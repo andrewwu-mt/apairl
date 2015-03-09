@@ -58,7 +58,7 @@ public class ProvinsiDAO extends HibernateDaoSupport {
 		log.debug("getting Provinsi instance with id: " + id);
 		try {
 			Provinsi instance = (Provinsi) getHibernateTemplate().get(
-					"com.spinach.dbo.Provinsi", id);
+					"com.apairl.dbo.Provinsi", id);
 			return instance;
 		} catch (RuntimeException re) {
 			log.error("get failed", re);

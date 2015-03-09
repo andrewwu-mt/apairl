@@ -70,7 +70,7 @@ public class ShipDAO extends HibernateDaoSupport {
 		log.debug("getting Ship instance with id: " + id);
 		try {
 			Ship instance = (Ship) getHibernateTemplate().get(
-					"com.spinach.dbo.Ship", id);
+					"com.apairl.dbo.Ship", id);
 			return instance;
 		} catch (RuntimeException re) {
 			log.error("get failed", re);
@@ -212,7 +212,7 @@ public class ShipDAO extends HibernateDaoSupport {
 			
 			String queryString = 
 					"select count(*) * 10000 " +
-					"from sp_ship " +
+					"from ap_ship " +
 					"where payment_method_id = 3 " +
 					str;
 

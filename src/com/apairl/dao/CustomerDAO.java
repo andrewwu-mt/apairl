@@ -73,7 +73,7 @@ public class CustomerDAO extends HibernateDaoSupport {
 		log.debug("getting Customer instance with id: " + id);
 		try {
 			Customer instance = (Customer) getHibernateTemplate().get(
-					"com.spinach.dbo.Customer", id);
+					"com.apairl.dbo.Customer", id);
 			return instance;
 		} catch (RuntimeException re) {
 			log.error("get failed", re);

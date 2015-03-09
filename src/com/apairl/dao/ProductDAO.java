@@ -75,7 +75,7 @@ public class ProductDAO extends HibernateDaoSupport {
 		log.debug("getting Product instance with id: " + id);
 		try {
 			Product instance = (Product) getHibernateTemplate().get(
-					"com.spinach.dbo.Product", id);
+					"com.apairl.dbo.Product", id);
 			return instance;
 		} catch (RuntimeException re) {
 			log.error("get failed", re);

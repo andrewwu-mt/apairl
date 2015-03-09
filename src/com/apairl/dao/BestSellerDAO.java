@@ -58,7 +58,7 @@ public class BestSellerDAO extends HibernateDaoSupport {
 		log.debug("getting BestSeller instance with id: " + id);
 		try {
 			BestSeller instance = (BestSeller) getHibernateTemplate().get(
-					"com.spinach.dbo.BestSeller", id);
+					"com.apairl.dbo.BestSeller", id);
 			return instance;
 		} catch (RuntimeException re) {
 			log.error("get failed", re);

@@ -223,10 +223,10 @@ public class OrderAction extends ActionSupport{
 		String totalFee = df.format(ship.getFee());
 		String totalAll = df.format(ship.getTotal());
 		
-		String website = "http://spinachstore.com/";
+		String website = "http://apairlstore.com/";
 		String link = "<a href="+host+"/order-received?id="+ship.getShipId()+">Lihat detail pemesanan anda</a>"; 
 
-		String title = "Konfirmasi pemesanan spinach";
+		String title = "Konfirmasi pemesanan apairl";
 		String adminFee = "";
 		if(ship.getPaymentMethod().getPaymentMethodId() == 3){
 			adminFee = "IDR 10,000 (Admin Fee) \n";
@@ -243,12 +243,12 @@ public class OrderAction extends ActionSupport{
 				"Rek. BCA : 8710085669 \n" +
 				"a/n : ANDREW GOTAMA \n\n" +
 				"Pengiriman mulai dilakukan setelah pembayaran. \n" +
-				"Mohon segera dilunaskan sesuai nominal yang terterai dan segera konfirmasi ke email spinachstore@gmail.com. \n" +
+				"Mohon segera dilunaskan sesuai nominal yang terterai dan segera konfirmasi ke email apairlstore@gmail.com. \n" +
 				"Data yang harus dilampirkan adalah nomor rekening pembayar dan nominalnya. \n\n" +
 				"Klik link berikut ini untuk melihat detail pemesanan anda : \n" +
 				link+" \n\n" +
 				"Terima kasih. \n\n" +
-				"*NB. Untuk pertanyaan mengenai Cash on Delivery, silahkan hubungi kami melalui nomor HP. 081216438899 atau email spinachstore@gmail.com.";
+				"*NB. Untuk pertanyaan mengenai Cash on Delivery, silahkan hubungi kami melalui nomor HP. 081216438899 atau email apairlstore@gmail.com.";
 		
 		MailUtil.sendEmail(ship.getCustomer().getEmail(), ship.getCustomer().getName(), website, title, content, link, ship.getShipId(), totalPrice);
 	}

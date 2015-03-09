@@ -58,7 +58,7 @@ public class KabupatenDAO extends HibernateDaoSupport {
 		log.debug("getting Kabupaten instance with id: " + id);
 		try {
 			Kabupaten instance = (Kabupaten) getHibernateTemplate().get(
-					"com.spinach.dbo.Kabupaten", id);
+					"com.apairl.dbo.Kabupaten", id);
 			return instance;
 		} catch (RuntimeException re) {
 			log.error("get failed", re);

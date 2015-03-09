@@ -271,7 +271,7 @@
         <div id="js--testimonails-carousel" class="carousel  slide" data-ride="carousel" data-interval="5000">
           <div class="carousel-inner">
             <div class="item  active">
-              <q class="testimonials__text">A top quality product delivered super quick! Thank you so much Spinach Store,<br>I shall definitely be using you guys again!</q><br><br>
+              <q class="testimonials__text">A top quality product delivered super quick! Thank you so much Apairl Store,<br>I shall definitely be using you guys again!</q><br><br>
               <cite><b>Andrew</b></cite>
             </div>
             <div class="item">

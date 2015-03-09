@@ -147,9 +147,9 @@ public class CustomerAction extends ActionSupport{
 	
 	public void sendMail(String host){
 
-		String website = "http://spinachstore.com/";
+		String website = "http://apairlstore.com/";
 		String link = "<a href="+host+"/index#loginModal>Click to login</a>"; 
-		String title = "Retrieve password Spinachstore";
+		String title = "Retrieve password apairlstore";
 		
 		String content = 
 				"Your password is <strong>"+oldPwd+"</strong> \n" +

@@ -4,11 +4,9 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 
-<!-- Mirrored from www.proteusthemes.com/themes/organique-html/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 12 Sep 2014 16:03:54 GMT -->
-<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
 <head>
     <meta charset="utf-8">
-    
+	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="Andrew Wu">
@@ -17,12 +15,11 @@
 	<script src="js/spin.js"></script>
 	<script src="js/platform-checker.js"></script>
 
-    <title>Spinach Store Indonesia | Jual Miras | Spirits & Wine</title>
-    <meta name="description" content="Online shop Indonesia spesial menjual berbagai macam liquor seperti wine, spirits dan beer. Kami juga menyediakan jasa pengiriman untuk seluruh Indonesia." />    
-    <meta name="keywords" content="Online shop Indonesia spesial menjual berbagai macam liquor seperti wine, spirits dan beer. Kami juga menyediakan jasa pengiriman untuk seluruh Indonesia. Jual Miras." />   
-    <meta name="generator" content="PrestaShop" />
-    <meta name="robots" content="index,follow" />
-    <meta name="author" content="Andrew Gotama">
+    <title>Apairl Store Indonesia</title>
+    <meta name="description" content="Online shop Indonesia menjual dress, bikini, dan berbagai macam pakaian." />    
+    <meta name="keywords" content="apairl, apairlstore, store, indonesia, bikini, triangl, dress, shirt, skirt, desty, rustam" />   
+    <meta name="generator" content="Apairlstore" />
+    <meta name="robots" content="INDEX,FOLLOW" />
 
     <!-- Custom styles for this template -->
     <link rel="stylesheet" href="stylesheets/A.b9575786.main.css.pagespeed.cf.KV29qTgDkf.css"/>
@@ -41,7 +38,7 @@
 	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 	
-	  ga('create', 'UA-50983431-1', 'spinachstore.com');
+	  ga('create', 'UA-50983431-1', 'apairlstore.com');
 	  ga('send', 'pageview');
 	
 	</script>
@@ -74,7 +71,7 @@
     <div class="row">
       <div class="col-xs-12  col-sm-6">
         <div class="top__slogan">
-          Aneka Miras | Spirits & Wine | <img alt="Logo" src="images/flag.png" width="13" height="13">
+          Apairlstore Online Shop Indonesia
         </div>
       </div>
       <div class="col-xs-12  col-sm-6">
@@ -134,7 +131,7 @@
     <div class="modal-content  center">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
-        <h3><span class="light">Register</span> to Spinachstore</h3>
+        <h3><span class="light">Register</span> to Apairlstore</h3>
         <hr class="divider">
       </div>
       <div class="modal-body">
@@ -162,7 +159,7 @@
     <div class="modal-content  center">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
-        <h3><span class="light">Login</span> to Spinachstore</h3>
+        <h3><span class="light">Login</span> to Apairlstore</h3>
         <hr class="divider">
       </div>
       <div class="modal-body">
@@ -230,7 +227,7 @@
     <div class="row">
       <div class="col-xs-10  col-md-3">
         <div class="header-logo">
-          <a href="index"><img alt="Logo" src="images/logo.png.pagespeed.ce.m478RzMLoo.png" width="200" height="90"></a>
+          <a href="index"><img alt="Logo" src="images/logo/apairL_w.png" width="120" height="120"></a>
         </div>
       </div>
       <div class="col-xs-2  visible-sm  visible-xs">

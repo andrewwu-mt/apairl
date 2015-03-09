@@ -15,8 +15,8 @@ import javax.mail.internet.MimeMessage;
 public class ContactUs {
 	
 	private String host = "smtp.gmail.com";
-	private String username = "spinachstore@gmail.com";
-	private String password = "spinachpolid";
+	private String username = "apairlstore@gmail.com";
+	private String password = "apairlpolid";
 	private int port = 587;
 	
 	public void sendEmail(String email, String name, String subject, String content) {

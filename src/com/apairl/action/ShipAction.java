@@ -124,12 +124,12 @@ public class ShipAction extends ActionSupport{
 		String totalAll = df.format(ship.getTotal());
 		String paypalTotal = df.format(((ship.getTotal()/exc.getValue())*1.04)+0.3);
 		
-		String website = "http://spinachstore.com/";
+		String website = "http://apairlstore.com/";
 		String link = "<a href="+host+"/order-received?id="+ship.getShipId()+">Lihat detail pemesanan anda</a>"; 
-		String title = "Konfirmasi pemesanan spinach";
+		String title = "Konfirmasi pemesanan apairl";
 		
 		String content = ship.getCustomer().getName() + ", pembayaran anda telah kami terima. \n" +
-				"ID pemesanan anda di spinachstore adalah "+ship.getShipId()+" dengan total harga :\n\n" +
+				"ID pemesanan anda di apairlstore adalah "+ship.getShipId()+" dengan total harga :\n\n" +
 				"IDR "+totalPrice+" \n" +
 				"IDR "+totalFee+" (Shipping) \n" +
 				"--------------------------------- + \n" +
@@ -145,7 +145,7 @@ public class ShipAction extends ActionSupport{
 				link+" \n\n" +
 				"Pesanan anda akan segera kami proses.\n" +
 				"Terima kasih. \n\n" +
-				"*NB. Untuk info lebih lanjut, silahkan hubungi kami melalui nomor HP. 081216438899 atau email spinachstore@gmail.com.";
+				"*NB. Untuk info lebih lanjut, silahkan hubungi kami melalui nomor HP. 081216438899 atau email apairlstore@gmail.com.";
 		
 		MailUtil.sendEmail(ship.getCustomer().getEmail(), ship.getCustomer().getName(), website, title, content, link, ship.getShipId(), totalPrice);
 	}

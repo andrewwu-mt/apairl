@@ -57,7 +57,7 @@ public class TypeDAO extends HibernateDaoSupport {
 		log.debug("getting Type instance with id: " + id);
 		try {
 			Type instance = (Type) getHibernateTemplate().get(
-					"com.spinach.dbo.Type", id);
+					"com.apairl.dbo.Type", id);
 			return instance;
 		} catch (RuntimeException re) {
 			log.error("get failed", re);

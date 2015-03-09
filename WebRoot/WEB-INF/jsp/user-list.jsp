@@ -45,6 +45,6 @@ $(document).ready(function(){
 	<br>
 	<br>
 	
-    <div id="footer">Copyright©2014 Spinach All Rights Reserved</div>
+    <div id="footer">Copyright©2014 apairl All Rights Reserved</div>
 	
 </body>

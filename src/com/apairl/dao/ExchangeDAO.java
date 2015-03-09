@@ -57,7 +57,7 @@ public class ExchangeDAO extends HibernateDaoSupport {
 		log.debug("getting Exchange instance with id: " + id);
 		try {
 			Exchange instance = (Exchange) getHibernateTemplate().get(
-					"com.spinach.dbo.Exchange", id);
+					"com.apairl.dbo.Exchange", id);
 			return instance;
 		} catch (RuntimeException re) {
 			log.error("get failed", re);

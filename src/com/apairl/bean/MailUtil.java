@@ -18,8 +18,8 @@ import javax.mail.internet.MimeMessage;
 public class MailUtil {
 	
 	private static String host = "smtp.gmail.com";
-	private static String username = "spinachstore@gmail.com";
-	private static String password = "spinachpolid";
+	private static String username = "apairlstore@gmail.com";
+	private static String password = "apairlpolid";
 	private static int port = 587;
 	
 	public static void sendEmail(String address, String name, String webname, String title, String content, String headerHost, Long shipId, String totalPrice) {
@@ -36,10 +36,10 @@ public class MailUtil {
 		});
 		
 		content = content.replace("\n", "<br>");
-		address += ", spinachstore@gmail.com";
+		address += ", apairlstore@gmail.com";
 		try {
 			Message message = new MimeMessage(session);
-			message.setFrom(new InternetAddress(username, "Spinach Store"));
+			message.setFrom(new InternetAddress(username, "apairl Store"));
 			message.setRecipients(Message.RecipientType.TO, InternetAddress.parse(address));
 			message.setSubject(title);
 			message.setContent(content, "text/html;charset=utf-8");

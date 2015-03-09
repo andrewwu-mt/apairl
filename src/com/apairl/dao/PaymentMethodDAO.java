@@ -57,7 +57,7 @@ public class PaymentMethodDAO extends HibernateDaoSupport {
 		log.debug("getting PaymentMethod instance with id: " + id);
 		try {
 			PaymentMethod instance = (PaymentMethod) getHibernateTemplate().get(
-					"com.spinach.dbo.PaymentMethod", id);
+					"com.apairl.dbo.PaymentMethod", id);
 			return instance;
 		} catch (RuntimeException re) {
 			log.error("get failed", re);

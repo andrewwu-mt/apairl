@@ -58,7 +58,7 @@ public class OrderDAO extends HibernateDaoSupport {
 		log.debug("getting Order instance with id: " + id);
 		try {
 			Order instance = (Order) getHibernateTemplate().get(
-					"com.spinach.dbo.Order", id);
+					"com.apairl.dbo.Order", id);
 			return instance;
 		} catch (RuntimeException re) {
 			log.error("get failed", re);

@@ -123,8 +123,8 @@ public class ProductAction extends ActionSupport{
 	public String saveRecord(){
 		try{
 			String osName = System.getProperty("os.name");
-			String path = "C:/apache-tomcat-7.0.54/webapps/spinach/products/";
-			if(!osName.contains("Windows")) path = "/usr/share/tomcat/webapps/spinach/products/";
+			String path = "C:/apache-tomcat-7.0.54/webapps/apairl/products/";
+			if(!osName.contains("Windows")) path = "/usr/share/tomcat/webapps/apairl/products/";
 			
 			Type type = typeDAO.findById(typeId);
 			Category category = categoryDAO.findById(categoryId);
@@ -167,8 +167,8 @@ public class ProductAction extends ActionSupport{
 	public String updateRecord(){
 		try{
 			String osName = System.getProperty("os.name");
-			String path = "C:/apache-tomcat-7.0.54/webapps/spinach/products/";
-			if(!osName.contains("Windows")) path = "/usr/share/tomcat/webapps/spinach/products/";
+			String path = "C:/apache-tomcat-7.0.54/webapps/apairl/products/";
+			if(!osName.contains("Windows")) path = "/usr/share/tomcat/webapps/apairl/products/";
 			
 			Type type = typeDAO.findById(typeId);
 			Category category = categoryDAO.findById(categoryId);

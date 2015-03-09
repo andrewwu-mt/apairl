@@ -58,7 +58,7 @@ public class ShipTypeDAO extends HibernateDaoSupport {
 		log.debug("getting ShipType instance with id: " + id);
 		try {
 			ShipType instance = (ShipType) getHibernateTemplate().get(
-					"com.spinach.dbo.ShipType", id);
+					"com.apairl.dbo.ShipType", id);
 			return instance;
 		} catch (RuntimeException re) {
 			log.error("get failed", re);

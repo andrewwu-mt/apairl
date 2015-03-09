@@ -60,10 +60,10 @@ $(document).ready(function() {
 <s:form name="_xclick" method="post" action="https://www.paypal.com/cgi-bin/webscr" id="form">
 <%-- <s:form name="_xclick" method="post" action="https://www.sandbox.paypal.com/cgi-bin/webscr" id="form"> --%>
 	<input type="hidden" name="cmd" value="_xclick">
-    <input type="hidden" name="business" value="spinachstore@gmail.com">
-<!--     <input type="hidden" name="business" value="seller@spinach.com"> -->
+    <input type="hidden" name="business" value="apairlstore@gmail.com">
+<!--     <input type="hidden" name="business" value="seller@apairl.com"> -->
     <input type="hidden" name="currency_code" value="USD">
-    <input type="hidden" name="item_name" value="Spinach Order #<s:property value="#request.shipId" />">
+    <input type="hidden" name="item_name" value="Apairl Order #<s:property value="#request.shipId" />">
     <input type="hidden" id="paypal_total" name="amount" value="${request.amount}">
     
 	<input type="hidden" name="rm" value="2">

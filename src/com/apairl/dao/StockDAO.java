@@ -78,7 +78,7 @@ public class StockDAO extends HibernateDaoSupport {
 		log.debug("getting Stock instance with id: " + id);
 		try {
 			Stock instance = (Stock) getHibernateTemplate().get(
-					"com.spinach.dbo.Stock", id);
+					"com.apairl.dbo.Stock", id);
 			return instance;
 		} catch (RuntimeException re) {
 			log.error("get failed", re);

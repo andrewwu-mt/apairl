@@ -72,11 +72,11 @@
           </form>
         </div>
         <div class="col-xs-12 col-sm-3">
-          <h2 class="no-margin">Spinachstore</h2><br/>
-          <p><strong>Alam Sutera,<br>
-          Tangerang, Indonesia</strong></p>
+          <h2 class="no-margin">Apairlstore</h2><br/>
+          <p><strong>Taman Palem,<br>
+          Cengkareng, Indonesia</strong></p>
           <span class="glyphicon  glyphicon-earphone"></span> <span class="text-dark">+62 813 1547 6688 </span><br>
-          <span class="glyphicon  glyphicon-envelope"></span> <a class="secondary-link" href="http://www.gmail.com" target="_blank"><strong>spinachstore@gmail.com</strong></a>
+          <span class="glyphicon  glyphicon-envelope"></span> <a class="secondary-link" href="http://www.gmail.com" target="_blank"><strong>apairlstore@gmail.com</strong></a>
         </div>
       </div>
     </div>

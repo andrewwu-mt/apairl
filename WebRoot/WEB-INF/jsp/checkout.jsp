@@ -335,9 +335,9 @@
           </ul>
           
 			    <input type="hidden" name="cmd" value="_xclick">
-			    <input type="hidden" name="business" value="spinachstore@gmail.com">
+			    <input type="hidden" name="business" value="apairlstore@gmail.com">
 			    <input type="hidden" name="currency_code" value="USD">
-			    <input type="hidden" name="item_name" value="Spinachstore Payment">
+			    <input type="hidden" name="item_name" value="Apairlstore Payment">
 			    <input type="hidden" id="paypal_total" name="amount" value="">
 			
             <button type="submit" id="btn" class="btn btn-warning pull-right">Place Order</button>

@@ -1,7 +1,7 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 
 <head>
-<title>Spinach Store | Jual Miras | Spirits & Wine</title>
+<title>Apairl Store Indonesia</title>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <link rel="shortcut icon" href="images/spico.ico">
 <link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
@@ -25,7 +25,7 @@
   <div class="shell">
     <!-- Header -->
     <div id="header">
-      <h1 id="logo"><a href="index">Spinach Beverage</a></h1>
+      <h1 id="logo"><a href="index">Apairlstore</a></h1>
       <div id="navigation">
         <ul>
           <li><a href="stock-list">Stock List</a></li>

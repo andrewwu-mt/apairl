@@ -24,5 +24,5 @@
 		</div>  
 
 
-<div id="footer">Copyright©2014 Spinach All Rights Reserved</div>
+<div id="footer">Copyright©2014 Apairl All Rights Reserved</div>
 </body>

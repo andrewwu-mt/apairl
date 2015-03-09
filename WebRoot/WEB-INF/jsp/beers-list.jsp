@@ -36,7 +36,7 @@
   <div class="row">
     <div class="col-xs-12  col-sm-3">
       <aside class="sidebar  sidebar--shop">
-        <h3 class="sidebar__title"><span class="light">Spinach</span> Store</h3>
+        <h3 class="sidebar__title"><span class="light">apairl</span> Store</h3>
         <hr class="shop__divider">
         <div class="shop-filter">
 

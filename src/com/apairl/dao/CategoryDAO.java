@@ -57,7 +57,7 @@ public class CategoryDAO extends HibernateDaoSupport {
 		log.debug("getting Category instance with id: " + id);
 		try {
 			Category instance = (Category) getHibernateTemplate().get(
-					"com.spinach.dbo.Category", id);
+					"com.apairl.dbo.Category", id);
 			return instance;
 		} catch (RuntimeException re) {
 			log.error("get failed", re);

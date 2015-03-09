@@ -58,7 +58,7 @@ public class TopRatedDAO extends HibernateDaoSupport {
 		log.debug("getting TopRated instance with id: " + id);
 		try {
 			TopRated instance = (TopRated) getHibernateTemplate().get(
-					"com.spinach.dbo.TopRated", id);
+					"com.apairl.dbo.TopRated", id);
 			return instance;
 		} catch (RuntimeException re) {
 			log.error("get failed", re);

@@ -57,7 +57,7 @@ public class AdminDAO extends HibernateDaoSupport {
 		log.debug("getting Admin instance with id: " + id);
 		try {
 			Admin instance = (Admin) getHibernateTemplate().get(
-					"com.spinach.dbo.Admin", id);
+					"com.apairl.dbo.Admin", id);
 			return instance;
 		} catch (RuntimeException re) {
 			log.error("get failed", re);
