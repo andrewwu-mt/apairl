@@ -1,5 +1,5 @@
 #MyEclipse Hibernate Properties
-#Thu Jan 29 18:05:39 CST 2015
+#Mon Mar 09 22:59:22 CST 2015
 genBasicCompId=true
 sessionFactoryName=com.apairl.dbo.HibernateSessionFactory
 profile=
@@ -18,3 +18,4 @@ genAnnotations=false
 reSettingsFile=/apairl/hibernate.reveng.xml
 configFile=/apairl/src/hibernate.cfg.xml
 createConfigFile=true
+baseDaoClass=BaseHibernateDAO

@@ -88,4 +88,14 @@
 		<property name="sessionFactory">
 			<ref bean="sessionFactory" />
 		</property>
+	</bean>
+	<bean id="ProductSrcDAO" class="com.apairl.dao.ProductSrcDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="SrcDAO" class="com.apairl.dao.SrcDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
 	</bean></beans>

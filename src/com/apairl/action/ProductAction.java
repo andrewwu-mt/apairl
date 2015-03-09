@@ -5,7 +5,6 @@ import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.activation.MimetypesFileTypeMap;
 import javax.servlet.http.HttpServletRequest;
 
 import org.apache.commons.io.FileUtils;
@@ -13,6 +12,8 @@ import org.apache.struts2.ServletActionContext;
 
 import com.apairl.dao.CategoryDAO;
 import com.apairl.dao.ProductDAO;
+import com.apairl.dao.ProductSrcDAO;
+import com.apairl.dao.SrcDAO;
 import com.apairl.dao.StockDAO;
 import com.apairl.dao.TypeDAO;
 import com.apairl.dbo.Category;
@@ -33,6 +34,8 @@ public class ProductAction extends ActionSupport{
 	private TypeDAO typeDAO;
 	private StockDAO stockDAO;
 	private CategoryDAO categoryDAO;
+	private ProductSrcDAO productSrcDAO;
+	private SrcDAO srcDAO;
 	
 	private Integer id;
 	private Integer typeId;
@@ -120,25 +123,14 @@ public class ProductAction extends ActionSupport{
 	}
 	
 	//Admin permission
+	
 	public String saveRecord(){
 		try{
-			String osName = System.getProperty("os.name");
-			String path = "C:/apache-tomcat-7.0.54/webapps/apairl/products/";
-			if(!osName.contains("Windows")) path = "/usr/share/tomcat/webapps/apairl/products/";
 			
 			Type type = typeDAO.findById(typeId);
 			Category category = categoryDAO.findById(categoryId);
 			
 			Product product = new Product();
-			
-			if(fileUploadFileName != null){
-				File file = new File(path, name+".jpg");
-		        if(fileUploadFileName.contains(".jpg") || fileUploadFileName.contains(".jpeg")){
-		        	FileUtils.copyFile(fileUpload, file);
-					product.setSrc("products/" + name + ".jpg");
-		        }
-			}
-			
 			product.setType(type);
 			product.setCategory(category);
 			product.setName(name);
@@ -166,23 +158,10 @@ public class ProductAction extends ActionSupport{
 	
 	public String updateRecord(){
 		try{
-			String osName = System.getProperty("os.name");
-			String path = "C:/apache-tomcat-7.0.54/webapps/apairl/products/";
-			if(!osName.contains("Windows")) path = "/usr/share/tomcat/webapps/apairl/products/";
-			
 			Type type = typeDAO.findById(typeId);
 			Category category = categoryDAO.findById(categoryId);
 			
 			Product product = productDAO.findById(productId);
-
-			if(fileUploadFileName != null){
-				File file = new File(path, name+".jpg");
-		        if(fileUploadFileName.contains(".jpg") || fileUploadFileName.contains(".jpeg")){
-		        	FileUtils.copyFile(fileUpload, file);
-					product.setSrc("products/" + name + ".jpg");
-		        }
-			}
-			
 			product.setType(type);
 			product.setCategory(category);
 			product.setName(name);
@@ -373,6 +352,22 @@ public class ProductAction extends ActionSupport{
 
 	public void setTypeId(Integer typeId) {
 		this.typeId = typeId;
+	}
+
+	public ProductSrcDAO getProductSrcDAO() {
+		return productSrcDAO;
+	}
+
+	public void setProductSrcDAO(ProductSrcDAO productSrcDAO) {
+		this.productSrcDAO = productSrcDAO;
+	}
+
+	public SrcDAO getSrcDAO() {
+		return srcDAO;
+	}
+
+	public void setSrcDAO(SrcDAO srcDAO) {
+		this.srcDAO = srcDAO;
 	}
 	
 }

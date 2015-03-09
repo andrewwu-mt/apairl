@@ -24,13 +24,6 @@
 					<th>Value</th>
 				</tr>
 				
-				<tr>
-					<td>Image</td>
-					<td>
-						<s:file name="fileUpload" style="width: 200px" />
-					</td>
-				</tr>
-				
 				<s:select list="%{#request.typeList}" name="typeId" listKey="typeId" listValue="name" label="Type" />
 				<s:select list="%{#request.categoryList}" name="categoryId" listKey="categoryId" listValue="name" label="Category" />
 				<s:textfield name="name" label="Name" size="50" />

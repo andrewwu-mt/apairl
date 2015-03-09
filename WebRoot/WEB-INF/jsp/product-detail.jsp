@@ -22,6 +22,9 @@ $(document).ready(function(){
 	
 });
 </script>
+<s:action name="product-src-get-by-product" executeResult="false">
+	<s:param name="productId" value="#parameters.id" /> 
+</s:action>
 <s:action name="product-get" executeResult="false">
 	<s:param name="productId" value="#parameters.id" /> 
 </s:action>
@@ -60,13 +63,16 @@ $(document).ready(function(){
           <div class="push-down-20">
             <img class="js--product-preview" alt="Single product image" src="${request.product.src}" width="360" height="458">
           </div>
-          <div class="product-preview__thumbs  clearfix">
-            <div class="product-preview__thumb  active  js--preview-thumbs">
-              <a href=".html" data-src="images/dummy/w360/13.jpg">
-                <img src="${request.product.src}" alt="Single product thumbnail image" width="66" height="82"/>
-              </a>
-            </div>
-          </div>
+          
+          <s:iterator value="#request.productSrcList">
+	          <div class="product-preview__thumbs  clearfix">
+	            <div class="product-preview__thumb  active  js--preview-thumbs">
+	              <a href=".html" data-src="images/dummy/w360/13.jpg">
+	                <img src="${id.src.value}" alt="Single product thumbnail image" width="66" height="82"/>
+	              </a>
+	            </div>
+	          </div>
+          </s:iterator>
         </div>
       </div>
       <div class="col-xs-12 col-sm-8">
@@ -101,8 +107,7 @@ $(document).ready(function(){
           </div>
           <hr class="bold__divider">
           <p class="single-product__text">
-          	Amount / carton is <strong>&nbsp;<font color="darkred" id="desc">${request.product.description}</font>.</strong><br>
-          	Price / carton is <strong>&nbsp;<font color="darkred">IDR&nbsp;<font id="priceBox"><fmt:formatNumber groupingUsed="true">${request.product.priceBox}</fmt:formatNumber></font></font>.</strong>
+          	<strong><font color="darkred" id="desc">${request.product.description}</font></strong><br>
           </p>
           <hr class="bold__divider">
           <!-- Single button -->

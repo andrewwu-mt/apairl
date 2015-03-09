@@ -10,6 +10,9 @@
 <head>
 <meta charset="UTF-8">
 <jsp:include page="header-2.jsp"/>
+<s:action name="product-src-get-by-product" executeResult="false">
+	<s:param name="productId" value="#parameters.id" /> 
+</s:action>
 <s:action name="product-get" executeResult="false">
 	<s:param name="productId" value="#parameters.id" /> 
 </s:action>
@@ -29,14 +32,6 @@
 					<th>Value</th>
 				</tr>
 				
-				<tr>
-					<td>Image</td>
-					<td>
-						<img alt="Single product image" src="${request.product.src}" width="100" height="100">
-						<s:file name="fileUpload" style="width: 200px" />
-					</td>
-				</tr>
-				
 				<s:select list="%{#request.typeList}" name="typeId" listKey="typeId" listValue="name" label="Type" value="%{#request.product.type.typeId}" />
 				<s:select list="%{#request.categoryList}" name="categoryId" listKey="categoryId" listValue="name" label="Category" value="%{#request.product.category.categoryId}" />
 				<s:textfield name="name" label="Name" value="%{#request.product.name}" size="50" />
@@ -48,10 +43,52 @@
 				<s:textarea name="aboutProduct" label="About" value="%{#request.product.aboutProduct}" cssStyle="resize:none;height:100px;width:500px" />
 				
 	 			<tr>
-	  		    	<td colspan="2" align="right"><div class="button-wrapper"><button class="submit">Submit</button></div></td>
+	  		    	<td colspan="2" align="right"><div class="button-wrapper"><button class="submit">Save changes</button></div></td>
 	  		    </tr>
 			</s:form>
 		</table>
+		
+		<br><br>
+		
+		Thumbnail Management
+		<table>
+			<s:form action="product-src-save" validate="true" cssClass="list2" namespace="/" method="POST" enctype="multipart/form-data" >
+				<tr>
+					<th>Field</th>
+					<th>Value</th>
+				</tr>
+				<tr>
+					<td>Image</td>
+					<td>
+						<s:iterator value="#request.productSrcList">
+							<a href="product-src-delete-by-src?srcId=${id.src.srcId}"><img alt="Single product image" src="${id.src.name}" width="100" height="100"></a>
+						</s:iterator>
+						<s:file name="fileUpload" style="width: 200px" />
+					</td>
+				</tr>
+	 			<tr>
+	  		    	<td colspan="2" align="right"><div class="button-wrapper"><button class="submit">Upload Thumbnail</button></div></td>
+	  		    </tr>
+			</s:form>
+		</table>
+		
+		<br><br>
+		
+		Primary Thumbnail
+		<table>
+			<s:form action="product-src-save-primary" validate="true" cssClass="list2" namespace="/" method="POST" enctype="multipart/form-data" >
+				<s:hidden value="%{#request.product.productId}" name="productId" />
+				<tr>
+					<th>Field</th>
+					<th>Value</th>
+				</tr>
+				<s:select list="%{#request.productSrcList}" name="srcId" label="Select thumbnail" />
+	 			<tr>
+	  		    	<td colspan="2" align="right"><div class="button-wrapper"><button class="submit">Set as Primary</button></div></td>
+	  		    </tr>
+			</s:form>
+		</table>
+		
 		
 		<br>
 		<br>

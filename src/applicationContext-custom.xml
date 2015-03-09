@@ -10,6 +10,19 @@
 	<bean id="AdminInterceptor" class="com.apairl.interceptor.AdminInterceptor" scope="prototype" />
 	<bean id="LoginInterceptor" class="com.apairl.interceptor.LoginInterceptor" scope="prototype" />
 	
+	
+	<bean id="ProductSrcAction" class="com.apairl.action.ProductSrcAction" scope="prototype">
+		<property name="productSrcDAO">
+			<ref bean="ProductSrcDAO" />
+		</property>
+		<property name="productDAO">
+			<ref bean="ProductDAO" />
+		</property>
+		<property name="srcDAO">
+			<ref bean="SrcDAO" />
+		</property>
+	</bean>
+	
 	<bean id="CustomerAction" class="com.apairl.action.CustomerAction" scope="prototype">
 		<property name="customerDAO">
 			<ref bean="CustomerDAO" />
@@ -70,6 +83,12 @@
 		</property>
 		<property name="categoryDAO">
 			<ref bean="CategoryDAO" />
+		</property>
+		<property name="productSrcDAO">
+			<ref bean="ProductSrcDAO" />
+		</property>
+		<property name="srcDAO">
+			<ref bean="SrcDAO" />
 		</property>
 	</bean>
 	
