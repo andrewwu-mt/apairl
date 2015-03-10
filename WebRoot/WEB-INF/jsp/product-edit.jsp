@@ -53,6 +53,7 @@
 		Thumbnail Management
 		<table>
 			<s:form action="product-src-save" validate="true" cssClass="list2" namespace="/" method="POST" enctype="multipart/form-data" >
+				<s:hidden name="productId" value="%{#request.product.productId}" />
 				<tr>
 					<th>Field</th>
 					<th>Value</th>
@@ -61,7 +62,7 @@
 					<td>Image</td>
 					<td>
 						<s:iterator value="#request.productSrcList">
-							<a href="product-src-delete-by-src?srcId=${id.src.srcId}"><img alt="Single product image" src="${id.src.name}" width="100" height="100"></a>
+							<a href="product-src-delete-by-src?srcId=${id.src.srcId}"><img alt="Single product image" src="${id.src.value}" width="100" height="100"></a>
 						</s:iterator>
 						<s:file name="fileUpload" style="width: 200px" />
 					</td>
@@ -77,12 +78,12 @@
 		Primary Thumbnail
 		<table>
 			<s:form action="product-src-save-primary" validate="true" cssClass="list2" namespace="/" method="POST" enctype="multipart/form-data" >
-				<s:hidden value="%{#request.product.productId}" name="productId" />
+				<s:hidden name="productId" value="%{#request.product.productId}" />
 				<tr>
 					<th>Field</th>
 					<th>Value</th>
 				</tr>
-				<s:select list="%{#request.productSrcList}" name="srcId" label="Select thumbnail" />
+				<s:select list="%{#request.productSrcList}" listKey="id.src.srcId" listValue="id.src.value" name="srcId" label="Select thumbnail" />
 	 			<tr>
 	  		    	<td colspan="2" align="right"><div class="button-wrapper"><button class="submit">Set as Primary</button></div></td>
 	  		    </tr>

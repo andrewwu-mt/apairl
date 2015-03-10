@@ -28,7 +28,7 @@
 		<action name="product-src-save-primary" class="ProductSrcAction" method="savePrimaryThumbnail">
 			<interceptor-ref name="checkAdmin"/>
 			<interceptor-ref name="defaultStack"/>
-			<result name="successsave" type="result-message">product-edit?id=${#request.productId}</result>
+			<result name="success" type="result-message">product-edit?id=${#request.productId}</result>
 		</action>
 		
 		<action name="product-src-save" class="ProductSrcAction" method="saveRecord">

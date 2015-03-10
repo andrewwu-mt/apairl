@@ -64,15 +64,20 @@ $(document).ready(function(){
             <img class="js--product-preview" alt="Single product image" src="${request.product.src}" width="360" height="458">
           </div>
           
-          <s:iterator value="#request.productSrcList">
-	          <div class="product-preview__thumbs  clearfix">
-	            <div class="product-preview__thumb  active  js--preview-thumbs">
-	              <a href=".html" data-src="images/dummy/w360/13.jpg">
+          <div class="product-preview__thumbs  clearfix">
+	          <s:iterator value="#request.productSrcList" status="st">
+	        	<s:if test="#st.first">
+	        		<div class="product-preview__thumb  active  js--preview-thumbs">
+	        	</s:if>  	
+	        	<s:else>
+		            <div class="product-preview__thumb  js--preview-thumbs">
+	        	</s:else>
+	              <a href=".js--product-preview" data-src="${id.src.value}">
 	                <img src="${id.src.value}" alt="Single product thumbnail image" width="66" height="82"/>
 	              </a>
 	            </div>
-	          </div>
-          </s:iterator>
+	          </s:iterator>
+          </div>
         </div>
       </div>
       <div class="col-xs-12 col-sm-8">

@@ -10,7 +10,7 @@
             <key-many-to-one name="product" class="com.apairl.dbo.Product" lazy="false">
                 <column name="product_id" precision="10" scale="0" />
             </key-many-to-one>
-            <key-many-to-one name="src" class="com.apairl.dbo.Product" lazy="false">
+            <key-many-to-one name="src" class="com.apairl.dbo.Src" lazy="false">
                 <column name="src_id" precision="10" scale="0" />
             </key-many-to-one>
         </composite-id>

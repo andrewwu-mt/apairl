@@ -55,7 +55,8 @@ public class ProductSrcAction extends ActionSupport{
 	}
 	
 	public Src saveSrc(){
-		Src src = new Src();
+		Src src = null;
+		
 		try{
 			String osName = System.getProperty("os.name");
 			String path = "C:/apache-tomcat-7.0.54/webapps/apairl/products/";
@@ -64,8 +65,13 @@ public class ProductSrcAction extends ActionSupport{
 			File file = new File(path, fileUploadFileName);
 	        if(fileUploadFileName.contains(".jpg") || fileUploadFileName.contains(".jpeg")){
 	        	FileUtils.copyFile(fileUpload, file);
+	        	
+	    		src = srcDAO.findByValue("products/" + fileUploadFileName);
+	    		if(src == null) src = new Src();
 	        	src.setValue("products/" + fileUploadFileName);
-	        	srcDAO.save(src);
+	        	try{
+	        		srcDAO.attachDirty(src);
+	        	}catch(Exception e){}
 	        }
 		} catch(Exception e){
 			return null;
@@ -89,10 +95,11 @@ public class ProductSrcAction extends ActionSupport{
 				productSrcDAO.save(productSrc);
 
 			}catch(Exception e){
+				e.printStackTrace();
 				return "saveerror";
 			}
 		}
-		return "savesuccess";
+		return "successsave";
 	}
 	
 	public String deleteBySrcId(){

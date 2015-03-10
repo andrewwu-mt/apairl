@@ -3,10 +3,8 @@ package com.apairl.dao;
 import java.util.List;
 
 import org.hibernate.LockMode;
-import org.hibernate.Query;
 import org.hibernate.SQLQuery;
 import org.hibernate.Session;
-import org.hibernate.criterion.Example;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.orm.hibernate3.support.HibernateDaoSupport;
@@ -31,7 +29,7 @@ public class ProductSrcDAO extends HibernateDaoSupport  {
     public void save(ProductSrc transientInstance) {
         log.debug("saving ProductSrc instance");
         try {
-            getSession().save(transientInstance);
+            getHibernateTemplate().save(transientInstance);
             log.debug("save successful");
         } catch (RuntimeException re) {
             log.error("save failed", re);
@@ -42,7 +40,7 @@ public class ProductSrcDAO extends HibernateDaoSupport  {
 	public void delete(ProductSrc persistentInstance) {
         log.debug("deleting ProductSrc instance");
         try {
-            getSession().delete(persistentInstance);
+            getHibernateTemplate().delete(persistentInstance);
             log.debug("delete successful");
         } catch (RuntimeException re) {
             log.error("delete failed", re);
@@ -53,7 +51,7 @@ public class ProductSrcDAO extends HibernateDaoSupport  {
     public ProductSrc findById( com.apairl.dbo.ProductSrcId id) {
         log.debug("getting ProductSrc instance with id: " + id);
         try {
-            ProductSrc instance = (ProductSrc) getSession()
+            ProductSrc instance = (ProductSrc) getHibernateTemplate()
                     .get("com.apairl.dbo.ProductSrc", id);
             return instance;
         } catch (RuntimeException re) {
@@ -62,31 +60,14 @@ public class ProductSrcDAO extends HibernateDaoSupport  {
         }
     }
     
-    
-    public List findByExample(ProductSrc instance) {
-        log.debug("finding ProductSrc instance by example");
-        try {
-            List results = getSession()
-                    .createCriteria("com.apairl.dbo.ProductSrc")
-                    .add(Example.create(instance))
-            .list();
-            log.debug("find by example successful, result size: " + results.size());
-            return results;
-        } catch (RuntimeException re) {
-            log.error("find by example failed", re);
-            throw re;
-        }
-    }    
-    
     public List findByProperty(String propertyName, Object value) {
       log.debug("finding ProductSrc instance with property: " + propertyName
             + ", value: " + value);
       try {
          String queryString = "from ProductSrc as model where model." 
          						+ propertyName + "= ?";
-         Query queryObject = getSession().createQuery(queryString);
-		 queryObject.setParameter(0, value);
-		 return queryObject.list();
+         
+			return getHibernateTemplate().find(queryString, value);
       } catch (RuntimeException re) {
          log.error("find by property name failed", re);
          throw re;
@@ -109,8 +90,7 @@ public class ProductSrcDAO extends HibernateDaoSupport  {
 		log.debug("finding all ProductSrc instances");
 		try {
 			String queryString = "from ProductSrc";
-	         Query queryObject = getSession().createQuery(queryString);
-			 return queryObject.list();
+			return getHibernateTemplate().find(queryString);
 		} catch (RuntimeException re) {
 			log.error("find all failed", re);
 			throw re;
@@ -120,7 +100,7 @@ public class ProductSrcDAO extends HibernateDaoSupport  {
     public ProductSrc merge(ProductSrc detachedInstance) {
         log.debug("merging ProductSrc instance");
         try {
-            ProductSrc result = (ProductSrc) getSession()
+            ProductSrc result = (ProductSrc) getHibernateTemplate()
                     .merge(detachedInstance);
             log.debug("merge successful");
             return result;
@@ -133,7 +113,7 @@ public class ProductSrcDAO extends HibernateDaoSupport  {
     public void attachDirty(ProductSrc instance) {
         log.debug("attaching dirty ProductSrc instance");
         try {
-            getSession().saveOrUpdate(instance);
+            getHibernateTemplate().saveOrUpdate(instance);
             log.debug("attach successful");
         } catch (RuntimeException re) {
             log.error("attach failed", re);
@@ -144,7 +124,7 @@ public class ProductSrcDAO extends HibernateDaoSupport  {
     public void attachClean(ProductSrc instance) {
         log.debug("attaching clean ProductSrc instance");
         try {
-                      	getSession().lock(instance, LockMode.NONE);
+                      	getHibernateTemplate().lock(instance, LockMode.NONE);
                         log.debug("attach successful");
         } catch (RuntimeException re) {
             log.error("attach failed", re);

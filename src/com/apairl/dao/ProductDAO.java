@@ -1,8 +1,6 @@
 package com.apairl.dao;
 
-import java.sql.Timestamp;
 import java.util.List;
-import java.util.Set;
 
 import org.hibernate.LockMode;
 import org.slf4j.Logger;
