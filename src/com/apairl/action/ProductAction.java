@@ -7,22 +7,25 @@ import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 
-import org.apache.commons.io.FileUtils;
+import org.apache.log4j.Logger;
 import org.apache.struts2.ServletActionContext;
 
 import com.apairl.dao.CategoryDAO;
+import com.apairl.dao.ColorDAO;
 import com.apairl.dao.ProductDAO;
 import com.apairl.dao.ProductSrcDAO;
+import com.apairl.dao.SizeDAO;
 import com.apairl.dao.SrcDAO;
 import com.apairl.dao.StockDAO;
 import com.apairl.dao.TypeDAO;
-import com.apairl.dbo.Category;
+import com.apairl.dbo.Color;
 import com.apairl.dbo.Product;
+import com.apairl.dbo.Size;
 import com.apairl.dbo.Stock;
-import com.apairl.dbo.Type;
 import com.opensymphony.xwork2.ActionSupport;
 
 public class ProductAction extends ActionSupport{
+	private static final Logger log = Logger.getLogger(ProductAction.class);
 
 	/**
 	 * 
@@ -36,18 +39,21 @@ public class ProductAction extends ActionSupport{
 	private CategoryDAO categoryDAO;
 	private ProductSrcDAO productSrcDAO;
 	private SrcDAO srcDAO;
+	private SizeDAO sizeDAO;
+	private ColorDAO colorDAO;
 	
-	private Integer id;
 	private Integer typeId;
 	private String productName;
 	private String searchKeyword;
 	
+	
+	private Integer sizeId;
+	private Integer colorId;
 	private Integer productId;
 	private Integer categoryId;
 	private String name;
 	private String description;
-	private Integer priceBox;
-	private Integer priceBottle;
+	private Integer price;
 	private Integer active;
 	private String shortName;
 	private String aboutProduct;
@@ -98,17 +104,13 @@ public class ProductAction extends ActionSupport{
 		if(productName != null && !"".equals(productName)){
 			product = (Product) productDAO.findByName(productName).get(0);
 		} else {
-			product = productDAO.findById(id);
+			product = productDAO.findById(productId);
 		}
 		
-		Stock stock = (Stock) stockDAO.findByProperty("product", product).get(0);
-		int remainder = stock.getNumber();
+		List<Stock> stockList = stockDAO.findByProperty("product.productId", product.getProductId());
 		
 		HttpServletRequest request = ServletActionContext.getRequest();
-		request.setAttribute("product", product);
-		request.setAttribute("remainder", remainder);
-
-		
+		request.setAttribute("stockList", stockList);
 		
 		return SUCCESS;
 	}
@@ -126,31 +128,29 @@ public class ProductAction extends ActionSupport{
 	
 	public String saveRecord(){
 		try{
-			
-			Type type = typeDAO.findById(typeId);
-			Category category = categoryDAO.findById(categoryId);
-			
 			Product product = new Product();
-			product.setType(type);
-			product.setCategory(category);
 			product.setName(name);
 			product.setDescription(description);
-			product.setPriceBox(priceBox);
-			product.setPriceBottle(priceBottle);
+			product.setPrice(price);
 			product.setActive(active);
-			product.setShortName(shortName);
-			product.setAboutProduct(aboutProduct);
 			product.setInsertDate(new Timestamp(System.currentTimeMillis()));
 			product.setUpdateDate(new Timestamp(System.currentTimeMillis()));
 			productDAO.save(product);
 			
 			Stock stock = new Stock();
-			stock.setNumber(0);
+			stock.setQty(0);
+			
+			Size size = sizeDAO.findById(sizeId);
+			stock.setSize(size);
+			
+			Color color = colorDAO.findById(colorId);
+			stock.setColor(color);
+			
 			stock.setProduct(product);
 			stockDAO.save(stock);
 			
 		}catch(Exception e){
-			e.printStackTrace();
+			log.error("Save product failed", e);
 			return "saveerror";
 		}
 		return "successsave";
@@ -158,23 +158,15 @@ public class ProductAction extends ActionSupport{
 	
 	public String updateRecord(){
 		try{
-			Type type = typeDAO.findById(typeId);
-			Category category = categoryDAO.findById(categoryId);
-			
 			Product product = productDAO.findById(productId);
-			product.setType(type);
-			product.setCategory(category);
 			product.setName(name);
 			product.setDescription(description);
-			product.setPriceBox(priceBox);
-			product.setPriceBottle(priceBottle);
+			product.setPrice(price);
 			product.setActive(active);
-			product.setShortName(shortName);
-			product.setAboutProduct(aboutProduct);
 			productDAO.update(product);
 			
 		}catch(Exception e){
-			e.printStackTrace();
+			log.error("Update product failed", e);
 			return "updateerror";
 		}
 		return SUCCESS;
@@ -195,14 +187,6 @@ public class ProductAction extends ActionSupport{
 
 	public void setProductDAO(ProductDAO productDAO) {
 		this.productDAO = productDAO;
-	}
-
-	public int getId() {
-		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
 	}
 
 	public static long getSerialversionuid() {
@@ -255,22 +239,6 @@ public class ProductAction extends ActionSupport{
 
 	public void setDescription(String description) {
 		this.description = description;
-	}
-
-	public Integer getPriceBox() {
-		return priceBox;
-	}
-
-	public void setPriceBox(Integer priceBox) {
-		this.priceBox = priceBox;
-	}
-
-	public Integer getPriceBottle() {
-		return priceBottle;
-	}
-
-	public void setPriceBottle(Integer priceBottle) {
-		this.priceBottle = priceBottle;
 	}
 
 	public Integer getActive() {
@@ -346,10 +314,6 @@ public class ProductAction extends ActionSupport{
 		this.categoryId = categoryId;
 	}
 
-	public void setId(Integer id) {
-		this.id = id;
-	}
-
 	public void setTypeId(Integer typeId) {
 		this.typeId = typeId;
 	}
@@ -368,6 +332,50 @@ public class ProductAction extends ActionSupport{
 
 	public void setSrcDAO(SrcDAO srcDAO) {
 		this.srcDAO = srcDAO;
+	}
+
+	public SizeDAO getSizeDAO() {
+		return sizeDAO;
+	}
+
+	public void setSizeDAO(SizeDAO sizeDAO) {
+		this.sizeDAO = sizeDAO;
+	}
+
+	public ColorDAO getColorDAO() {
+		return colorDAO;
+	}
+
+	public void setColorDAO(ColorDAO colorDAO) {
+		this.colorDAO = colorDAO;
+	}
+
+	public Integer getSizeId() {
+		return sizeId;
+	}
+
+	public void setSizeId(Integer sizeId) {
+		this.sizeId = sizeId;
+	}
+
+	public Integer getColorId() {
+		return colorId;
+	}
+
+	public void setColorId(Integer colorId) {
+		this.colorId = colorId;
+	}
+
+	public Integer getPrice() {
+		return price;
+	}
+
+	public void setPrice(Integer price) {
+		this.price = price;
+	}
+
+	public static Logger getLog() {
+		return log;
 	}
 	
 }

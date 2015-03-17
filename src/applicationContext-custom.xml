@@ -78,6 +78,12 @@
 		<property name="srcDAO">
 			<ref bean="SrcDAO" />
 		</property>
+		<property name="sizeDAO">
+			<ref bean="SizeDAO" />
+		</property>
+		<property name="colorDAO">
+			<ref bean="ColorDAO" />
+		</property>
 	</bean>
 	
 	<bean id="CartAction" class="com.apairl.action.CartAction" scope="prototype">
@@ -111,20 +117,17 @@
 	</bean>
 	
 	<bean id="OrderAction" class="com.apairl.action.OrderAction" scope="prototype">
-		<property name="customerDAO">
-			<ref bean="CustomerDAO" />
-		</property>
-		<property name="productDAO">
-			<ref bean="ProductDAO" />
-		</property>
 		<property name="orderDAO">
 			<ref bean="OrderDAO" />
 		</property>
+		<property name="orderProductDAO">
+			<ref bean="OrderProductDAO" />
+		</property>
+		<property name="cartProductDAO">
+			<ref bean="CartProductDAO" />
+		</property>
 		<property name="orderShipDAO">
 			<ref bean="OrderShipDAO" />
-		</property>
-		<property name="shipTypeDAO">
-			<ref bean="ShipTypeDAO" />
 		</property>
 		<property name="stockDAO">
 			<ref bean="StockDAO" />
@@ -134,21 +137,6 @@
 		</property>
 		<property name="paymentMethodDAO">
 			<ref bean="PaymentMethodDAO" />
-		</property>
-	</bean>
-	
-	<bean id="ShipAction" class="com.apairl.action.ShipAction" scope="prototype">
-		<property name="orderShipDAO">
-			<ref bean="OrderShipDAO" />
-		</property>
-		<property name="exchangeDAO">
-			<ref bean="ExchangeDAO" />
-		</property>
-		<property name="orderDAO">
-			<ref bean="OrderDAO" />
-		</property>
-		<property name="stockDAO">
-			<ref bean="StockDAO" />
 		</property>
 	</bean>
 	

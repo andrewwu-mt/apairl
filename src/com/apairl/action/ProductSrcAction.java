@@ -42,14 +42,11 @@ public class ProductSrcAction extends ActionSupport{
 	
 	public String savePrimaryThumbnail(){
 		try{
-			Product product = productDAO.findById(productId);
-			Src src = srcDAO.findById(srcId);
-			product.setSrc(src.getValue());
-			productDAO.update(product);
+			productSrcDAO.updateAllPrimary(productId, 0);
+			productSrcDAO.updatePrimaryByProductAndSrc(productId, srcId, 1);
 		}catch(Exception e){
 			return "saveerror";
 		}
-		
 		
 		return SUCCESS;
 	}

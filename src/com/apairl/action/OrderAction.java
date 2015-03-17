@@ -15,6 +15,7 @@ import com.apairl.dao.OrderDAO;
 import com.apairl.dao.OrderProductDAO;
 import com.apairl.dao.OrderShipDAO;
 import com.apairl.dao.PaymentMethodDAO;
+import com.apairl.dao.StockDAO;
 import com.apairl.dbo.CartProduct;
 import com.apairl.dbo.Customer;
 import com.apairl.dbo.Kabupaten;
@@ -31,9 +32,9 @@ public class OrderAction extends ActionSupport{
 	private CartProductDAO cartProductDAO;
 	private OrderProductDAO orderProductDAO;
 	private OrderShipDAO orderShipDAO;
-
 	private PaymentMethodDAO paymentMethodDAO;
 	private KabupatenDAO kabupatenDAO;
+	private StockDAO stockDAO;
 	
 	private Integer paymentMethodId;
 	private String shipName;
@@ -114,6 +115,137 @@ public class OrderAction extends ActionSupport{
 		
 		return SUCCESS;
 	}
-	
+
+	public OrderDAO getOrderDAO() {
+		return orderDAO;
+	}
+
+	public void setOrderDAO(OrderDAO orderDAO) {
+		this.orderDAO = orderDAO;
+	}
+
+	public CartProductDAO getCartProductDAO() {
+		return cartProductDAO;
+	}
+
+	public void setCartProductDAO(CartProductDAO cartProductDAO) {
+		this.cartProductDAO = cartProductDAO;
+	}
+
+	public OrderProductDAO getOrderProductDAO() {
+		return orderProductDAO;
+	}
+
+	public void setOrderProductDAO(OrderProductDAO orderProductDAO) {
+		this.orderProductDAO = orderProductDAO;
+	}
+
+	public OrderShipDAO getOrderShipDAO() {
+		return orderShipDAO;
+	}
+
+	public void setOrderShipDAO(OrderShipDAO orderShipDAO) {
+		this.orderShipDAO = orderShipDAO;
+	}
+
+	public PaymentMethodDAO getPaymentMethodDAO() {
+		return paymentMethodDAO;
+	}
+
+	public void setPaymentMethodDAO(PaymentMethodDAO paymentMethodDAO) {
+		this.paymentMethodDAO = paymentMethodDAO;
+	}
+
+	public KabupatenDAO getKabupatenDAO() {
+		return kabupatenDAO;
+	}
+
+	public void setKabupatenDAO(KabupatenDAO kabupatenDAO) {
+		this.kabupatenDAO = kabupatenDAO;
+	}
+
+	public StockDAO getStockDAO() {
+		return stockDAO;
+	}
+
+	public void setStockDAO(StockDAO stockDAO) {
+		this.stockDAO = stockDAO;
+	}
+
+	public Integer getPaymentMethodId() {
+		return paymentMethodId;
+	}
+
+	public void setPaymentMethodId(Integer paymentMethodId) {
+		this.paymentMethodId = paymentMethodId;
+	}
+
+	public String getShipName() {
+		return shipName;
+	}
+
+	public void setShipName(String shipName) {
+		this.shipName = shipName;
+	}
+
+	public String getShipLast() {
+		return shipLast;
+	}
+
+	public void setShipLast(String shipLast) {
+		this.shipLast = shipLast;
+	}
+
+	public String getShipAddress() {
+		return shipAddress;
+	}
+
+	public void setShipAddress(String shipAddress) {
+		this.shipAddress = shipAddress;
+	}
+
+	public String getShipAddress2() {
+		return shipAddress2;
+	}
+
+	public void setShipAddress2(String shipAddress2) {
+		this.shipAddress2 = shipAddress2;
+	}
+
+	public Integer getShipPost() {
+		return shipPost;
+	}
+
+	public void setShipPost(Integer shipPost) {
+		this.shipPost = shipPost;
+	}
+
+	public Integer getShipKabupatenId() {
+		return shipKabupatenId;
+	}
+
+	public void setShipKabupatenId(Integer shipKabupatenId) {
+		this.shipKabupatenId = shipKabupatenId;
+	}
+
+	public String getShipPhone() {
+		return shipPhone;
+	}
+
+	public void setShipPhone(String shipPhone) {
+		this.shipPhone = shipPhone;
+	}
+
+	public Integer getIsSameAddr() {
+		return isSameAddr;
+	}
+
+	public void setIsSameAddr(Integer isSameAddr) {
+		this.isSameAddr = isSameAddr;
+	}
+
+	public static Logger getLog() {
+		return log;
+	}
 	
 }

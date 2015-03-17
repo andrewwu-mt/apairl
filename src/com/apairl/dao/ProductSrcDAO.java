@@ -37,6 +37,8 @@ public class ProductSrcDAO extends HibernateDaoSupport  {
         }
     }
     
+    
+    
 	public void delete(ProductSrc persistentInstance) {
         log.debug("deleting ProductSrc instance");
         try {
@@ -85,7 +87,43 @@ public class ProductSrcDAO extends HibernateDaoSupport  {
     	session.clear();
     	session.close();
     }
-    
+
+	public void updateAllPrimary(Integer productId, Integer isPrimary) {
+		log.debug("finding all ProductSrc instances");
+		try {
+			String queryString = "update ap_product_src set is_primary = "+isPrimary+" where product_id = "+productId+" ";
+			
+			Session session = this.getHibernateTemplate().getSessionFactory().openSession();
+			SQLQuery query = session.createSQLQuery(queryString);
+			query.executeUpdate();
+			session.flush();
+			session.clear();
+			session.close();
+			
+		} catch (RuntimeException re) {
+			log.error("find all failed", re);
+			throw re;
+		}
+	}
+
+	public void updatePrimaryByProductAndSrc(Integer productId, Integer srcId, Integer isPrimary) {
+		log.debug("finding all ProductSrc instances");
+		try {
+			String queryString = "update ap_product_src set is_primary = "+isPrimary+" where product_id = "+productId+" and src_id = "+srcId+" ";
+			
+			Session session = this.getHibernateTemplate().getSessionFactory().openSession();
+			SQLQuery query = session.createSQLQuery(queryString);
+			query.executeUpdate();
+			session.flush();
+			session.clear();
+			session.close();
+			
+		} catch (RuntimeException re) {
+			log.error("find all failed", re);
+			throw re;
+		}
+	}
+	
 	public List findAll() {
 		log.debug("finding all ProductSrc instances");
 		try {
