@@ -34,7 +34,27 @@
 			<ref bean="sessionFactory" />
 		</property>
 	</bean>
+	<bean id="CartDAO" class="com.apairl.dao.CartDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="CartProductDAO" class="com.apairl.dao.CartProductDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
 	<bean id="OrderDAO" class="com.apairl.dao.OrderDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="OrderProductDAO" class="com.apairl.dao.OrderProductDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="OrderShipDAO" class="com.apairl.dao.OrderShipDAO">
 		<property name="sessionFactory">
 			<ref bean="sessionFactory" />
 		</property>
@@ -79,22 +99,22 @@
 			<ref bean="sessionFactory" />
 		</property>
 	</bean>
-	<bean id="TopRatedDAO" class="com.apairl.dao.TopRatedDAO">
-		<property name="sessionFactory">
-			<ref bean="sessionFactory" />
-		</property>
-	</bean>
-	<bean id="BestSellerDAO" class="com.apairl.dao.BestSellerDAO">
-		<property name="sessionFactory">
-			<ref bean="sessionFactory" />
-		</property>
-	</bean>
 	<bean id="ProductSrcDAO" class="com.apairl.dao.ProductSrcDAO">
 		<property name="sessionFactory">
 			<ref bean="sessionFactory" />
 		</property>
 	</bean>
 	<bean id="SrcDAO" class="com.apairl.dao.SrcDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="SizeDAO" class="com.apairl.dao.SizeDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="ColorDAO" class="com.apairl.dao.ColorDAO">
 		<property name="sessionFactory">
 			<ref bean="sessionFactory" />
 		</property>

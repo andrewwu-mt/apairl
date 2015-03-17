@@ -11,18 +11,18 @@ import com.apairl.bean.AES;
 import com.apairl.bean.MailUtil;
 import com.apairl.dao.ExchangeDAO;
 import com.apairl.dao.OrderDAO;
-import com.apairl.dao.ShipDAO;
+import com.apairl.dao.OrderShipDAO;
 import com.apairl.dao.StockDAO;
 import com.apairl.dbo.Exchange;
 import com.apairl.dbo.Order;
 import com.apairl.dbo.Product;
-import com.apairl.dbo.Ship;
+import com.apairl.dbo.OrderShip;
 import com.apairl.dbo.Stock;
 import com.opensymphony.xwork2.ActionSupport;
 
 public class ShipAction extends ActionSupport{
 
-	private ShipDAO shipDAO;
+	private OrderShipDAO orderShipDAO;
 	private ExchangeDAO exchangeDAO;
 	private OrderDAO orderDAO;
 	private StockDAO stockDAO;
@@ -30,7 +30,7 @@ public class ShipAction extends ActionSupport{
 	private Long shipId;
 	private String email;
 	
-	private Ship threadShip;
+	private OrderShip threadShip;
 	private String threadHost;
 	
 	//Paypal callback variables
@@ -42,14 +42,14 @@ public class ShipAction extends ActionSupport{
 	
 	public String getRecord(){
 		HttpServletRequest request = ServletActionContext.getRequest();
-		Ship ship = shipDAO.findById(shipId);
+		OrderShip ship = orderShipDAO.findById(shipId);
 		request.setAttribute("ship", ship);
 		
 		return SUCCESS;
 	}
 	
 	public String cancel(){
-		Ship ship = shipDAO.findById(shipId);
+		OrderShip ship = orderShipDAO.findById(shipId);
 		List<Order> orderList = orderDAO.findByProperty("ship.shipId", shipId);
 		for(int i=0 ; i<orderList.size() ; i++){
 			Order order = orderList.get(i);
@@ -67,7 +67,7 @@ public class ShipAction extends ActionSupport{
 			orderDAO.delete(order);
 		}
 		
-		shipDAO.delete(ship);
+		orderShipDAO.delete(ship);
 		
 		return SUCCESS;
 	}
@@ -82,14 +82,14 @@ public class ShipAction extends ActionSupport{
 		Long id = Long.valueOf(aes.decrypt(cert));
 		
 		if(id.longValue() == itemId.longValue()){
-			Ship ship = shipDAO.findById(id);
+			OrderShip ship = orderShipDAO.findById(id);
 			if(payment_status != null){
 				if(payment_status.equals("Completed")){
 					if(ship.getStatus() != 1){
 						ship.setStatus((short) 1);
 						ship.setPaymentStatus(payment_status);
 						ship.setTxnId(txn_id);
-						shipDAO.update(ship);
+						orderShipDAO.update(ship);
 						
 						request.setAttribute("shipId", shipId);
 						
@@ -107,14 +107,14 @@ public class ShipAction extends ActionSupport{
 					}
 				} else {
 					ship.setPaymentStatus(payment_status);
-					shipDAO.update(ship);
+					orderShipDAO.update(ship);
 				}
 			}
 		}
 		return SUCCESS;
 	}
 	
-	public void sendMail(Ship ship, String host){
+	public void sendMail(OrderShip ship, String host){
 		DecimalFormat df = new DecimalFormat("#,###");
 		Exchange exc = exchangeDAO.findById(1);
 		
@@ -150,12 +150,12 @@ public class ShipAction extends ActionSupport{
 		MailUtil.sendEmail(ship.getCustomer().getEmail(), ship.getCustomer().getName(), website, title, content, link, ship.getShipId(), totalPrice);
 	}
 
-	public ShipDAO getShipDAO() {
-		return shipDAO;
+	public OrderShipDAO getOrderShipDAO() {
+		return orderShipDAO;
 	}
 
-	public void setShipDAO(ShipDAO shipDAO) {
-		this.shipDAO = shipDAO;
+	public void setOrderShipDAO(OrderShipDAO orderShipDAO) {
+		this.orderShipDAO = orderShipDAO;
 	}
 
 	public Long getShipId() {
@@ -182,11 +182,11 @@ public class ShipAction extends ActionSupport{
 		this.exchangeDAO = exchangeDAO;
 	}
 
-	public Ship getThreadShip() {
+	public OrderShip getThreadShip() {
 		return threadShip;
 	}
 
-	public void setThreadShip(Ship threadShip) {
+	public void setThreadShip(OrderShip threadShip) {
 		this.threadShip = threadShip;
 	}
 

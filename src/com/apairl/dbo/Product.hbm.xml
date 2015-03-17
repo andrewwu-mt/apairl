@@ -10,23 +10,14 @@
             <column name="product_id" />
             <generator class="increment" />
         </id>
-        <many-to-one name="type" class="com.apairl.dbo.Type" fetch="select" lazy="false">
-            <column name="type_id" not-null="true" />
-        </many-to-one>
         <property name="name" type="java.lang.String">
             <column name="name" length="50" not-null="true" />
-        </property>
-        <property name="shortName" type="java.lang.String">
-            <column name="short_name" length="50" />
         </property>
         <property name="description" type="java.lang.String">
             <column name="description" length="65535" />
         </property>
-        <property name="priceBox" type="java.lang.Integer">
-            <column name="price_box" not-null="true" />
-        </property>
-        <property name="priceBottle" type="java.lang.Integer">
-            <column name="price_bottle" not-null="true" />
+        <property name="price" type="java.lang.Integer">
+            <column name="price" not-null="true" />
         </property>
         <property name="insertDate" type="java.sql.Timestamp">
             <column name="insert_date" length="19" not-null="true" />
@@ -37,26 +28,5 @@
         <property name="active" type="java.lang.Integer">
             <column name="active" not-null="true" />
         </property>
-        <property name="src" type="java.lang.String">
-            <column name="src" length="100" />
-        </property>
-        <property name="aboutProduct" type="java.lang.String">
-        	<column name="about_product" />
-        </property>
-        <many-to-one name="category" class="com.apairl.dbo.Category" fetch="select" lazy="false">
-            <column name="category_id" not-null="true" />
-        </many-to-one>
-        <set name="stocks" inverse="true" lazy="false">
-            <key>
-                <column name="product_id" not-null="true" />
-            </key>
-            <one-to-many class="com.apairl.dbo.Stock" />
-        </set>
-        <set name="orders" inverse="true">
-            <key>
-                <column name="product_id" not-null="true" />
-            </key>
-            <one-to-many class="com.apairl.dbo.Order" />
-        </set>
     </class>
 </hibernate-mapping>

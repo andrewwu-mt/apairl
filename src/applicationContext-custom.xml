@@ -44,18 +44,6 @@
 		</property>
 	</bean>
 	
-	<bean id="BestSellerAction" class="com.apairl.action.BestSellerAction" scope="prototype">
-		<property name="bestSellerDAO">
-			<ref bean="BestSellerDAO" />
-		</property>
-	</bean>
-	
-	<bean id="TopRatedAction" class="com.apairl.action.TopRatedAction" scope="prototype">
-		<property name="topRatedDAO">
-			<ref bean="TopRatedDAO" />
-		</property>
-	</bean>
-	
 	<bean id="CategoryAction" class="com.apairl.action.CategoryAction" scope="prototype">
 		<property name="categoryDAO">
 			<ref bean="CategoryDAO" />
@@ -120,8 +108,8 @@
 		<property name="orderDAO">
 			<ref bean="OrderDAO" />
 		</property>
-		<property name="shipDAO">
-			<ref bean="ShipDAO" />
+		<property name="orderShipDAO">
+			<ref bean="OrderShipDAO" />
 		</property>
 		<property name="shipTypeDAO">
 			<ref bean="ShipTypeDAO" />
@@ -138,8 +126,8 @@
 	</bean>
 	
 	<bean id="ShipAction" class="com.apairl.action.ShipAction" scope="prototype">
-		<property name="shipDAO">
-			<ref bean="ShipDAO" />
+		<property name="orderShipDAO">
+			<ref bean="OrderShipDAO" />
 		</property>
 		<property name="exchangeDAO">
 			<ref bean="ExchangeDAO" />
@@ -180,8 +168,8 @@
 		<property name="adminDAO">
 			<ref bean="AdminDAO" />
 		</property>
-		<property name="shipDAO">
-			<ref bean="ShipDAO" />
+		<property name="orderShipDAO">
+			<ref bean="OrderShipDAO" />
 		</property>
 		<property name="orderDAO">
 			<ref bean="OrderDAO" />

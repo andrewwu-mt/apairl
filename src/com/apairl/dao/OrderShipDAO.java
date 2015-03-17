@@ -3,7 +3,6 @@ package com.apairl.dao;
 import java.util.List;
 
 import org.hibernate.LockMode;
-import org.hibernate.Query;
 import org.hibernate.SQLQuery;
 import org.hibernate.Session;
 import org.slf4j.Logger;
@@ -11,21 +10,21 @@ import org.slf4j.LoggerFactory;
 import org.springframework.context.ApplicationContext;
 import org.springframework.orm.hibernate3.support.HibernateDaoSupport;
 
-import com.apairl.dbo.Ship;
+import com.apairl.dbo.OrderShip;
 
 /**
- * A data access object (DAO) providing persistence and search support for Ship
+ * A data access object (DAO) providing persistence and search support for OrderShip
  * entities. Transaction control of the save(), update() and delete() operations
  * can directly support Spring container-managed transactions or they can be
  * augmented to handle user-managed Spring transactions. Each of these methods
  * provides additional information for how to configure it for the desired type
  * of transaction control.
  * 
- * @see com.apairl.dbo.Ship
+ * @see com.apairl.dbo.OrderShip
  * @author MyEclipse Persistence Tools
  */
-public class ShipDAO extends HibernateDaoSupport {
-	private static final Logger log = LoggerFactory.getLogger(ShipDAO.class);
+public class OrderShipDAO extends HibernateDaoSupport {
+	private static final Logger log = LoggerFactory.getLogger(OrderShipDAO.class);
 
 	// property constants
 
@@ -33,8 +32,8 @@ public class ShipDAO extends HibernateDaoSupport {
 		// do nothing
 	}
 
-	public void save(Ship transientInstance) {
-		log.debug("saving Ship instance");
+	public void save(OrderShip transientInstance) {
+		log.debug("saving OrderShip instance");
 		try {
 			getHibernateTemplate().save(transientInstance);
 			log.debug("save successful");
@@ -44,8 +43,8 @@ public class ShipDAO extends HibernateDaoSupport {
 		}
 	}
 	
-	public void update(Ship transientInstance) {
-		log.debug("saving Ship instance");
+	public void update(OrderShip transientInstance) {
+		log.debug("saving OrderShip instance");
 		try {
 			getHibernateTemplate().update(transientInstance);
 			log.debug("save successful");
@@ -55,8 +54,8 @@ public class ShipDAO extends HibernateDaoSupport {
 		}
 	}
 
-	public void delete(Ship persistentInstance) {
-		log.debug("deleting Ship instance");
+	public void delete(OrderShip persistentInstance) {
+		log.debug("deleting OrderShip instance");
 		try {
 			getHibernateTemplate().delete(persistentInstance);
 			log.debug("delete successful");
@@ -66,11 +65,11 @@ public class ShipDAO extends HibernateDaoSupport {
 		}
 	}
 
-	public Ship findById(java.lang.Long id) {
-		log.debug("getting Ship instance with id: " + id);
+	public OrderShip findById(java.lang.Long id) {
+		log.debug("getting OrderShip instance with id: " + id);
 		try {
-			Ship instance = (Ship) getHibernateTemplate().get(
-					"com.apairl.dbo.Ship", id);
+			OrderShip instance = (OrderShip) getHibernateTemplate().get(
+					"com.apairl.dbo.OrderShip", id);
 			return instance;
 		} catch (RuntimeException re) {
 			log.error("get failed", re);
@@ -78,10 +77,10 @@ public class ShipDAO extends HibernateDaoSupport {
 		}
 	}
 	
-	public Ship findByIdJoin(java.lang.Long id) {
+	public OrderShip findByIdJoin(java.lang.Long id) {
 		try {
-			String queryString = "from Ship as model left join fetch model.customer as c left join fetch c.kabupaten as k left join fetch k.provinsi as p left join fetch model.shipType as s where model.shipId = ?";
-			List<Ship> list = getHibernateTemplate().find(queryString, id);
+			String queryString = "from OrderShip as model left join fetch model.customer as c left join fetch c.kabupaten as k left join fetch k.provinsi as p left join fetch model.OrderShipType as s where model.OrderShipId = ?";
+			List<OrderShip> list = getHibernateTemplate().find(queryString, id);
 			if(list.size() > 0) {
 				return list.get(0);
 			} else {
@@ -93,8 +92,8 @@ public class ShipDAO extends HibernateDaoSupport {
 		}
 	}
 
-	public List findByExample(Ship instance) {
-		log.debug("finding Ship instance by example");
+	public List findByExample(OrderShip instance) {
+		log.debug("finding OrderShip instance by example");
 		try {
 			List results = getHibernateTemplate().findByExample(instance);
 			log.debug("find by example successful, result size: "
@@ -107,10 +106,10 @@ public class ShipDAO extends HibernateDaoSupport {
 	}
 
 	public List findByProperty(String propertyName, Object value) {
-		log.debug("finding Ship instance with property: " + propertyName
+		log.debug("finding OrderShip instance with property: " + propertyName
 				+ ", value: " + value);
 		try {
-			String queryString = "from Ship as model left join fetch model.customer as c left join fetch c.kabupaten as k left join fetch k.provinsi as p left join fetch model.shipType as s where model."
+			String queryString = "from OrderShip as model left join fetch model.customer as c left join fetch c.kabupaten as k left join fetch k.provinsi as p left join fetch model.OrderShipType as s where model."
 					+ propertyName + "= ?";
 			return getHibernateTemplate().find(queryString, value);
 		} catch (RuntimeException re) {
@@ -120,14 +119,14 @@ public class ShipDAO extends HibernateDaoSupport {
 	}
 
 	public List findAll() {
-		log.debug("finding all Ship instances");
+		log.debug("finding all OrderShip instances");
 		try {
 			String queryString = 
-					"from Ship as model " +
+					"from OrderShip as model " +
 					"left join fetch model.customer as c " +
 					"left join fetch c.kabupaten as k " +
 					"left join fetch k.provinsi as p " +
-					"left join fetch model.shipType as s " +
+					"left join fetch model.OrderShipType as s " +
 					"order by model.insertDate asc";
 			return getHibernateTemplate().find(queryString);
 		} catch (RuntimeException re) {
@@ -137,7 +136,7 @@ public class ShipDAO extends HibernateDaoSupport {
 	}
 	
 	public List findByMonth(Integer month, Integer year) {
-		log.debug("finding all Ship instances");
+		log.debug("finding all OrderShip instances");
 		try {
 			String str = "";
 
@@ -153,7 +152,7 @@ public class ShipDAO extends HibernateDaoSupport {
 
 			
 			String queryString = 
-					"from Ship as model " +
+					"from OrderShip as model " +
 					str +
 					"order by model.insertDate asc";
 			return getHibernateTemplate().find(queryString);
@@ -164,7 +163,7 @@ public class ShipDAO extends HibernateDaoSupport {
 	}
 
 	public Long findPrice(Integer month, Integer year, String param) {
-		log.debug("finding all Ship instances");
+		log.debug("finding all OrderShip instances");
 		try {
 			String str = "";
 
@@ -180,7 +179,7 @@ public class ShipDAO extends HibernateDaoSupport {
 			
 			String queryString = 
 					"select sum("+param+") " +
-					"from Ship as model " +
+					"from OrderShip as model " +
 					str;
 			List<Long> list = getHibernateTemplate().find(queryString);
 			
@@ -196,7 +195,7 @@ public class ShipDAO extends HibernateDaoSupport {
 	}
 	
 	public Long findAdminFee(Integer month, Integer year) {
-		log.debug("finding all Ship instances");
+		log.debug("finding all OrderShip instances");
 		try {
 			String str = "";
 
@@ -212,7 +211,7 @@ public class ShipDAO extends HibernateDaoSupport {
 			
 			String queryString = 
 					"select count(*) * 10000 " +
-					"from ap_ship " +
+					"from ap_OrderShip " +
 					"where payment_method_id = 3 " +
 					str;
 
@@ -236,10 +235,10 @@ public class ShipDAO extends HibernateDaoSupport {
 		}
 	}
 	
-	public Ship merge(Ship detachedInstance) {
-		log.debug("merging Ship instance");
+	public OrderShip merge(OrderShip detachedInstance) {
+		log.debug("merging OrderShip instance");
 		try {
-			Ship result = (Ship) getHibernateTemplate().merge(detachedInstance);
+			OrderShip result = (OrderShip) getHibernateTemplate().merge(detachedInstance);
 			log.debug("merge successful");
 			return result;
 		} catch (RuntimeException re) {
@@ -248,8 +247,8 @@ public class ShipDAO extends HibernateDaoSupport {
 		}
 	}
 
-	public void attachDirty(Ship instance) {
-		log.debug("attaching dirty Ship instance");
+	public void attachDirty(OrderShip instance) {
+		log.debug("attaching dirty OrderShip instance");
 		try {
 			getHibernateTemplate().saveOrUpdate(instance);
 			log.debug("attach successful");
@@ -259,8 +258,8 @@ public class ShipDAO extends HibernateDaoSupport {
 		}
 	}
 
-	public void attachClean(Ship instance) {
-		log.debug("attaching clean Ship instance");
+	public void attachClean(OrderShip instance) {
+		log.debug("attaching clean OrderShip instance");
 		try {
 			getHibernateTemplate().lock(instance, LockMode.NONE);
 			log.debug("attach successful");
@@ -270,7 +269,7 @@ public class ShipDAO extends HibernateDaoSupport {
 		}
 	}
 
-	public static ShipDAO getFromApplicationContext(ApplicationContext ctx) {
-		return (ShipDAO) ctx.getBean("ShipDAO");
+	public static OrderShipDAO getFromApplicationContext(ApplicationContext ctx) {
+		return (OrderShipDAO) ctx.getBean("OrderShipDAO");
 	}
 }

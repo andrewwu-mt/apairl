@@ -4,32 +4,32 @@ package com.apairl.dbo;
  * Order entity. @author MyEclipse Persistence Tools
  */
 
-public class Order implements java.io.Serializable {
+public class Cart implements java.io.Serializable {
 
 	// Fields
 
-	private Integer orderId;
+	private Integer cartId;
 	private Customer customer;
 
 	// Constructors
 
 	/** default constructor */
-	public Order() {
+	public Cart() {
 	}
 
 	/** full constructor */
-	public Order(Customer customer) {
+	public Cart(Customer customer) {
 		this.customer = customer;
 	}
 
 	// Property accessors
 
 	public Integer getOrderId() {
-		return this.orderId;
+		return this.cartId;
 	}
 
-	public void setOrderId(Integer orderId) {
-		this.orderId = orderId;
+	public void setCartId(Integer cartId) {
+		this.cartId = cartId;
 	}
 
 	public Customer getCustomer() {

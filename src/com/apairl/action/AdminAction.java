@@ -14,17 +14,17 @@ import com.apairl.dao.AdminDAO;
 import com.apairl.dao.CustomerDAO;
 import com.apairl.dao.KabupatenDAO;
 import com.apairl.dao.OrderDAO;
+import com.apairl.dao.OrderShipDAO;
 import com.apairl.dao.PaymentMethodDAO;
 import com.apairl.dao.ProductDAO;
-import com.apairl.dao.ShipDAO;
 import com.apairl.dao.StockDAO;
 import com.apairl.dbo.Admin;
 import com.apairl.dbo.Customer;
 import com.apairl.dbo.Kabupaten;
 import com.apairl.dbo.Order;
+import com.apairl.dbo.OrderShip;
 import com.apairl.dbo.PaymentMethod;
 import com.apairl.dbo.Product;
-import com.apairl.dbo.Ship;
 import com.apairl.dbo.Stock;
 import com.opensymphony.xwork2.ActionSupport;
 
@@ -34,7 +34,7 @@ public class AdminAction extends ActionSupport {
 	private String password;
 	private AdminDAO adminDAO;
 	private StockDAO stockDAO;
-	private ShipDAO shipDAO;
+	private OrderShipDAO orderShipDAO;
 	private OrderDAO orderDAO;
 	private ProductDAO productDAO;
 	private int id;
@@ -196,7 +196,7 @@ public class AdminAction extends ActionSupport {
 			for(int i=0 ; i<list.size() ; i++){
 				if(numbers.get(i) != null){
 					Stock stock = list.get(i);
-					stock.setNumber(numbers.get(i));
+					stock.setQty(numbers.get(i));
 					stockDAO.update(stock);
 				}
 			}
@@ -223,14 +223,14 @@ public class AdminAction extends ActionSupport {
 	//Ship Records
 	public String getShipRecord(){
 		HttpServletRequest request = ServletActionContext.getRequest();
-		Ship ship = shipDAO.findById(shipId);
+		OrderShip ship = orderShipDAO.findById(shipId);
 		request.setAttribute("ship", ship);
 		
 		return SUCCESS;
 	}
 	
 	public String updateShipRecord(){
-		Ship ship = shipDAO.findById(shipId);
+		OrderShip ship = orderShipDAO.findById(shipId);
 		Kabupaten shipKabupaten = kabupatenDAO.findById(kabupatenId);
 		PaymentMethod paymentMethod = paymentMethodDAO.findById(paymentMethodId);
 		
@@ -238,12 +238,9 @@ public class AdminAction extends ActionSupport {
 		ship.setShipAddress2(shipAddress2);
 		ship.setShipKabupaten(shipKabupaten);
 		ship.setShipPhone(shipPhone);
-		ship.setSubtotal(subtotal);
-		ship.setFee(fee);
-		ship.setTotal(total);
 		ship.setStatus(status);
 		ship.setPaymentMethod(paymentMethod);
-		shipDAO.update(ship);
+		orderShipDAO.update(ship);
 		
 		return SUCCESS;
 	}
@@ -255,11 +252,11 @@ public class AdminAction extends ActionSupport {
 			year = cal.get(Calendar.YEAR);
 		}
 		HttpServletRequest request = ServletActionContext.getRequest();
-		List<Ship> shipList = shipDAO.findByMonth(month, year);
-		Long subtotal = shipDAO.findPrice(month, year, "subtotal");
-		Long fee = shipDAO.findPrice(month, year, "fee");
-		Long adminFee = shipDAO.findAdminFee(month, year);
-		Long total = shipDAO.findPrice(month, year, "total");
+		List<OrderShip> shipList = orderShipDAO.findByMonth(month, year);
+		Long subtotal = orderShipDAO.findPrice(month, year, "subtotal");
+		Long fee = orderShipDAO.findPrice(month, year, "fee");
+		Long adminFee = orderShipDAO.findAdminFee(month, year);
+		Long total = orderShipDAO.findPrice(month, year, "total");
 		
 		if(subtotal == null) subtotal = (long) 0;
 		if(fee == null) fee = (long) 0;
@@ -281,7 +278,7 @@ public class AdminAction extends ActionSupport {
 		HttpServletRequest request = ServletActionContext.getRequest();
 		request.setAttribute("path", path);
 		
-		Ship ship = shipDAO.findById(shipId);
+		OrderShip ship = orderShipDAO.findById(shipId);
 		List<Order> orderList = orderDAO.findByProperty("ship", ship);
 		for(int i=0 ; i<orderList.size() ; i++){
 			Order order = orderList.get(i);
@@ -299,7 +296,7 @@ public class AdminAction extends ActionSupport {
 			orderDAO.delete(order);
 		}
 		
-		shipDAO.delete(ship);
+		orderShipDAO.delete(ship);
 		
 		return "successdelete";
 	}
@@ -308,14 +305,14 @@ public class AdminAction extends ActionSupport {
 		HttpServletRequest request = ServletActionContext.getRequest();
 		request.setAttribute("path", path);
 		
-		Ship ship = shipDAO.findByIdJoin(shipId);
+		OrderShip ship = orderShipDAO.findByIdJoin(shipId);
 		if(status == 0){
 			ship.setStatus((short) 1);
 		} else {
 			ship.setStatus((short) 0);
 		}
 		
-		shipDAO.update(ship);
+		orderShipDAO.update(ship);
 		
 		return SUCCESS;
 		
@@ -377,12 +374,12 @@ public class AdminAction extends ActionSupport {
 		this.number = number;
 	}
 
-	public ShipDAO getShipDAO() {
-		return shipDAO;
+	public OrderShipDAO getOrderShipDAO() {
+		return orderShipDAO;
 	}
 
-	public void setShipDAO(ShipDAO shipDAO) {
-		this.shipDAO = shipDAO;
+	public void setOrderShipDAO(OrderShipDAO orderShipDAO) {
+		this.orderShipDAO = orderShipDAO;
 	}
 
 	public OrderDAO getOrderDAO() {

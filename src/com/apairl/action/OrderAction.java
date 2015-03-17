@@ -18,7 +18,7 @@ import com.apairl.dao.KabupatenDAO;
 import com.apairl.dao.OrderDAO;
 import com.apairl.dao.PaymentMethodDAO;
 import com.apairl.dao.ProductDAO;
-import com.apairl.dao.ShipDAO;
+import com.apairl.dao.OrderShipDAO;
 import com.apairl.dao.ShipTypeDAO;
 import com.apairl.dao.StockDAO;
 import com.apairl.dbo.Customer;
@@ -26,7 +26,7 @@ import com.apairl.dbo.Kabupaten;
 import com.apairl.dbo.Order;
 import com.apairl.dbo.PaymentMethod;
 import com.apairl.dbo.Product;
-import com.apairl.dbo.Ship;
+import com.apairl.dbo.OrderShip;
 import com.apairl.dbo.ShipType;
 import com.apairl.dbo.Stock;
 import com.opensymphony.xwork2.ActionSupport;
@@ -48,7 +48,7 @@ public class OrderAction extends ActionSupport{
 	private Integer paymentMethodId;
 	private Integer amount;
 	
-	private Ship threadShip;
+	private OrderShip threadShip;
 	private String threadHost;
 	
 	private String shipName;
@@ -66,7 +66,7 @@ public class OrderAction extends ActionSupport{
 	private CustomerDAO customerDAO;
 	private ProductDAO productDAO;
 	private OrderDAO orderDAO;
-	private ShipDAO shipDAO;
+	private OrderShipDAO orderShipDAO;
 	private PaymentMethodDAO paymentMethodDAO;
 	private StockDAO stockDAO;
 	private KabupatenDAO kabupatenDAO;
@@ -99,7 +99,7 @@ public class OrderAction extends ActionSupport{
 			PaymentMethod pm = paymentMethodDAO.findById(paymentMethodId);
 			
 			//Create Ship
-			Ship ship = new Ship();
+			OrderShip ship = new OrderShip();
 			Long shipId = System.currentTimeMillis();
 			ship.setShipId(shipId);
 			ship.setCustomer(customer);
@@ -133,7 +133,7 @@ public class OrderAction extends ActionSupport{
 			
 			
 			ship.setPaymentMethod(pm);
-			shipDAO.save(ship);
+			orderShipDAO.save(ship);
 			
 			for(int key : cartList.keySet()){
 				Product product = productDAO.findById(key);
@@ -173,7 +173,7 @@ public class OrderAction extends ActionSupport{
 			}
 
 			String host = request.getScheme() + "://" + request.getHeader("host") + request.getContextPath();
-			Ship shipResult = shipDAO.findByIdJoin(shipId);
+			OrderShip shipResult = orderShipDAO.findByIdJoin(shipId);
 			
 			request.setAttribute("host", host);
 			request.setAttribute("ship", shipResult);
@@ -216,7 +216,7 @@ public class OrderAction extends ActionSupport{
 		return SUCCESS;
 	}
 	
-	public void sendMail(Ship ship, String host){
+	public void sendMail(OrderShip ship, String host){
 		DecimalFormat df = new DecimalFormat("#,###");
 		
 		String totalPrice = df.format(ship.getSubtotal());
@@ -309,12 +309,12 @@ public class OrderAction extends ActionSupport{
 		this.orderDAO = orderDAO;
 	}
 
-	public ShipDAO getShipDAO() {
-		return shipDAO;
+	public OrderShipDAO getOrderShipDAO() {
+		return orderShipDAO;
 	}
 
-	public void setShipDAO(ShipDAO shipDAO) {
-		this.shipDAO = shipDAO;
+	public void setOrderShipDAO(OrderShipDAO orderShipDAO) {
+		this.orderShipDAO = orderShipDAO;
 	}
 
 	public StockDAO getStockDAO() {
@@ -517,11 +517,11 @@ public class OrderAction extends ActionSupport{
 		this.checkbox = checkbox;
 	}
 
-	public Ship getThreadShip() {
+	public OrderShip getThreadShip() {
 		return threadShip;
 	}
 
-	public void setThreadShip(Ship threadShip) {
+	public void setThreadShip(OrderShip threadShip) {
 		this.threadShip = threadShip;
 	}
 

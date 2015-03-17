@@ -10,7 +10,9 @@ public class Stock implements java.io.Serializable {
 
 	private Integer stockId;
 	private Product product;
-	private Integer number;
+	private Size size;
+	private Color color;
+	private Integer qty;
 
 	// Constructors
 
@@ -19,9 +21,11 @@ public class Stock implements java.io.Serializable {
 	}
 
 	/** full constructor */
-	public Stock(Product product, Integer number) {
+	public Stock(Product product, Integer qty, Size size, Color color) {
 		this.product = product;
-		this.number = number;
+		this.qty = qty;
+		this.size = size;
+		this.color = color;
 	}
 
 	// Property accessors
@@ -42,12 +46,28 @@ public class Stock implements java.io.Serializable {
 		this.product = product;
 	}
 
-	public Integer getNumber() {
-		return this.number;
+	public Integer getQty() {
+		return qty;
 	}
 
-	public void setNumber(Integer number) {
-		this.number = number;
+	public void setQty(Integer qty) {
+		this.qty = qty;
+	}
+
+	public Size getSize() {
+		return size;
+	}
+
+	public void setSize(Size size) {
+		this.size = size;
+	}
+
+	public Color getColor() {
+		return color;
+	}
+
+	public void setColor(Color color) {
+		this.color = color;
 	}
 
 }

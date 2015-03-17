@@ -10,11 +10,17 @@
             <column name="stock_id" />
             <generator class="increment" />
         </id>
-        <many-to-one name="product" class="com.apairl.dbo.Product" fetch="select">
+        <many-to-one name="product" class="com.apairl.dbo.Product" lazy="false" fetch="select">
             <column name="product_id" not-null="true" />
         </many-to-one>
-        <property name="number" type="java.lang.Integer">
-            <column name="number" not-null="true" />
+        <many-to-one name="size" class="com.apairl.dbo.Size" lazy="false" fetch="select">
+            <column name="size_id" not-null="true" />
+        </many-to-one>
+        <many-to-one name="color" class="com.apairl.dbo.Color" lazy="false" fetch="select">
+            <column name="color_id" not-null="true" />
+        </many-to-one>
+        <property name="qty" type="java.lang.Integer">
+            <column name="qty" not-null="true" />
         </property>
     </class>
 </hibernate-mapping>

@@ -8,32 +8,32 @@ import org.slf4j.LoggerFactory;
 import org.springframework.context.ApplicationContext;
 import org.springframework.orm.hibernate3.support.HibernateDaoSupport;
 
-import com.apairl.dbo.TopRated;
-import com.apairl.dbo.TopRatedId;
+import com.apairl.dbo.Cart;
 
 /**
- * A data access object (DAO) providing persistence and search support for
- * TopRated entities. Transaction control of the save(), update() and delete()
- * operations can directly support Spring container-managed transactions or they
- * can be augmented to handle user-managed Spring transactions. Each of these
- * methods provides additional information for how to configure it for the
- * desired type of transaction control.
+ * A data access object (DAO) providing persistence and search support for Cart
+ * entities. Transaction control of the save(), update() and delete() operations
+ * can directly support Spring container-managed transactions or they can be
+ * augmented to handle user-managed Spring transactions. Each of these methods
+ * provides additional information for how to configure it for the desired type
+ * of transaction control.
  * 
- * @see dbo.TopRated
+ * @see com.apairl.dbo.Cart
  * @author MyEclipse Persistence Tools
  */
-public class TopRatedDAO extends HibernateDaoSupport {
-	private static final Logger log = LoggerFactory
-			.getLogger(TopRatedDAO.class);
+public class CartDAO extends HibernateDaoSupport {
+	private static final Logger log = LoggerFactory.getLogger(CartDAO.class);
 	// property constants
-	public static final String RANK = "rank";
+	public static final String AMOUNT = "amount";
+	public static final String TYPE = "type";
+	public static final String PRICE = "price";
 
 	protected void initDao() {
 		// do nothing
 	}
 
-	public void save(TopRated transientInstance) {
-		log.debug("saving TopRated instance");
+	public void save(Cart transientInstance) {
+		log.debug("saving Cart instance");
 		try {
 			getHibernateTemplate().save(transientInstance);
 			log.debug("save successful");
@@ -43,8 +43,8 @@ public class TopRatedDAO extends HibernateDaoSupport {
 		}
 	}
 
-	public void delete(TopRated persistentInstance) {
-		log.debug("deleting TopRated instance");
+	public void delete(Cart persistentInstance) {
+		log.debug("deleting Cart instance");
 		try {
 			getHibernateTemplate().delete(persistentInstance);
 			log.debug("delete successful");
@@ -54,11 +54,11 @@ public class TopRatedDAO extends HibernateDaoSupport {
 		}
 	}
 
-	public TopRated findById(TopRatedId id) {
-		log.debug("getting TopRated instance with id: " + id);
+	public Cart findById(java.lang.Integer id) {
+		log.debug("getting Cart instance with id: " + id);
 		try {
-			TopRated instance = (TopRated) getHibernateTemplate().get(
-					"com.apairl.dbo.TopRated", id);
+			Cart instance = (Cart) getHibernateTemplate().get(
+					"com.apairl.dbo.Cart", id);
 			return instance;
 		} catch (RuntimeException re) {
 			log.error("get failed", re);
@@ -66,8 +66,8 @@ public class TopRatedDAO extends HibernateDaoSupport {
 		}
 	}
 
-	public List findByExample(TopRated instance) {
-		log.debug("finding TopRated instance by example");
+	public List findByExample(Cart instance) {
+		log.debug("finding Cart instance by example");
 		try {
 			List results = getHibernateTemplate().findByExample(instance);
 			log.debug("find by example successful, result size: "
@@ -80,10 +80,10 @@ public class TopRatedDAO extends HibernateDaoSupport {
 	}
 
 	public List findByProperty(String propertyName, Object value) {
-		log.debug("finding TopRated instance with property: " + propertyName
+		log.debug("finding Cart instance with property: " + propertyName
 				+ ", value: " + value);
 		try {
-			String queryString = "from TopRated as model where model."
+			String queryString = "from Cart as model left join fetch model.customer as c left join fetch model.product as p where model."
 					+ propertyName + "= ?";
 			return getHibernateTemplate().find(queryString, value);
 		} catch (RuntimeException re) {
@@ -92,14 +92,22 @@ public class TopRatedDAO extends HibernateDaoSupport {
 		}
 	}
 
-	public List findByRank(Object rank) {
-		return findByProperty(RANK, rank);
+	public List findByAmount(Object amount) {
+		return findByProperty(AMOUNT, amount);
+	}
+
+	public List findByType(Object type) {
+		return findByProperty(TYPE, type);
+	}
+
+	public List findByPrice(Object price) {
+		return findByProperty(PRICE, price);
 	}
 
 	public List findAll() {
-		log.debug("finding all TopRated instances");
+		log.debug("finding all Cart instances");
 		try {
-			String queryString = "from TopRated";
+			String queryString = "from Cart";
 			return getHibernateTemplate().find(queryString);
 		} catch (RuntimeException re) {
 			log.error("find all failed", re);
@@ -107,10 +115,10 @@ public class TopRatedDAO extends HibernateDaoSupport {
 		}
 	}
 
-	public TopRated merge(TopRated detachedInstance) {
-		log.debug("merging TopRated instance");
+	public Cart merge(Cart detachedInstance) {
+		log.debug("merging Cart instance");
 		try {
-			TopRated result = (TopRated) getHibernateTemplate().merge(
+			Cart result = (Cart) getHibernateTemplate().merge(
 					detachedInstance);
 			log.debug("merge successful");
 			return result;
@@ -120,8 +128,8 @@ public class TopRatedDAO extends HibernateDaoSupport {
 		}
 	}
 
-	public void attachDirty(TopRated instance) {
-		log.debug("attaching dirty TopRated instance");
+	public void attachDirty(Cart instance) {
+		log.debug("attaching dirty Cart instance");
 		try {
 			getHibernateTemplate().saveOrUpdate(instance);
 			log.debug("attach successful");
@@ -131,8 +139,8 @@ public class TopRatedDAO extends HibernateDaoSupport {
 		}
 	}
 
-	public void attachClean(TopRated instance) {
-		log.debug("attaching clean TopRated instance");
+	public void attachClean(Cart instance) {
+		log.debug("attaching clean Cart instance");
 		try {
 			getHibernateTemplate().lock(instance, LockMode.NONE);
 			log.debug("attach successful");
@@ -142,7 +150,7 @@ public class TopRatedDAO extends HibernateDaoSupport {
 		}
 	}
 
-	public static TopRatedDAO getFromApplicationContext(ApplicationContext ctx) {
-		return (TopRatedDAO) ctx.getBean("TopRatedDAO");
+	public static CartDAO getFromApplicationContext(ApplicationContext ctx) {
+		return (CartDAO) ctx.getBean("CartDAO");
 	}
 }
