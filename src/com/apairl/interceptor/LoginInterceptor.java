@@ -20,7 +20,7 @@ public class LoginInterceptor extends MethodFilterInterceptor{
 		if(session.getAttribute("customer") != null){
 			return invocation.invoke();
 		} else {
-			return "relogin";
+			return "login";
 		}
 	}
 	

@@ -1,536 +1,119 @@
 package com.apairl.action;
 
 import java.sql.Timestamp;
-import java.text.DecimalFormat;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
+import org.apache.log4j.Logger;
 import org.apache.struts2.ServletActionContext;
 
-import com.apairl.bean.AES;
-import com.apairl.bean.MailUtil;
-import com.apairl.dao.CustomerDAO;
+import com.apairl.dao.CartProductDAO;
 import com.apairl.dao.KabupatenDAO;
 import com.apairl.dao.OrderDAO;
-import com.apairl.dao.PaymentMethodDAO;
-import com.apairl.dao.ProductDAO;
+import com.apairl.dao.OrderProductDAO;
 import com.apairl.dao.OrderShipDAO;
-import com.apairl.dao.ShipTypeDAO;
-import com.apairl.dao.StockDAO;
+import com.apairl.dao.PaymentMethodDAO;
+import com.apairl.dbo.CartProduct;
 import com.apairl.dbo.Customer;
 import com.apairl.dbo.Kabupaten;
 import com.apairl.dbo.Order;
-import com.apairl.dbo.PaymentMethod;
-import com.apairl.dbo.Product;
+import com.apairl.dbo.OrderProduct;
 import com.apairl.dbo.OrderShip;
-import com.apairl.dbo.ShipType;
-import com.apairl.dbo.Stock;
+import com.apairl.dbo.PaymentMethod;
 import com.opensymphony.xwork2.ActionSupport;
 
 public class OrderAction extends ActionSupport{
+	private static final Logger log = Logger.getLogger(OrderAction.class);
 	
-	private String name;
-	private String last;
-	private String email;
-	private String address;
-	private String address2;
-	private String phone;
-	private int shipTypeId;
-	private int post;
-	private int kabupatenId;
-	private int provinsiId;
-	private String comment;
-	private Integer customerId;
+	private OrderDAO orderDAO;
+	private CartProductDAO cartProductDAO;
+	private OrderProductDAO orderProductDAO;
+	private OrderShipDAO orderShipDAO;
+
+	private PaymentMethodDAO paymentMethodDAO;
+	private KabupatenDAO kabupatenDAO;
+	
 	private Integer paymentMethodId;
-	private Integer amount;
-	
-	private OrderShip threadShip;
-	private String threadHost;
-	
 	private String shipName;
 	private String shipLast;
-	private String shipAddr;
-	private String shipAddr2;
+	private String shipAddress;
+	private String shipAddress2;
 	private Integer shipPost;
 	private Integer shipKabupatenId;
 	private String shipPhone;
 	
-	private Integer subtotal;
-	private Integer shippingFee;
-	private Integer total;
+	private Integer isSameAddr;
 	
-	private CustomerDAO customerDAO;
-	private ProductDAO productDAO;
-	private OrderDAO orderDAO;
-	private OrderShipDAO orderShipDAO;
-	private PaymentMethodDAO paymentMethodDAO;
-	private StockDAO stockDAO;
-	private KabupatenDAO kabupatenDAO;
-	private ShipTypeDAO shipTypeDAO;
-	
-	private Integer checkbox;
-	
-	public String add(){
-		Map<Integer, List<Object>> cartList = new HashMap<Integer, List<Object>>();
+	public Order copyCartToOrder(){
 		HttpServletRequest request = ServletActionContext.getRequest();
 		HttpSession session = request.getSession();
-		cartList = (Map<Integer, List<Object>>) session.getAttribute("cartList");
+		Customer customer = (Customer) session.getAttribute("customer");
 		
-		if(cartList != null && cartList.size() != 0){
-			//Update customer detail
-			Customer customer = customerDAO.findById(customerId);
-			Kabupaten kab = kabupatenDAO.findById(kabupatenId);
-			customer.setName(name);
-			customer.setLast(last);
-			customer.setEmail(email);
-			customer.setKabupaten(kab);
-			customer.setPhone(phone);
-			customer.setAddress(address);
-			customer.setAddress2(address2);
-			customer.setPost(post);
-			customerDAO.update(customer);
-			
-			session.setAttribute("customer", customer);
-			
-			PaymentMethod pm = paymentMethodDAO.findById(paymentMethodId);
-			
-			//Create Ship
-			OrderShip ship = new OrderShip();
-			Long shipId = System.currentTimeMillis();
-			ship.setShipId(shipId);
-			ship.setCustomer(customer);
-			ship.setInsertDate(new Timestamp(System.currentTimeMillis()));
-			ship.setStatus((short) 0);
-			ShipType shipType = shipTypeDAO.findById(shipTypeId);
-			ship.setShipType(shipType);
-			ship.setSubtotal(subtotal);
-			ship.setTotal(total);
-			ship.setFee(shippingFee);
-			
-			if(checkbox != null){
-				ship.setShipName(name);
-				ship.setShipLast(last);
-				ship.setShipAddress(address);
-				ship.setShipAddress2(address2);
-				ship.setShipPost(post);
-				ship.setShipKabupaten(kab);
-				ship.setShipPhone(phone);
-			} else {
-				ship.setShipName(shipName);
-				ship.setShipLast(shipLast);
-				ship.setShipAddress(shipAddr);
-				ship.setShipAddress2(shipAddr2);
-				ship.setShipPost(shipPost);
-				Kabupaten shipKabupaten = kabupatenDAO.findById(shipKabupatenId);
-				ship.setShipKabupaten(shipKabupaten);
-				ship.setShipPhone(shipPhone);
+		Order order = new Order();
+		order.setCustomer(customer);
+		orderDAO.save(order);
+		
+		List<CartProduct> cpList = cartProductDAO.findByProperty("cart.customer.customerId", customer.getCustomerId());
+		for(CartProduct cp : cpList){
+			OrderProduct op = new OrderProduct();
+			op.setOrder(order);
+			op.setProduct(cp.getProduct());
+			op.setColor(cp.getColor());
+			op.setSize(cp.getSize());
+			op.setQty(cp.getQty());
+			op.setSum(cp.getSum());
+			try{
+				orderProductDAO.save(op);
+			} catch(Exception e){
+				log.error("Copy to order failed", e);
+				return null;
 			}
-			
-			
-			
-			ship.setPaymentMethod(pm);
-			orderShipDAO.save(ship);
-			
-			for(int key : cartList.keySet()){
-				Product product = productDAO.findById(key);
-				
-				int amount = (Integer) cartList.get(key).get(1);
-				int type = (Integer) cartList.get(key).get(2);
-				
-				if(type == 2){
-					String m = product.getDescription().split("x")[0];
-					int mult = Integer.valueOf(m);
-					amount = amount*mult;
-				}
-				
-				int price = (Integer) cartList.get(key).get(3);
-				
-				Order order = new Order();
-				order.setCustomer(customer);
-				order.setProduct(product);
-				order.setAmount(amount);
-				order.setType(type);
-				order.setPrice(price);
-				order.setShip(ship);
-				
-				orderDAO.save(order);
-				
-				Stock stock = (Stock) stockDAO.findByProperty("product", product).get(0);
-				int total = stock.getNumber();
-				String desc = product.getDescription();
-				String multiplier = desc.split("x")[0];
-				if(type == 2){
-					amount = (amount * Integer.valueOf(multiplier));
-				}
-				
-				int remainder = total - amount;
-				stock.setNumber(remainder);
-				stockDAO.update(stock);
-			}
-
-			String host = request.getScheme() + "://" + request.getHeader("host") + request.getContextPath();
-			OrderShip shipResult = orderShipDAO.findByIdJoin(shipId);
-			
-			request.setAttribute("host", host);
-			request.setAttribute("ship", shipResult);
-			request.setAttribute("total", total);
-			request.setAttribute("amount", amount);
-			request.setAttribute("shipId", ship.getShipId());
-
-			session.removeAttribute("cartList");
-			
-			if(paymentMethodId == 2){
-				AES aes = new AES();
-				String cert = aes.encrypt(ship.getShipId().toString());
-				request.setAttribute("cert", cert);
-				return "paypal";
-			} else {
-				threadShip = ship;
-				threadHost = host;
-				
-				Thread t = new Thread(new Runnable(){
-					@Override
-					public void run() {
-						// TODO Auto-generated method stub
-						sendMail(threadShip, threadHost);
-					}
-				});
-				t.start();
-				
-				return SUCCESS;
-			}
-		} else {
-			return "cartempty";
 		}
 		
+		return order;
 	}
-	
-	public String paypal(){
-		HttpServletRequest request = ServletActionContext.getRequest();
-		request.setAttribute("amount", amount);
+
+	public String checkout(){
+		Order order = copyCartToOrder();
+		
+		OrderShip os = new OrderShip();
+		os.setOrder(order);
+		os.setInsertDate(new Timestamp(System.currentTimeMillis()));
+
+		PaymentMethod pm = paymentMethodDAO.findById(paymentMethodId);
+		os.setPaymentMethod(pm);
+		
+		if(isSameAddr != null && isSameAddr != 0){
+			Customer customer = order.getCustomer();
+			os.setShipName(customer.getName());
+			os.setShipLast(customer.getLast());
+			os.setShipAddress(customer.getAddress());
+			os.setShipAddress2(customer.getAddress2());
+			os.setShipPost(customer.getPost());
+			os.setShipPhone(customer.getPhone());
+		} else {
+			os.setShipName(shipName);
+			os.setShipLast(shipLast);
+			os.setShipAddress(shipAddress);
+			os.setShipAddress2(shipAddress2);
+			os.setShipPost(shipPost);
+			os.setShipPhone(shipPhone);
+		}
+
+		Kabupaten shipKabupaten = kabupatenDAO.findById(shipKabupatenId);
+		os.setShipKabupaten(shipKabupaten);
+		
+		try{
+			orderShipDAO.save(os);
+		}catch(Exception e){
+			log.error("Checkout error", e);
+			return "systemerror";
+		}
 		
 		return SUCCESS;
 	}
 	
-	public void sendMail(OrderShip ship, String host){
-		DecimalFormat df = new DecimalFormat("#,###");
-		
-		String totalPrice = df.format(ship.getSubtotal());
-		String totalFee = df.format(ship.getFee());
-		String totalAll = df.format(ship.getTotal());
-		
-		String website = "http://apairlstore.com/";
-		String link = "<a href="+host+"/order-received?id="+ship.getShipId()+">Lihat detail pemesanan anda</a>"; 
-
-		String title = "Konfirmasi pemesanan apairl";
-		String adminFee = "";
-		if(ship.getPaymentMethod().getPaymentMethodId() == 3){
-			adminFee = "IDR 10,000 (Admin Fee) \n";
-		}
-		
-		String content = ship.getCustomer().getName() + ", terima kasih untuk pemesanannya. \n" +
-				"ID pemesanan anda adalah "+ship.getShipId()+" dengan total harga :\n\n" +
-				"IDR "+totalPrice+" \n" +
-				"IDR "+totalFee+" (Shipping) \n" +
-				adminFee +
-				"--------------------------------- + \n" +
-				"IDR "+totalAll+ "\n\n"+
-				"Pembayaran di transfer ke rekening berikut ini : \n\n" +
-				"Rek. BCA : 8710085669 \n" +
-				"a/n : ANDREW GOTAMA \n\n" +
-				"Pengiriman mulai dilakukan setelah pembayaran. \n" +
-				"Mohon segera dilunaskan sesuai nominal yang terterai dan segera konfirmasi ke email apairlstore@gmail.com. \n" +
-				"Data yang harus dilampirkan adalah nomor rekening pembayar dan nominalnya. \n\n" +
-				"Klik link berikut ini untuk melihat detail pemesanan anda : \n" +
-				link+" \n\n" +
-				"Terima kasih. \n\n" +
-				"*NB. Untuk pertanyaan mengenai Cash on Delivery, silahkan hubungi kami melalui nomor HP. 081216438899 atau email apairlstore@gmail.com.";
-		
-		MailUtil.sendEmail(ship.getCustomer().getEmail(), ship.getCustomer().getName(), website, title, content, link, ship.getShipId(), totalPrice);
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	public String getEmail() {
-		return email;
-	}
-
-	public void setEmail(String email) {
-		this.email = email;
-	}
-
-	public String getAddress() {
-		return address;
-	}
-
-	public void setAddress(String address) {
-		this.address = address;
-	}
-
-	public String getPhone() {
-		return phone;
-	}
-
-	public void setPhone(String phone) {
-		this.phone = phone;
-	}
-
-	public CustomerDAO getCustomerDAO() {
-		return customerDAO;
-	}
-
-	public void setCustomerDAO(CustomerDAO customerDAO) {
-		this.customerDAO = customerDAO;
-	}
-
-	public ProductDAO getProductDAO() {
-		return productDAO;
-	}
-
-	public void setProductDAO(ProductDAO productDAO) {
-		this.productDAO = productDAO;
-	}
-
-	public OrderDAO getOrderDAO() {
-		return orderDAO;
-	}
-
-	public void setOrderDAO(OrderDAO orderDAO) {
-		this.orderDAO = orderDAO;
-	}
-
-	public OrderShipDAO getOrderShipDAO() {
-		return orderShipDAO;
-	}
-
-	public void setOrderShipDAO(OrderShipDAO orderShipDAO) {
-		this.orderShipDAO = orderShipDAO;
-	}
-
-	public StockDAO getStockDAO() {
-		return stockDAO;
-	}
-
-	public void setStockDAO(StockDAO stockDAO) {
-		this.stockDAO = stockDAO;
-	}
-
-	public ShipTypeDAO getShipTypeDAO() {
-		return shipTypeDAO;
-	}
-
-	public void setShipTypeDAO(ShipTypeDAO shipTypeDAO) {
-		this.shipTypeDAO = shipTypeDAO;
-	}
-
-	public int getShipTypeId() {
-		return shipTypeId;
-	}
-
-	public void setShipTypeId(int shipTypeId) {
-		this.shipTypeId = shipTypeId;
-	}
-
-	public int getPost() {
-		return post;
-	}
-
-	public void setPost(int post) {
-		this.post = post;
-	}
-
-	public int getKabupatenId() {
-		return kabupatenId;
-	}
-
-	public void setKabupatenId(int kabupatenId) {
-		this.kabupatenId = kabupatenId;
-	}
-
-	public KabupatenDAO getKabupatenDAO() {
-		return kabupatenDAO;
-	}
-
-	public void setKabupatenDAO(KabupatenDAO kabupatenDAO) {
-		this.kabupatenDAO = kabupatenDAO;
-	}
-
-	public int getProvinsiId() {
-		return provinsiId;
-	}
-
-	public void setProvinsiId(int provinsiId) {
-		this.provinsiId = provinsiId;
-	}
-
-	public String getComment() {
-		return comment;
-	}
-
-	public void setComment(String comment) {
-		this.comment = comment;
-	}
-
-	public Integer getCustomerId() {
-		return customerId;
-	}
-
-	public void setCustomerId(Integer customerId) {
-		this.customerId = customerId;
-	}
-
-	public Integer getPaymentMethodId() {
-		return paymentMethodId;
-	}
-
-	public void setPaymentMethodId(Integer paymentMethodId) {
-		this.paymentMethodId = paymentMethodId;
-	}
-
-	public Integer getAmount() {
-		return amount;
-	}
-
-	public void setAmount(Integer amount) {
-		this.amount = amount;
-	}
-
-	public String getShipName() {
-		return shipName;
-	}
-
-	public void setShipName(String shipName) {
-		this.shipName = shipName;
-	}
-
-	public String getShipLast() {
-		return shipLast;
-	}
-
-	public void setShipLast(String shipLast) {
-		this.shipLast = shipLast;
-	}
-
-	public String getShipAddr() {
-		return shipAddr;
-	}
-
-	public void setShipAddr(String shipAddr) {
-		this.shipAddr = shipAddr;
-	}
-
-	public String getShipAddr2() {
-		return shipAddr2;
-	}
-
-	public void setShipAddr2(String shipAddr2) {
-		this.shipAddr2 = shipAddr2;
-	}
-
-	public Integer getShipPost() {
-		return shipPost;
-	}
-
-	public void setShipPost(Integer shipPost) {
-		this.shipPost = shipPost;
-	}
-
-	public Integer getShipKabupatenId() {
-		return shipKabupatenId;
-	}
-
-	public void setShipKabupatenId(Integer shipKabupatenId) {
-		this.shipKabupatenId = shipKabupatenId;
-	}
-
-	public String getShipPhone() {
-		return shipPhone;
-	}
-
-	public void setShipPhone(String shipPhone) {
-		this.shipPhone = shipPhone;
-	}
-
-	public Integer getSubtotal() {
-		return subtotal;
-	}
-
-	public void setSubtotal(Integer subtotal) {
-		this.subtotal = subtotal;
-	}
-
-	public Integer getShippingFee() {
-		return shippingFee;
-	}
-
-	public void setShippingFee(Integer shippingFee) {
-		this.shippingFee = shippingFee;
-	}
-
-	public Integer getTotal() {
-		return total;
-	}
-
-	public void setTotal(Integer total) {
-		this.total = total;
-	}
-
-	public PaymentMethodDAO getPaymentMethodDAO() {
-		return paymentMethodDAO;
-	}
-
-	public void setPaymentMethodDAO(PaymentMethodDAO paymentMethodDAO) {
-		this.paymentMethodDAO = paymentMethodDAO;
-	}
-
-	public String getLast() {
-		return last;
-	}
-
-	public void setLast(String last) {
-		this.last = last;
-	}
-
-	public String getAddress2() {
-		return address2;
-	}
-
-	public void setAddress2(String address2) {
-		this.address2 = address2;
-	}
-
-	public Integer getCheckbox() {
-		return checkbox;
-	}
-
-	public void setCheckbox(Integer checkbox) {
-		this.checkbox = checkbox;
-	}
-
-	public OrderShip getThreadShip() {
-		return threadShip;
-	}
-
-	public void setThreadShip(OrderShip threadShip) {
-		this.threadShip = threadShip;
-	}
-
-	public String getThreadHost() {
-		return threadHost;
-	}
-
-	public void setThreadHost(String threadHost) {
-		this.threadHost = threadHost;
-	}
-
+	
 }

@@ -7,8 +7,8 @@
 <hibernate-mapping>
     <class name="com.apairl.dbo.OrderShip" table="ap_order_ship">
         <id name="orderShipId" type="java.lang.Long">
-            <column name="ship_id" />
-            <generator class="assigned" />
+            <column name="order_ship_id" />
+            <generator class="increment" />
         </id>
         <many-to-one name="shipType" class="com.apairl.dbo.ShipType" fetch="select" lazy="false">
             <column name="ship_type_id" not-null="true" />
@@ -23,16 +23,10 @@
             <column name="insert_date" length="19" not-null="true" />
         </property>
         <property name="updateDate" type="java.sql.Timestamp">
-            <column name="update_date" length="19" not-null="true" />
+            <column name="update_date" length="19" not-null="false" />
         </property>
         <property name="status" type="java.lang.Short">
             <column name="status" not-null="true" />
-        </property>
-        <property name="paymentStatus" type="java.lang.String">
-            <column name="payment_status" />
-        </property>
-        <property name="txnId" type="java.lang.String">
-            <column name="txn_id" />
         </property>
         <many-to-one name="paymentMethod" class="com.apairl.dbo.PaymentMethod" fetch="select" lazy="false">
             <column name="payment_method_id" not-null="true" />

@@ -121,6 +121,12 @@ public class ResultMessage extends StrutsResultSupport  {
         else if(invocation.getResultCode().equalsIgnoreCase("deleteusererror")) {
         	message = "This user already has order records";
 		}
+        else if(invocation.getResultCode().equalsIgnoreCase("systemerror")) {
+        	message = "System error. Please contact customer service.";
+		}
+        else if(invocation.getResultCode().equalsIgnoreCase("login")) {
+        	message = "Please login";
+		}
 		
 		buffer.append("<script type=\"text/javascript\">");
 		if(showalert) {

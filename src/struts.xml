@@ -14,6 +14,8 @@
 			<interceptor name="checkLogin" class="LoginInterceptor"></interceptor>
 		</interceptors>
 		<global-results>
+			<result name="systemerror" type="result-message">index</result>
+			<result name="login" type="result-message">login-page</result>
 			<result name="relogin" type="result-message">index</result>
 			<result name="login-admin" type="result-message">admin</result>
 		</global-results>
@@ -164,45 +166,41 @@
 		<!-- Type Action End -->
 		
 		<!-- Cart Action -->
-		<action name="cart-all" class="CartAction" method="allRecords"/>
-		
-		<action name="cart-add" class="CartAction" method="add">
-			<result name="success">WEB-INF/jsp/cart-list.jsp</result>
-		</action>
-		<action name="cart-del" class="CartAction" method="delete">
-			<result name="cartempty" type="result-message">product-list</result>
-			<result name="success">WEB-INF/jsp/cart-list.jsp</result>
-		</action>
-		<action name="cart-list" class="CartAction" method="list">
-			<result name="cartempty" type="result-message">index</result>
-			<result name="success">WEB-INF/jsp/cart-list.jsp</result>
-		</action>
-		<action name="checkout" class="CartAction" method="checkout">
+		<action name="cart-list" class="IndexAction" >
 			<interceptor-ref name="checkLogin"/>
 			<interceptor-ref name="defaultStack"/>
-			<result name="cartempty" type="result-message">index</result>
-			<result name="success">WEB-INF/jsp/checkout.jsp</result>
+			<result name="successsave" type="result-message">cart-list</result>
 		</action>
+		
+		<action name="cart-all" class="CartAction" method="allRecords"/>
+		
+		<action name="cart-save" class="CartAction" method="saveRecord">
+			<interceptor-ref name="checkLogin"/>
+			<interceptor-ref name="defaultStack"/>
+			<result name="successsave" type="result-message">cart-list</result>
+		</action>
+		<action name="cart-update" class="CartAction" method="updateRecord">
+			<interceptor-ref name="checkLogin"/>
+			<interceptor-ref name="defaultStack"/>
+			<result name="success" type="result-message">cart-list</result>
+		</action>
+		<action name="cart-delete" class="CartAction" method="deleteRecord">
+			<interceptor-ref name="checkLogin"/>
+			<interceptor-ref name="defaultStack"/>
+			<result name="successdelete" type="result-message">cart-list</result>
+		</action>
+		
 		
 		<!-- Cart Action End -->
 		
 		<!-- Order Action -->
-		<action name="order-add" class="OrderAction" method="add">
+		
+		<action name="checkout" class="OrderAction" method="checkout">
 			<interceptor-ref name="checkLogin"/>
 			<interceptor-ref name="defaultStack"/>
-			<result name="cartempty" type="result-message">product-list</result>
-			<result name="success"  type="redirect">
-	        	<param name="location">order-received</param>
-	            <param name="id">${#request.shipId}</param>
-            </result>
-			<result name="paypal">WEB-INF/jsp/paypal-redirect.jsp</result>
+			<result name="success">WEB-INF/jsp/checkout.jsp</result>
 		</action>
 		
-		<action name="order-paypal" class="OrderAction" method="paypal">
-			<interceptor-ref name="checkLogin"/>
-			<interceptor-ref name="defaultStack"/>
-			<result name="cartempty" type="result-message">product-list</result>
-		</action>
 		<!-- Order Action End -->
 		
 		<!-- Ship User Action -->

@@ -90,6 +90,18 @@
 		<property name="exchangeDAO">
 			<ref bean="ExchangeDAO" />
 		</property>
+		<property name="cartDAO">
+			<ref bean="CartDAO" />
+		</property>
+		<property name="cartProductDAO">
+			<ref bean="CartProductDAO" />
+		</property>
+		<property name="sizeDAO">
+			<ref bean="SizeDAO" />
+		</property>
+		<property name="colorDAO">
+			<ref bean="ColorDAO" />
+		</property>
 	</bean>
 	
 	<bean id="TypeAction" class="com.apairl.action.TypeAction" scope="prototype">

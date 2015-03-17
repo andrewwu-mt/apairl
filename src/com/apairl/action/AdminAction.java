@@ -4,10 +4,12 @@ import java.sql.Timestamp;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
+import java.util.Set;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
+import org.apache.log4j.Logger;
 import org.apache.struts2.ServletActionContext;
 
 import com.apairl.dao.AdminDAO;
@@ -22,6 +24,7 @@ import com.apairl.dbo.Admin;
 import com.apairl.dbo.Customer;
 import com.apairl.dbo.Kabupaten;
 import com.apairl.dbo.Order;
+import com.apairl.dbo.OrderProduct;
 import com.apairl.dbo.OrderShip;
 import com.apairl.dbo.PaymentMethod;
 import com.apairl.dbo.Product;
@@ -29,6 +32,7 @@ import com.apairl.dbo.Stock;
 import com.opensymphony.xwork2.ActionSupport;
 
 public class AdminAction extends ActionSupport {
+	private static final Logger log = Logger.getLogger(AdminAction.class);
 	
 	private String username;
 	private String password;
@@ -39,7 +43,7 @@ public class AdminAction extends ActionSupport {
 	private ProductDAO productDAO;
 	private int id;
 	private int productId;
-	private Long shipId;
+	private Long orderShipId;
 	private CustomerDAO customerDAO;
 	private String path;
 	
@@ -212,7 +216,7 @@ public class AdminAction extends ActionSupport {
 
 	//Order Records
 	public String getShipDetailRecord(){
-		orderList = orderDAO.findByProperty("ship.shipId", shipId);
+		orderList = orderDAO.findByProperty("ship.orderShipId", orderShipId);
 		return SUCCESS;
 	}
 	
@@ -223,14 +227,14 @@ public class AdminAction extends ActionSupport {
 	//Ship Records
 	public String getShipRecord(){
 		HttpServletRequest request = ServletActionContext.getRequest();
-		OrderShip ship = orderShipDAO.findById(shipId);
+		OrderShip ship = orderShipDAO.findById(orderShipId);
 		request.setAttribute("ship", ship);
 		
 		return SUCCESS;
 	}
 	
 	public String updateShipRecord(){
-		OrderShip ship = orderShipDAO.findById(shipId);
+		OrderShip ship = orderShipDAO.findById(orderShipId);
 		Kabupaten shipKabupaten = kabupatenDAO.findById(kabupatenId);
 		PaymentMethod paymentMethod = paymentMethodDAO.findById(paymentMethodId);
 		
@@ -278,26 +282,27 @@ public class AdminAction extends ActionSupport {
 		HttpServletRequest request = ServletActionContext.getRequest();
 		request.setAttribute("path", path);
 		
-		OrderShip ship = orderShipDAO.findById(shipId);
-		List<Order> orderList = orderDAO.findByProperty("ship", ship);
-		for(int i=0 ; i<orderList.size() ; i++){
-			Order order = orderList.get(i);
-			Product product = order.getProduct();
-			String mult = product.getDescription().split("x")[0];
-			int restock = 0;
-			if(order.getType() == 1){
-				restock = order.getAmount();
-			} else {
-				restock = order.getAmount() * Integer.valueOf(mult);
+		OrderShip orderShip = orderShipDAO.findById(orderShipId);
+		Order order = orderShip.getOrder();
+		
+		Set<OrderProduct> opList = order.getOrderProducts();
+		for(OrderProduct op : opList){
+			Product p = op.getProduct();
+			Integer qty = op.getQty();
+			List<Stock> stockList = stockDAO.findByProperty("product.productId", p.getProductId());
+			if(stockList.size() != 0){
+				Stock stock = stockList.get(0);
+				stock.setQty(stock.getQty() + qty);
+				stockDAO.update(stock);
 			}
-			Stock stock = (Stock) stockDAO.findByProperty("product", product).get(0);
-			stock.setNumber(stock.getNumber() + restock);
-			stockDAO.update(stock);
-			orderDAO.delete(order);
 		}
 		
-		orderShipDAO.delete(ship);
-		
+		try{
+			orderShipDAO.delete(orderShip);
+		} catch(Exception e){
+			log.error("Delete ship error", e);
+			return "systemerror";
+		}
 		return "successdelete";
 	}
 	
@@ -305,7 +310,7 @@ public class AdminAction extends ActionSupport {
 		HttpServletRequest request = ServletActionContext.getRequest();
 		request.setAttribute("path", path);
 		
-		OrderShip ship = orderShipDAO.findByIdJoin(shipId);
+		OrderShip ship = orderShipDAO.findByIdJoin(orderShipId);
 		if(status == 0){
 			ship.setStatus((short) 1);
 		} else {
@@ -398,12 +403,12 @@ public class AdminAction extends ActionSupport {
 		this.orderList = orderList;
 	}
 
-	public Long getShipId() {
-		return shipId;
+	public Long getOrderShipId() {
+		return orderShipId;
 	}
 
-	public void setShipId(Long shipId) {
-		this.shipId = shipId;
+	public void setOrderShipId(Long orderShipId) {
+		this.orderShipId = orderShipId;
 	}
 
 	public ProductDAO getProductDAO() {
@@ -660,6 +665,10 @@ public class AdminAction extends ActionSupport {
 
 	public void setTotal(Integer total) {
 		this.total = total;
+	}
+
+	public static Logger getLog() {
+		return log;
 	}
 
 }

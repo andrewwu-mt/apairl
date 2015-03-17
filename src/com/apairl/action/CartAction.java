@@ -1,23 +1,32 @@
 package com.apairl.action;
 
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
+import org.apache.log4j.Logger;
 import org.apache.struts2.ServletActionContext;
 
+import com.apairl.dao.CartDAO;
+import com.apairl.dao.CartProductDAO;
+import com.apairl.dao.ColorDAO;
 import com.apairl.dao.ExchangeDAO;
 import com.apairl.dao.ProductDAO;
+import com.apairl.dao.SizeDAO;
 import com.apairl.dao.StockDAO;
-import com.apairl.dbo.Exchange;
+import com.apairl.dbo.Cart;
+import com.apairl.dbo.CartProduct;
+import com.apairl.dbo.Color;
+import com.apairl.dbo.Customer;
 import com.apairl.dbo.Product;
+import com.apairl.dbo.Size;
 import com.opensymphony.xwork2.ActionSupport;
 
 public class CartAction extends ActionSupport{
+	private static final Logger log = Logger.getLogger(CartAction.class);
 	
 	private int id;
 	private int amount;
@@ -26,7 +35,16 @@ public class CartAction extends ActionSupport{
 	private ProductDAO productDAO;
 	private StockDAO stockDAO;
 	private ExchangeDAO exchangeDAO;
+	private CartDAO cartDAO;
+	private CartProductDAO cartProductDAO;
+	private SizeDAO sizeDAO;
+	private ColorDAO colorDAO;
 	
+	private Integer qty;
+	private Integer sizeId;
+	private Integer colorId;
+	private Integer cartId;
+	private Integer cartProductId;
 	private int total;
 	private String productName;
 	private String name;
@@ -41,55 +59,53 @@ public class CartAction extends ActionSupport{
 	public String allRecords(){
 		HttpServletRequest request = ServletActionContext.getRequest();
 		HttpSession session = request.getSession();
-		if(session.getAttribute("cartList") != null){
-			Map<Integer, List<Object>> cartList = (Map<Integer, List<Object>>) session.getAttribute("cartList");
-			int sum = 0;
-			for(int i : cartList.keySet()){
-				int value = (Integer) cartList.get(i).get(3);
-				sum += value;
-			}
-			request.setAttribute("cartTotal", sum);			
-			request.setAttribute("cartList", cartList);
-			request.setAttribute("cartSize", cartList.size());
-			Integer totalBottle = calculateTotal(cartList);
-			request.setAttribute("totalBottle", totalBottle);
-			
-			Exchange exchange = exchangeDAO.findById(1);
-			request.setAttribute("exchange", exchange);
-		} else {
-			request.setAttribute("cartSize", 0);
+		
+		Customer customer = (Customer) session.getAttribute("customer");
+		List<Cart> cartList = cartDAO.findByProperty("customer.customerId", customer.getCustomerId());
+		if(cartList.size() != 0){
+			Cart cart = cartList.get(0);
+			Set cartProductList = cart.getCartProducts();
+			request.setAttribute("cartProductList", cartProductList);
 		}
 		
 		return SUCCESS;
 	}
 
-	public String add(){
+	public String saveRecord(){
 		HttpServletRequest request = ServletActionContext.getRequest();
 		HttpSession session = request.getSession();
 		host = request.getScheme() + "://" + request.getHeader("host") + request.getContextPath();
-		Map<Integer, List<Object>> cartList = new HashMap<Integer, List<Object>>();
-		Product product = productDAO.findById(productId);
 		
-		if(product != null){
-			List<Object> list = new ArrayList<Object>();
-			list.add(product.getShortName().replace("&nbsp;", " "));
-			list.add(amount);
-			list.add(type);
-			list.add(total);
-			list.add(product.getPriceBottle());
-			list.add(product.getSrc());
-
-			if(session.getAttribute("cartList") == null){
-				cartList.put(product.getProductId(), list);
-				session.setAttribute("cartList", cartList);
-			} else {
-				cartList = (Map<Integer, List<Object>>) session.getAttribute("cartList");
-				
-				cartList.put(product.getProductId(), list);
-				session.setAttribute("cartList", cartList);
-			}
+		Customer customer = (Customer) session.getAttribute("customer");
+		List<Cart> cartList = cartDAO.findByProperty("customer.customerId", customer.getCustomerId());
+		Cart cart = new Cart();
+		if(cartList.size() != 0){
+			cart = cartList.get(0);
+		} else {
+			cart.setCustomer(customer);
+			cartDAO.save(cart);
 		}
-		return SUCCESS;
+		Product p = productDAO.findById(productId);
+		CartProduct cp = new CartProduct();
+		cp.setCart(cart);
+		cp.setProduct(p);
+		
+		Size size = sizeDAO.findById(sizeId);
+		cp.setSize(size);
+		
+		Color color = colorDAO.findById(colorId);
+		cp.setColor(color);
+		
+		cp.setQty(qty);
+		cp.setSum(p.getPrice() * qty);
+		
+		try{
+			cartProductDAO.save(cp);
+		} catch(Exception e){
+			log.error("Add to cart error", e);
+		}
+			
+		return "successsave";
 		
 	}
 	
@@ -119,42 +135,35 @@ public class CartAction extends ActionSupport{
 		
 		return totalBottle;
 	}
-	
-	public String delete(){
-		HttpServletRequest request = ServletActionContext.getRequest();
-		HttpSession session = request.getSession();
-		Map<Integer, List<Object>> cartList = (Map<Integer, List<Object>>) session.getAttribute("cartList");
-		cartList.remove(productId);
-		if(cartList != null && cartList.size() != 0){
-			return SUCCESS;
-		} else {
-			return "cartempty";
+
+	public String updateRecord(){
+		List<CartProduct> cpList = cartProductDAO.findByProperty("product.productId", productId);
+		for(CartProduct cp : cpList){
+			try{
+				cp.setQty(qty);
+				cartProductDAO.attachDirty(cp);
+			} catch(Exception e){
+				log.error("Remove from cart error", e);
+				return "systemerror";
+			}
 		}
+		
+		return "successdelete";
 	}
 	
-	public String list(){
-		HttpServletRequest request = ServletActionContext.getRequest();
-		host = request.getScheme() + "://" + request.getHeader("host") + request.getContextPath();
-		HttpSession session = request.getSession();
-		Map<Integer, List<Object>> cartList = (Map<Integer, List<Object>>) session.getAttribute("cartList");
-		if(cartList != null && cartList.size() != 0){
-			return SUCCESS;
-		} else {
-			return "cartempty";
+	public String deleteRecord(){
+		List<CartProduct> cpList = cartProductDAO.findByProperty("product.productId", productId);
+		for(CartProduct cp : cpList){
+			try{
+				cartProductDAO.delete(cp);
+			} catch(Exception e){
+				log.error("Remove from cart error", e);
+				return "systemerror";
+			}
 		}
+		
+		return "successdelete";
 	}
-	
-	public String checkout(){
-		HttpServletRequest request = ServletActionContext.getRequest();
-		HttpSession session = request.getSession();
-		Map<Integer, List<Object>> cartList = (Map<Integer, List<Object>>) session.getAttribute("cartList");
-		if(cartList != null && cartList.size() != 0){
-			return SUCCESS;
-		} else {
-			return "cartempty";
-		}
-	}
-	
 
 	public int getId() {
 		return id;
@@ -282,6 +291,82 @@ public class CartAction extends ActionSupport{
 
 	public void setExchangeDAO(ExchangeDAO exchangeDAO) {
 		this.exchangeDAO = exchangeDAO;
+	}
+
+	public CartDAO getCartDAO() {
+		return cartDAO;
+	}
+
+	public void setCartDAO(CartDAO cartDAO) {
+		this.cartDAO = cartDAO;
+	}
+
+	public CartProductDAO getCartProductDAO() {
+		return cartProductDAO;
+	}
+
+	public void setCartProductDAO(CartProductDAO cartProductDAO) {
+		this.cartProductDAO = cartProductDAO;
+	}
+
+	public SizeDAO getSizeDAO() {
+		return sizeDAO;
+	}
+
+	public void setSizeDAO(SizeDAO sizeDAO) {
+		this.sizeDAO = sizeDAO;
+	}
+
+	public ColorDAO getColorDAO() {
+		return colorDAO;
+	}
+
+	public void setColorDAO(ColorDAO colorDAO) {
+		this.colorDAO = colorDAO;
+	}
+
+	public Integer getQty() {
+		return qty;
+	}
+
+	public void setQty(Integer qty) {
+		this.qty = qty;
+	}
+
+	public Integer getSizeId() {
+		return sizeId;
+	}
+
+	public void setSizeId(Integer sizeId) {
+		this.sizeId = sizeId;
+	}
+
+	public Integer getColorId() {
+		return colorId;
+	}
+
+	public void setColorId(Integer colorId) {
+		this.colorId = colorId;
+	}
+
+	public Integer getCartId() {
+		return cartId;
+	}
+
+	public void setCartId(Integer cartId) {
+		this.cartId = cartId;
+	}
+
+	public Integer getCartProductId() {
+		return cartProductId;
+	}
+
+	public void setCartProductId(Integer cartProductId) {
+		this.cartProductId = cartProductId;
+	}
+
+	public static Logger getLog() {
+		return log;
 	}
 	
 }

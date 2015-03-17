@@ -17,10 +17,8 @@ public class OrderShip implements java.io.Serializable {
 	private String comment;
 	private Timestamp insertDate;
 	private Timestamp updateDate;
-	private PaymentMethod paymentMethod;
-	private String paymentStatus;
-	private String txnId;
 	
+	private PaymentMethod paymentMethod;
 	private String shipName;
 	private String shipLast;
 	private String shipAddress;
@@ -36,7 +34,7 @@ public class OrderShip implements java.io.Serializable {
 	}
 
 	/** full constructor */
-	public OrderShip(String txnId, Order order, String paymentStatus, Long orderShipId, ShipType shipType, Timestamp insertDate, Timestamp updateDate, 
+	public OrderShip(Order order, Long orderShipId, ShipType shipType, Timestamp insertDate, Timestamp updateDate, 
 			Short status, String comment, PaymentMethod paymentMethod,
 			String shipName,
 			String shipLast,
@@ -54,8 +52,6 @@ public class OrderShip implements java.io.Serializable {
 		this.updateDate = updateDate;
 		this.comment = comment;
 		this.paymentMethod = paymentMethod;
-		this.txnId = txnId;
-		this.paymentStatus = paymentStatus;
 		this.shipName = shipName;
 		this.shipLast = shipLast;
 		this.shipAddress = shipAddress;
@@ -129,22 +125,6 @@ public class OrderShip implements java.io.Serializable {
 
 	public void setPaymentMethod(PaymentMethod paymentMethod) {
 		this.paymentMethod = paymentMethod;
-	}
-
-	public String getPaymentStatus() {
-		return paymentStatus;
-	}
-
-	public void setPaymentStatus(String paymentStatus) {
-		this.paymentStatus = paymentStatus;
-	}
-
-	public String getTxnId() {
-		return txnId;
-	}
-
-	public void setTxnId(String txnId) {
-		this.txnId = txnId;
 	}
 
 	public String getShipName() {
