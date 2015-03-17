@@ -13,5 +13,11 @@
         <many-to-one name="customer" class="com.apairl.dbo.Customer" fetch="select" lazy="false">
             <column name="customer_id" not-null="true" />
         </many-to-one>
+        <set name="cartProducts" lazy="false" inverse="true">
+            <key>
+                <column name="cart_id" not-null="true" />
+            </key>
+            <one-to-many class="com.apairl.dbo.CartProduct" />
+        </set>
     </class>
 </hibernate-mapping>

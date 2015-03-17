@@ -1,5 +1,8 @@
 package com.apairl.dbo;
 
+import java.util.HashSet;
+import java.util.Set;
+
 /**
  * Order entity. @author MyEclipse Persistence Tools
  */
@@ -10,6 +13,7 @@ public class Order implements java.io.Serializable {
 
 	private Integer orderId;
 	private Customer customer;
+	private Set orderProducts = new HashSet(0);
 
 	// Constructors
 
@@ -18,8 +22,9 @@ public class Order implements java.io.Serializable {
 	}
 
 	/** full constructor */
-	public Order(Customer customer) {
+	public Order(Customer customer, Set orderProducts) {
 		this.customer = customer;
+		this.orderProducts = orderProducts;
 	}
 
 	// Property accessors
@@ -40,5 +45,12 @@ public class Order implements java.io.Serializable {
 		this.customer = customer;
 	}
 
+	public Set getOrderProducts() {
+		return orderProducts;
+	}
+
+	public void setOrderProducts(Set orderProducts) {
+		this.orderProducts = orderProducts;
+	}
 
 }
