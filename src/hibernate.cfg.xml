@@ -30,24 +30,23 @@
 		<property name="c3p0.min_size">5</property>
 		<property name="c3p0.timeout">120</property>
 
-		<mapping resource="com/apairl/dbo/Stock.hbm.xml" />
-		<mapping resource="com/apairl/dbo/Product.hbm.xml" />
-		<mapping resource="com/apairl/dbo/Order.hbm.xml" />
-		<mapping resource="com/apairl/dbo/Customer.hbm.xml" />
-		<mapping resource="com/apairl/dbo/Ship.hbm.xml" />
-		<mapping resource="com/apairl/dbo/Type.hbm.xml" />
 		<mapping resource="com/apairl/dbo/Admin.hbm.xml" />
-		<mapping resource="com/apairl/dbo/ShipType.hbm.xml" />
-		<mapping resource="com/apairl/dbo/Kabupaten.hbm.xml" />
-		<mapping resource="com/apairl/dbo/Provinsi.hbm.xml" />
+		<mapping resource="com/apairl/dbo/Cart.hbm.xml" />
+		<mapping resource="com/apairl/dbo/CartProduct.hbm.xml" />
 		<mapping resource="com/apairl/dbo/Category.hbm.xml" />
-		<mapping resource="com/apairl/dbo/TopRated.hbm.xml" />
-		<mapping resource="com/apairl/dbo/BestSeller.hbm.xml" />
-		<mapping resource="com/apairl/dbo/PaymentMethod.hbm.xml" />
+		<mapping resource="com/apairl/dbo/Customer.hbm.xml" />
 		<mapping resource="com/apairl/dbo/Exchange.hbm.xml" />
-		<mapping resource="com/apairl/dbo/Src.hbm.xml" />
+		<mapping resource="com/apairl/dbo/Kabupaten.hbm.xml" />
+		<mapping resource="com/apairl/dbo/Order.hbm.xml" />
+		<mapping resource="com/apairl/dbo/OrderProduct.hbm.xml" />
+		<mapping resource="com/apairl/dbo/PaymentMethod.hbm.xml" />
+		<mapping resource="com/apairl/dbo/Product.hbm.xml" />
 		<mapping resource="com/apairl/dbo/ProductSrc.hbm.xml" />
-
+		<mapping resource="com/apairl/dbo/Provinsi.hbm.xml" />
+		<mapping resource="com/apairl/dbo/ShipType.hbm.xml" />
+		<mapping resource="com/apairl/dbo/Src.hbm.xml" />
+		<mapping resource="com/apairl/dbo/Stock.hbm.xml" />
+		<mapping resource="com/apairl/dbo/Type.hbm.xml" />
 	</session-factory>
 
 </hibernate-configuration>
