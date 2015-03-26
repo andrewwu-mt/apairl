@@ -13,11 +13,5 @@
         <property name="name" type="java.lang.String">
             <column name="name" length="45" not-null="true" />
         </property>
-        <set name="ships" inverse="true">
-            <key>
-                <column name="payment_method_id" not-null="true" />
-            </key>
-            <one-to-many class="com.apairl.dbo.Ship" />
-        </set>
     </class>
 </hibernate-mapping>

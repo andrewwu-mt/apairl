@@ -64,11 +64,6 @@
 			<ref bean="sessionFactory" />
 		</property>
 	</bean>
-	<bean id="ShipDAO" class="com.apairl.dao.ShipDAO">
-		<property name="sessionFactory">
-			<ref bean="sessionFactory" />
-		</property>
-	</bean>
 	<bean id="TypeDAO" class="com.apairl.dao.TypeDAO">
 		<property name="sessionFactory">
 			<ref bean="sessionFactory" />

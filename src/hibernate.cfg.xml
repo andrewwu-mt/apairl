@@ -34,6 +34,7 @@
 		<mapping resource="com/apairl/dbo/Cart.hbm.xml" />
 		<mapping resource="com/apairl/dbo/CartProduct.hbm.xml" />
 		<mapping resource="com/apairl/dbo/Category.hbm.xml" />
+		<mapping resource="com/apairl/dbo/Color.hbm.xml" />
 		<mapping resource="com/apairl/dbo/Customer.hbm.xml" />
 		<mapping resource="com/apairl/dbo/Exchange.hbm.xml" />
 		<mapping resource="com/apairl/dbo/Kabupaten.hbm.xml" />
@@ -44,6 +45,7 @@
 		<mapping resource="com/apairl/dbo/ProductSrc.hbm.xml" />
 		<mapping resource="com/apairl/dbo/Provinsi.hbm.xml" />
 		<mapping resource="com/apairl/dbo/ShipType.hbm.xml" />
+		<mapping resource="com/apairl/dbo/Size.hbm.xml" />
 		<mapping resource="com/apairl/dbo/Src.hbm.xml" />
 		<mapping resource="com/apairl/dbo/Stock.hbm.xml" />
 		<mapping resource="com/apairl/dbo/Type.hbm.xml" />
