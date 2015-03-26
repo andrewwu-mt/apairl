@@ -808,9 +808,9 @@ p {
   margin-bottom: 20px; }
 
 q:before {
-  content: "“"; }
+  content: "��; }
 q:after {
-  content: "”"; }
+  content: "��; }
 
 hr {
   border-color: #DDDDDD; }
