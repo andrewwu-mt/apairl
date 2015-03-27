@@ -71,18 +71,18 @@
               </div>
             </li>
             <li>
-              <div data-target="#ry-categories-tab-3" aria-controls="ry-categories-tab-3" role="tab" data-toggle="tab"><i class="ry-block-icon ry-icon-size-1 icon-jacket2"></i>
-                <h5 class="ry-medium-heading">BAG-A-DAY GIVEAWAY</h5>
+              <div data-target="#ry-categories-tab-3" aria-controls="ry-categories-tab-3" role="tab" data-toggle="tab"><i class="ry-block-icon ry-icon-size-1 icon-receipt-shopping-streamline"></i>
+                <h5 class="ry-medium-heading">SPECIAL PROMO 1</h5>
               </div>
             </li>
             <li>
-              <div data-target="#ry-categories-tab-4" aria-controls="ry-categories-tab-4" role="tab" data-toggle="tab"><i class="ry-block-icon ry-icon-size-1 icon-dress4"></i>
-                <h5 class="ry-medium-heading">GUEST EDITOR: LOUISE</h5>
+              <div data-target="#ry-categories-tab-4" aria-controls="ry-categories-tab-4" role="tab" data-toggle="tab"><i class="ry-block-icon ry-icon-size-1 icon-receipt-shopping-streamline"></i>
+                <h5 class="ry-medium-heading">SPECIAL PROMO 2</h5>
               </div>
             </li>
             <li>
-              <div data-target="#ry-categories-tab-5" aria-controls="ry-categories-tab-5" role="tab" data-toggle="tab"><i class="ry-block-icon ry-icon-size-1 icon-dress2"></i>
-                <h5 class="ry-medium-heading">ROEâS PICKS</h5>
+              <div data-target="#ry-categories-tab-5" aria-controls="ry-categories-tab-5" role="tab" data-toggle="tab"><i class="ry-block-icon ry-icon-size-1 icon-receipt-shopping-streamline"></i>
+                <h5 class="ry-medium-heading">SPECIAL PROMO 3</h5>
               </div>
             </li>
             <li>
