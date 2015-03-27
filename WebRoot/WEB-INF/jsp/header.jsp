@@ -3,7 +3,6 @@
 <!DOCTYPE html>
 <html class="no-js">
   
-<!-- Mirrored from demo.themeroyal.info/smoothie/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 10 Mar 2015 15:18:26 GMT -->
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,6 +13,16 @@
     <link rel="stylesheet" href="assets/styles/plugins.css">
     <link rel="stylesheet" href="assets/styles/main.css">
     <script src="vendors/modernizr/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+    <script src="vendors/jquery/jquery-1.11.0.min.js"></script>
+    <script src="vendors/html5shiv/html5shiv.min.js"></script>
+    <script src="vendors/jquery-easing/jquery.easing-1.3.min.js"></script>
+    <script src="vendors/woothemes-FlexSlider/jquery.flexslider-min.js"></script>
+    <script src="vendors/jquery.placeholder/jquery.placeholder.js"></script>
+    <script src="vendors/bootstrap-3.3/js/bootstrap.min.js"></script>
+    <script src="vendors/elevatezoom-master/jquery.elevateZoom-3.0.8.min.js"></script>
+    <script src="assets/scripts/main.js"></script>
+    
+    
   </head>
   <body>
     <!--[if lt IE 8]>
@@ -22,10 +31,8 @@
     <div id="ry-main-nav" class="ry-main-nav">
       <div class="container-fullsize">
         <div class="ry-nav-brand">
-        	<a href="index">
-        		<div class="ry-smoothie-logo"></div>
-            	<div class="ry-brand"><img src="assets/logo/apairL_w_borderless.png" alt="apairl-logo" height="45" width="140" /></div>
-            </a></div>
+            	<div class="ry-brand"><a href="index"><img src="assets/logo/apairL_w_borderless.png" alt="apairl-logo" height="45" width="140" /> </a></div>
+           </div>
         <div class="ry-nav-hamburger"><i class="icon-menu55"></i></div>
         <ul class="ry-nav-menu">
           <li><a href="index">HOME</a></li>
@@ -45,5 +52,4 @@
       </div>
     </div>
 
-<!-- Mirrored from demo.themeroyal.info/smoothie/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 10 Mar 2015 15:22:31 GMT -->
 </html>
