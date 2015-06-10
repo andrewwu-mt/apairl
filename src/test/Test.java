@@ -52,7 +52,7 @@ public class Test {
 			cRow.getCell(1).setCellStyle(style);
 			
 			//FileInputStream obtains input bytes from the image file
-			InputStream inputStream = new FileInputStream("/Users/andrewgotama/Desktop/chloe_white.png");
+			InputStream inputStream = new FileInputStream("C:/Users/Andrew Wu/Desktop/chloe_white.png");
 			//Get the contents of an InputStream as a byte[].
 			byte[] bytes = IOUtils.toByteArray(inputStream);
 			//Adds a picture to the workbook
@@ -105,7 +105,7 @@ public class Test {
 			
 			//Write the Excel file
 			FileOutputStream fileOut = null;
-			fileOut = new FileOutputStream("/Users/andrewgotama/Desktop/order.xlsx");
+			fileOut = new FileOutputStream("C:/Users/Andrew Wu/Desktop/order.xlsx");
 			wb.write(fileOut);
 			fileOut.close();
 		 
