@@ -94,7 +94,7 @@
 			<ref bean="sessionFactory" />
 		</property>
 	</bean>
-	<bean id="ProductSrcDAO" class="com.apairl.dao.ProductSrcDAO">
+	<bean id="ProductUrlDAO" class="com.apairl.dao.ProductUrlDAO">
 		<property name="sessionFactory">
 			<ref bean="sessionFactory" />
 		</property>
