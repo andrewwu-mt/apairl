@@ -1,0 +1,72 @@
+
+
+.date,
+.dropdown-menu > li:hover a,
+.dropdown-menu > li:active a,
+.dropdown-menu > li.active a,
+.dropdown-menu > li:focus a,
+.dropdown-menu > li:focus,
+.dropdown-menu > li.active,
+.dropdown-menu > li:active,
+.dropdown-menu > li:hover {
+	background-color: #87ca3e;
+}
+
+.btn-primary {
+	border-color: #87ca3e;
+}
+
+.checkout-table h4,
+.checkout-table h4 a,
+a:focus,
+a:hover,
+.copyrights a,
+.comments-count,
+.comments-count a,
+.slider_04 span,
+.tp-caption.slider_04 span,
+.slider_02 span,
+.tp-caption.slider_02 span,
+.new {
+	color: #87ca3e;
+}
+	
+::selection {
+	background: #87ca3e; /* Safari */
+	color:#fff;
+}
+	
+::-moz-selection {
+	background: #87ca3e; /* Firefox */
+	color:#fff;
+}
+
+.pagination > li > a:hover, 
+.pagination > li > span:hover,
+.tp-caption.slider_button_02 a,
+.slider_button_02 a,
+.cartbutton,
+.input-group-addon,
+.owl-theme .owl-controls .owl-nav [class*='owl-'],
+.tp-caption.slider_button_01 a,
+.slider_button_01 a,
+.dropdown-menu > li.shopcart:focus .btn-primary,
+.dropdown-menu > li.shopcart.active .btn-primary,
+.dropdown-menu > li.shopcart:active .btn-primary,
+.dropdown-menu > li.shopcart:hover .btn-primary,
+.btn-primary {
+	background-color: #87ca3e !important;
+	border-color: #87ca3e !important;
+}
+.dropdown-menu > li.shopcart:focus .btn-second,
+.dropdown-menu > li.shopcart.active .btn-second,
+.dropdown-menu > li.shopcart:active .btn-second,
+.dropdown-menu > li.shopcart:hover .btn-second,
+.btn-second {
+	background-color: #72ad30 !important;
+	border-color:#72ad30 !important;
+}
+
+.image_more_info img {
+	background: #72ad30 !important;
+}
