@@ -28,5 +28,15 @@
         <property name="active" type="java.lang.Integer">
             <column name="active" not-null="true" />
         </property>
+        <property name="urlPath" type="java.lang.String">
+            <column name="url_path" length="500" />
+        </property>
+        
+        <set name="productUrls" inverse="true">
+            <key>
+                <column name="product_id" not-null="true" />
+            </key>
+            <one-to-many class="com.apairl.dbo.ProductUrl" />
+        </set>
     </class>
 </hibernate-mapping>

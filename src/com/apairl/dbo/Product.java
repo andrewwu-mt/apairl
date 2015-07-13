@@ -1,6 +1,8 @@
 package com.apairl.dbo;
 
 import java.sql.Timestamp;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * Product entity. @author MyEclipse Persistence Tools
@@ -17,6 +19,8 @@ public class Product implements java.io.Serializable {
 	private Timestamp insertDate;
 	private Timestamp updateDate;
 	private Integer active;
+	private String urlPath;
+	private Set productUrls = new HashSet(0);
 
 	// Constructors
 
@@ -27,13 +31,15 @@ public class Product implements java.io.Serializable {
 	/** full constructor */
 	public Product(String name, String description,
 			Integer price, Timestamp insertDate,
-			Timestamp updateDate, Integer active) {
+			Timestamp updateDate, Integer active, String urlPath, Set productUrls) {
 		this.name = name;
 		this.description = description;
 		this.price = price;
 		this.insertDate = insertDate;
 		this.updateDate = updateDate;
 		this.active = active;
+		this.urlPath = urlPath;
+		this.productUrls = productUrls;
 	}
 
 	public Integer getProductId() {
@@ -90,6 +96,22 @@ public class Product implements java.io.Serializable {
 
 	public void setActive(Integer active) {
 		this.active = active;
+	}
+
+	public String getUrlPath() {
+		return urlPath;
+	}
+
+	public void setUrlPath(String urlPath) {
+		this.urlPath = urlPath;
+	}
+
+	public Set getProductUrls() {
+		return productUrls;
+	}
+
+	public void setProductUrls(Set productUrls) {
+		this.productUrls = productUrls;
 	}
 
 }

@@ -42,11 +42,10 @@
 		<mapping resource="com/apairl/dbo/OrderProduct.hbm.xml" />
 		<mapping resource="com/apairl/dbo/PaymentMethod.hbm.xml" />
 		<mapping resource="com/apairl/dbo/Product.hbm.xml" />
-		<mapping resource="com/apairl/dbo/ProductSrc.hbm.xml" />
+		<mapping resource="com/apairl/dbo/ProductUrl.hbm.xml" />
 		<mapping resource="com/apairl/dbo/Provinsi.hbm.xml" />
 		<mapping resource="com/apairl/dbo/ShipType.hbm.xml" />
 		<mapping resource="com/apairl/dbo/Size.hbm.xml" />
-		<mapping resource="com/apairl/dbo/Src.hbm.xml" />
 		<mapping resource="com/apairl/dbo/Stock.hbm.xml" />
 		<mapping resource="com/apairl/dbo/Type.hbm.xml" />
 	</session-factory>

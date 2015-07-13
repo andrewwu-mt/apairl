@@ -9,22 +9,18 @@ import org.apache.commons.io.FileUtils;
 import org.apache.struts2.ServletActionContext;
 
 import com.apairl.dao.ProductDAO;
-import com.apairl.dao.ProductSrcDAO;
-import com.apairl.dao.SrcDAO;
+import com.apairl.dao.ProductUrlDAO;
 import com.apairl.dbo.Product;
-import com.apairl.dbo.ProductSrc;
-import com.apairl.dbo.ProductSrcId;
-import com.apairl.dbo.Src;
+import com.apairl.dbo.ProductUrl;
 import com.opensymphony.xwork2.ActionSupport;
 
-public class ProductSrcAction extends ActionSupport{
+public class ProductUrlAction extends ActionSupport{
 
-	private ProductSrcDAO productSrcDAO;
+	private ProductUrlDAO productUrlDAO;
 	private ProductDAO productDAO;
-	private SrcDAO srcDAO;
 	
 	private Integer productId;
-	private Integer srcId;
+	private Integer productUrlId;
 
 	//upload file
 	private File fileUpload;
@@ -32,28 +28,15 @@ public class ProductSrcAction extends ActionSupport{
 	private String fileUploadFileName;
 	
 	public String getRecordsByProductId(){
-		List productSrcList = productSrcDAO.findByProperty("id.product.productId", productId);
+		List productUrlList = productUrlDAO.findByProperty("product.productId", productId);
 		HttpServletRequest request = ServletActionContext.getRequest();
-		request.setAttribute("productSrcList", productSrcList);
+		request.setAttribute("productUrlList", productUrlList);
 		request.setAttribute("productId", productId);
 		
 		return SUCCESS;
 	}
 	
-	public String savePrimaryThumbnail(){
-		try{
-			productSrcDAO.updateAllPrimary(productId, 0);
-			productSrcDAO.updatePrimaryByProductAndSrc(productId, srcId, 1);
-		}catch(Exception e){
-			return "saveerror";
-		}
-		
-		return SUCCESS;
-	}
-	
-	public Src saveSrc(){
-		Src src = null;
-		
+	public String saveUrl(){
 		try{
 			String osName = System.getProperty("os.name");
 			String path = "C:/apache-tomcat-7.0.54/webapps/apairl/products/";
@@ -62,18 +45,11 @@ public class ProductSrcAction extends ActionSupport{
 			File file = new File(path, fileUploadFileName);
 	        if(fileUploadFileName.contains(".jpg") || fileUploadFileName.contains(".jpeg")){
 	        	FileUtils.copyFile(fileUpload, file);
-	        	
-	    		src = srcDAO.findByValue("products/" + fileUploadFileName);
-	    		if(src == null) src = new Src();
-	        	src.setValue("products/" + fileUploadFileName);
-	        	try{
-	        		srcDAO.attachDirty(src);
-	        	}catch(Exception e){}
 	        }
 		} catch(Exception e){
 			return null;
 		}
-        return src;
+        return "products/" + fileUploadFileName;
 	}
 	
 	public String saveRecord(){
@@ -83,14 +59,11 @@ public class ProductSrcAction extends ActionSupport{
 			
 			try{
 				Product product = productDAO.findById(productId);
-				Src src = saveSrc();
-				ProductSrc productSrc = new ProductSrc();
-				ProductSrcId id = new ProductSrcId();
-				id.setProduct(product);
-				id.setSrc(src);
-				productSrc.setId(id);
-				productSrcDAO.save(productSrc);
-
+				String urlPath = saveUrl();
+				ProductUrl productUrl = new ProductUrl();
+				productUrl.setProduct(product);
+				productUrl.setUrlPath(urlPath);
+				productUrlDAO.save(productUrl);
 			}catch(Exception e){
 				e.printStackTrace();
 				return "saveerror";
@@ -99,42 +72,25 @@ public class ProductSrcAction extends ActionSupport{
 		return "successsave";
 	}
 	
-	public String deleteBySrcId(){
+	public String deleteRecord(){
 		HttpServletRequest request = ServletActionContext.getRequest();
 		request.setAttribute("productId", productId);
 		
 		try{
-			productSrcDAO.deleteBySrcId(srcId);
-			Src src = srcDAO.findById(srcId);
-			srcDAO.delete(src);
+			ProductUrl pu = productUrlDAO.findById(productUrlId);
+			productUrlDAO.delete(pu);
 		}catch(Exception e){
 			return "deleteerror";
 		}
 		return "successdelete";
 	}
 
-	public ProductSrcDAO getProductSrcDAO() {
-		return productSrcDAO;
+	public ProductUrlDAO getProductUrlDAO() {
+		return productUrlDAO;
 	}
 
-	public void setProductSrcDAO(ProductSrcDAO productSrcDAO) {
-		this.productSrcDAO = productSrcDAO;
-	}
-
-	public Integer getProductId() {
-		return productId;
-	}
-
-	public void setProductId(Integer productId) {
-		this.productId = productId;
-	}
-
-	public Integer getSrcId() {
-		return srcId;
-	}
-
-	public void setSrcId(Integer srcId) {
-		this.srcId = srcId;
+	public void setProductUrlDAO(ProductUrlDAO productUrlDAO) {
+		this.productUrlDAO = productUrlDAO;
 	}
 
 	public ProductDAO getProductDAO() {
@@ -145,12 +101,20 @@ public class ProductSrcAction extends ActionSupport{
 		this.productDAO = productDAO;
 	}
 
-	public SrcDAO getSrcDAO() {
-		return srcDAO;
+	public Integer getProductId() {
+		return productId;
 	}
 
-	public void setSrcDAO(SrcDAO srcDAO) {
-		this.srcDAO = srcDAO;
+	public void setProductId(Integer productId) {
+		this.productId = productId;
+	}
+
+	public Integer getProductUrlId() {
+		return productUrlId;
+	}
+
+	public void setProductUrlId(Integer productUrlId) {
+		this.productUrlId = productUrlId;
 	}
 
 	public File getFileUpload() {
@@ -176,5 +140,5 @@ public class ProductSrcAction extends ActionSupport{
 	public void setFileUploadFileName(String fileUploadFileName) {
 		this.fileUploadFileName = fileUploadFileName;
 	}
-	
+
 }

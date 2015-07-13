@@ -99,11 +99,6 @@
 			<ref bean="sessionFactory" />
 		</property>
 	</bean>
-	<bean id="SrcDAO" class="com.apairl.dao.SrcDAO">
-		<property name="sessionFactory">
-			<ref bean="sessionFactory" />
-		</property>
-	</bean>
 	<bean id="SizeDAO" class="com.apairl.dao.SizeDAO">
 		<property name="sessionFactory">
 			<ref bean="sessionFactory" />

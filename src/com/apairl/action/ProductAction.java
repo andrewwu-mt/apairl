@@ -13,9 +13,8 @@ import org.apache.struts2.ServletActionContext;
 import com.apairl.dao.CategoryDAO;
 import com.apairl.dao.ColorDAO;
 import com.apairl.dao.ProductDAO;
-import com.apairl.dao.ProductSrcDAO;
+import com.apairl.dao.ProductUrlDAO;
 import com.apairl.dao.SizeDAO;
-import com.apairl.dao.SrcDAO;
 import com.apairl.dao.StockDAO;
 import com.apairl.dao.TypeDAO;
 import com.apairl.dbo.Color;
@@ -37,8 +36,7 @@ public class ProductAction extends ActionSupport{
 	private TypeDAO typeDAO;
 	private StockDAO stockDAO;
 	private CategoryDAO categoryDAO;
-	private ProductSrcDAO productSrcDAO;
-	private SrcDAO srcDAO;
+	private ProductUrlDAO productSrcDAO;
 	private SizeDAO sizeDAO;
 	private ColorDAO colorDAO;
 	
@@ -318,20 +316,12 @@ public class ProductAction extends ActionSupport{
 		this.typeId = typeId;
 	}
 
-	public ProductSrcDAO getProductSrcDAO() {
+	public ProductUrlDAO getProductSrcDAO() {
 		return productSrcDAO;
 	}
 
-	public void setProductSrcDAO(ProductSrcDAO productSrcDAO) {
+	public void setProductSrcDAO(ProductUrlDAO productSrcDAO) {
 		this.productSrcDAO = productSrcDAO;
-	}
-
-	public SrcDAO getSrcDAO() {
-		return srcDAO;
-	}
-
-	public void setSrcDAO(SrcDAO srcDAO) {
-		this.srcDAO = srcDAO;
 	}
 
 	public SizeDAO getSizeDAO() {
