@@ -1,17 +1,13 @@
+<link rel="icon" type="img/ico" href="img/favicon.ico">
+
 <!-- Mobile Meta -->
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-
 
 <link rel="canonical" href="index" />
 
 <!-- CSS -->
 <link href="cdn.shopify.com/s/files/1/0271/9799/t/10/assets/stylea3ee.css?1172313162436649993" rel="stylesheet" type="text/css"  media="all"  />
 <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css"  media="all"  />
-
-
-
-
 
 <link rel="shortcut icon" href="http://cdn.shopify.com/s/files/1/0271/9799/t/10/assets/favicon.ico?1172313162436649993">
 <link rel="sitemap" type="application/xml" title="Sitemap" href="sitemap.xml" />
@@ -26,8 +22,6 @@
 
 //]]>
 </script>
-
-
 
 <script id="__st">
 //<![CDATA[

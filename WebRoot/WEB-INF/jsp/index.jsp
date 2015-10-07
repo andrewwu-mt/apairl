@@ -14,9 +14,9 @@
 		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
 	
-	
-	<title>Apairl Store - Jual Bikini dan pakaian wanita Indonesia</title>
-	<meta name="keywords" content="">
+	<title>Apairl Store Indonesia</title>
+	<meta name="keywords" content="apairl,apairlstore,bikini,triangl,indonesia,baju,jual,dress,murah,asli,authentic">
+	<meta name="description" content="Menjual authentic Triangl Bikini dan berbagai macam pakaian wanita lain khusus wilayah Indonesia.">
 	<jsp:include page="core.jsp" />
 </head>
 <body>
@@ -235,9 +235,9 @@
 	        get: 'user',
 	        userId: 1445652193,
 	        accessToken: '1445652193.7a705ff.1951a80bc4d5413e9285c86a577800fd',
-	        template: '<div class="col-md-2 col-sm-2 col-xs-6"><a class="fancybox-instagram" href="{{image}}"><img src="{{image}}" class="img-responsive"/></a></div>',        
-	        limit: 12,
-	        resolution: 'low_resolution'
+	        template: '<div class="col-md-2 col-sm-2 col-xs-6" style="padding:10px;"><a class="fancybox-instagram" href="{{image}}"><img src="{{image}}" class="img-responsive"/></a></div>',        
+	        limit: 24,
+	        resolution: 'standard_resolution'
 	    });
 	    
 	    userFeed.run();
