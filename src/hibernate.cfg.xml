@@ -45,6 +45,7 @@
 		<mapping resource="com/apairl/dbo/ProductUrl.hbm.xml" />
 		<mapping resource="com/apairl/dbo/Provinsi.hbm.xml" />
 		<mapping resource="com/apairl/dbo/ShipType.hbm.xml" />
+		<mapping resource="com/apairl/dbo/Slide.hbm.xml" />
 		<mapping resource="com/apairl/dbo/Size.hbm.xml" />
 		<mapping resource="com/apairl/dbo/Stock.hbm.xml" />
 		<mapping resource="com/apairl/dbo/Type.hbm.xml" />

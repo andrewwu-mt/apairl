@@ -105,7 +105,7 @@
 	<div class="row">
 		<h1 id="site-title">
 		  <a href="index" title="Home">
-		      <img src="cdn.shopify.com/s/files/1/0271/9799/t/10/assets/logo.png?1172313162436649993" alt="Apairl Store" /> 
+		      <img src="img/logo/logo-bg.png" alt="Apairl Store" /> 
 		  </a>
 		</h1>
 	</div>

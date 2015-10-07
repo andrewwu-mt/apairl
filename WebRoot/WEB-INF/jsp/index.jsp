@@ -1,6 +1,8 @@
 <%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
 <%@taglib uri="/struts-tags" prefix="s"%>
 
+<s:action name="slide-all" executeResult="false" />
+
 <!DOCTYPE html>
 <!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
 <!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
@@ -32,17 +34,11 @@
 	<div class="flexslider-container col-lg-12">
 		<div class="flexslider">
 	    <ul class="slides">
-	        <li>
-	            <img src="cdn.shopify.com/s/files/1/0271/9799/t/10/assets/carousel-item-1a3ee.jpg?1172313162436649993" alt="" />
-	        </li>
-	        
-	        <li>
-	          <img src="cdn.shopify.com/s/files/1/0271/9799/t/10/assets/carousel-item-2a3ee.jpg?1172313162436649993" alt="" />
-	        </li>
-
-        	<li>
-				<img src="cdn.shopify.com/s/files/1/0271/9799/t/10/assets/carousel-item-3a3ee.jpg?1172313162436649993" alt="" />
-			</li>
+	    	<s:iterator value="#request.slideList" >
+		        <li>
+		            <img src="${src}" alt="apairl-slide-${slideId}" />
+		        </li>
+	    	</s:iterator>
 	    </ul>
 	  </div>
 	</div>

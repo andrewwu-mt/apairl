@@ -24,6 +24,10 @@
 			<result name="success">/WEB-INF/jsp/{1}.jsp</result>
 		</action>
 		
+		<!-- Slide Start -->
+		<action name="slide-all" class="SlideAction" method="allRecords" />
+		<!-- Slide End -->
+		
 		<!-- ProductUrl Start -->
 		<action name="product-url-get-by-product" class="ProductUrlAction" method="getRecordsByProductId" />
 		

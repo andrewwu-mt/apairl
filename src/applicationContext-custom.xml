@@ -11,6 +11,12 @@
 	<bean id="LoginInterceptor" class="com.apairl.interceptor.LoginInterceptor" scope="prototype" />
 	
 	
+	<bean id="SlideAction" class="com.apairl.action.SlideAction" scope="prototype">
+		<property name="slideDAO">
+			<ref bean="SlideDAO" />
+		</property>
+	</bean>
+	
 	<bean id="ProductUrlAction" class="com.apairl.action.ProductUrlAction" scope="prototype">
 		<property name="productUrlDAO">
 			<ref bean="ProductUrlDAO" />

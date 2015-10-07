@@ -14,6 +14,11 @@
 		</property>
 	</bean>
 	
+	<bean id="SlideDAO" class="com.apairl.dao.SlideDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
 	<bean id="ExchangeDAO" class="com.apairl.dao.ExchangeDAO">
 		<property name="sessionFactory">
 			<ref bean="sessionFactory" />
