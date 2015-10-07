@@ -120,11 +120,10 @@
 						</a>
 						<ul class="dropdown-menu">
 								<li><a href="collections/beachwear.html">Beachwear</a></li>
-								<li><a href="collections/shorts.html">Shorts</a></li>
+								<li><a href="collections/shorts.html">Dress</a></li>
 						</ul>
 					</li>
-					<li><a href="collections/beachwear.html">Beachwear</a></li>
-					<li><a href="collections/watches.html">Watches</a></li>
+					<li><a href="collections/watches.html">Accessories</a></li>
 				</ul>
 			</div>
 		</div>

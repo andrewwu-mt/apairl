@@ -13,6 +13,11 @@ public class Slide implements java.io.Serializable {
 
 	// Constructors
 
+	/** default constructor */
+	public Slide() {
+	}
+
+	/** full constructor */
 	public Slide(String src) {
 		this.src = src;
 	}

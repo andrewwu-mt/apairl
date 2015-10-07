@@ -84,7 +84,7 @@ public class SlideDAO extends HibernateDaoSupport {
 	public List findAll() {
 		log.debug("finding all Slide instances");
 		try {
-			String queryString = "from Product";
+			String queryString = "from Slide";
 			return getHibernateTemplate().find(queryString);
 		} catch (RuntimeException re) {
 			log.error("find all failed", re);

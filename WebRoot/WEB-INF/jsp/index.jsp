@@ -36,7 +36,7 @@
 	    <ul class="slides">
 	    	<s:iterator value="#request.slideList" >
 		        <li>
-		            <img src="${src}" alt="apairl-slide-${slideId}" />
+		            <img src="${src}" alt="apairl-slide-${slideId}"/>
 		        </li>
 	    	</s:iterator>
 	    </ul>
@@ -73,19 +73,8 @@
 				<div class="hp-title">
 					<a href="products/seafolly-shimmer-tie-front-bustier.html">
 						<div class="indiv-product-title-text">Seafolly Shimmer Tie Front Bustier</div>
-						
-						
-					
 						<span class="money-styling custom-font">
-					
-							
-					
-								
-								
-									<small>from</small> &pound;53.00
-								
-							
-			
+							<small>from</small> &pound;53.00
 						</span>
 					</a>
 				</div>

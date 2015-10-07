@@ -61,7 +61,8 @@
 		<h3>Payment Methods</h3>
 		
 		<div id="footer-payment-methods">
-		    <img src="cdn.shopify.com/s/files/1/0271/9799/t/10/assets/card-paypala3ee.png?1172313162436649993" alt="" /> 
+		    <img src="img/payment/card-bcaa3ee.png" alt="" /> 
+		    <img src="img/payment/card-paypala3ee.png" alt="" /> 
 		</div>
 		
 		<h3>Like us!</h3>
