@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xml:lang="en-US" xmlns="http://www.w3.org/2005/Atom" xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:s="http://jadedpixel.com/-/spec/shopify">
+  <id>https://envy-stockholm.myshopify.com/collections/all.atom</id>
+  <link rel="alternate" type="text/html" href="https://envy-stockholm.myshopify.com/collections/all"/>
+  <link rel="self" type="application/atom+xml" href="https://envy-stockholm.myshopify.com/collections/watches.atom"/>
+  <title>Envy - Stockholm</title>
+  <updated>2013-10-01T10:45:29-04:00</updated>
+  <author>
+    <name>Envy - Stockholm</name>
+  </author>
+  <entry>
+    <id>https://envy-stockholm.myshopify.com/products/161487221</id>
+    <published>2013-10-01T10:45:29-04:00</published>
+    <updated>2013-10-01T10:45:29-04:00</updated>
+    <link rel="alternate" type="text/html" href="https://envy-stockholm.myshopify.com/products/tsovet-leather-watch"/>
+    <title>Tsovet Leather Watch</title>
+    <s:type>Watches</s:type>
+    <s:vendor>Tsovet</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0271/9799/products/image1a_1.jpeg?v=1380638735" /></td>
+    <td valign="bottom">
+      <p>
+        <strong>Vendor: </strong>Tsovet<br>
+        <strong>Type: </strong>Watches<br>
+        <strong>Price: </strong>
+            300.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><p>Leather strap watch by Tsovet. Featuring a round bezel with a stainless steel case, a textured crown to the 3 o'clock position, a round face with notched numerical indexes, logo detailing to the centre, triple hand Swiss quartz movement, a smooth leather strap with exposed stitched seams and a secure pin buckle fastening. Presented in a branded box.</p></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:variant>
+      <id>https://envy-stockholm.myshopify.com/products/161487221</id>
+      <title>Default Title</title>
+      <s:price currency="GBP">300.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>2000</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://envy-stockholm.myshopify.com/products/161487197</id>
+    <published>2013-10-01T10:45:18-04:00</published>
+    <updated>2013-10-01T10:45:18-04:00</updated>
+    <link rel="alternate" type="text/html" href="https://envy-stockholm.myshopify.com/products/tsovet-brown-leather-watch"/>
+    <title>Tsovet Brown Leather Watch</title>
+    <s:type>Watches</s:type>
+    <s:vendor>Tsovet</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0271/9799/products/image2a_2.jpeg?v=1380638729" /></td>
+    <td valign="bottom">
+      <p>
+        <strong>Vendor: </strong>Tsovet<br>
+        <strong>Type: </strong>Watches<br>
+        <strong>Price: </strong>
+            250.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><p>Analogue watch by Tsovet. Constructed in matte stainless steel with an 
+Italian calf leather strap. Featuring a large logo embossed round dial 
+with contrast indices, a luminous fill three hand quartz analogue 
+movement and scratch resistant toughened glass, a slim bezel, a raised 
+textured crown, a leather strap with natural stitching and a pin buckle 
+closure, includes a presentation case.</p>
+</td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:variant>
+      <id>https://envy-stockholm.myshopify.com/products/161487197</id>
+      <title>Default Title</title>
+      <s:price currency="GBP">250.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>3000</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://envy-stockholm.myshopify.com/products/161485575</id>
+    <published>2013-10-01T10:39:54-04:00</published>
+    <updated>2013-10-01T10:39:54-04:00</updated>
+    <link rel="alternate" type="text/html" href="https://envy-stockholm.myshopify.com/products/kr3w-watch-with-rubber-strap"/>
+    <title>KR3W Watch With Rubber Strap</title>
+    <s:type>Watches</s:type>
+    <s:vendor>KR3W</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0271/9799/products/image3a_2.jpeg?v=1380638398" /></td>
+    <td valign="bottom">
+      <p>
+        <strong>Vendor: </strong>KR3W<br>
+        <strong>Type: </strong>Watches<br>
+        <strong>Price: </strong>
+            30.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><p>Digital watch by KR3W . Featuring a flexible rubber rib-textured strap 
+with a plastic pin buckle fastening, a square dial with a graphic 
+contrast markings to the edges, digital readings with a stopwatch 
+function, and a stainless steel metal back. Digital watch by KR3W has 
+been styled with a short sleeve shirt</p>
+</td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:variant>
+      <id>https://envy-stockholm.myshopify.com/products/161485575</id>
+      <title>Default Title</title>
+      <s:price currency="GBP">30.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://envy-stockholm.myshopify.com/products/161485485</id>
+    <published>2013-10-01T10:39:30-04:00</published>
+    <updated>2013-10-01T10:39:30-04:00</updated>
+    <link rel="alternate" type="text/html" href="https://envy-stockholm.myshopify.com/products/guess-analog-ladies-catwalk-round-animal-print-watch"/>
+    <title>Guess Analog Ladies Catwalk Round Animal Print Watch</title>
+    <s:type>Watches</s:type>
+    <s:vendor>Guess</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0271/9799/products/image4a_2.jpeg?v=1380638374" /></td>
+    <td valign="bottom">
+      <p>
+        <strong>Vendor: </strong>Guess<br>
+        <strong>Type: </strong>Watches<br>
+        <strong>Price: </strong>
+            135.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><p>Analog bracelet watch by Guess. Featuring a gold-tone bracelet strap with brushed and high-shine metal detailing, a branded deployment clasp closure, a round dial with a crystal-studded bezel, a jewelled leopard print face with subtle branding and metal hands, and a textured crown to the three o'clock position.</p></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:variant>
+      <id>https://envy-stockholm.myshopify.com/products/161485485</id>
+      <title>Default Title</title>
+      <s:price currency="GBP">135.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>12000</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://envy-stockholm.myshopify.com/products/161485393</id>
+    <published>2013-10-01T10:39:04-04:00</published>
+    <updated>2013-10-01T10:39:04-04:00</updated>
+    <link rel="alternate" type="text/html" href="https://envy-stockholm.myshopify.com/products/emporio-armani-rubber-watch"/>
+    <title>Emporio Armani Rubber Watch</title>
+    <s:type>Watches</s:type>
+    <s:vendor>Adidas</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0271/9799/products/image6a_2.jpeg?v=1380638349" /></td>
+    <td valign="bottom">
+      <p>
+        <strong>Vendor: </strong>Adidas<br>
+        <strong>Type: </strong>Watches<br>
+        <strong>Price: </strong>
+            299.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><p>Rubber watch by Emporio Armani. Featuring a logo embossed round dial 
+with contrast indices, chronograph sub dials and a three hand analogue 
+movement, a smooth bezel, three raised crowns, a stainless steel 
+backing, an embossed rubber strap with a pin buckle fastening and a 
+keeper, includes a branded presentation box.</p>
+</td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:variant>
+      <id>https://envy-stockholm.myshopify.com/products/161485393</id>
+      <title>Default Title</title>
+      <s:price currency="GBP">299.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>10000</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://envy-stockholm.myshopify.com/products/161485101</id>
+    <published>2013-10-01T10:37:16-04:00</published>
+    <updated>2013-10-01T10:37:16-04:00</updated>
+    <link rel="alternate" type="text/html" href="https://envy-stockholm.myshopify.com/products/adidas-originals-adh2124-cambridge-watch"/>
+    <title>Adidas Originals ADH2124 Cambridge Watch</title>
+    <s:type>Watches</s:type>
+    <s:vendor>Adidas</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0271/9799/products/image5a_2.jpeg?v=1380638243" /></td>
+    <td valign="bottom">
+      <p>
+        <strong>Vendor: </strong>Adidas<br>
+        <strong>Type: </strong>Watches<br>
+        <strong>Price: </strong>
+            50.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><p>Cambridge sports watch by Adidas Originals. Featuring a smooth bezel, a 
+circular face with trefoil branding to the centre, silver-tone 
+detailing, a three hand dial with a date function, a crown to the side, a
+ plastic bracelet strap and a buckle fastening to the reverse. Presented
+ in a branded box.</p>
+</td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:variant>
+      <id>https://envy-stockholm.myshopify.com/products/161485101</id>
+      <title>Default Title</title>
+      <s:price currency="GBP">50.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>4000</s:grams>
+    </s:variant>
+  </entry>
+</feed>

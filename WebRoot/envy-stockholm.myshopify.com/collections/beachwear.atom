@@ -1,0 +1,1545 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xml:lang="en-US" xmlns="http://www.w3.org/2005/Atom" xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:s="http://jadedpixel.com/-/spec/shopify">
+  <id>https://envy-stockholm.myshopify.com/collections/all.atom</id>
+  <link rel="alternate" type="text/html" href="https://envy-stockholm.myshopify.com/collections/all"/>
+  <link rel="self" type="application/atom+xml" href="https://envy-stockholm.myshopify.com/collections/beachwear.atom"/>
+  <title>Envy - Stockholm</title>
+  <updated>2014-12-10T08:25:00-05:00</updated>
+  <author>
+    <name>Envy - Stockholm</name>
+  </author>
+  <entry>
+    <id>https://envy-stockholm.myshopify.com/products/392283468</id>
+    <published>2014-12-10T08:25:00-05:00</published>
+    <updated>2014-12-10T08:25:00-05:00</updated>
+    <link rel="alternate" type="text/html" href="https://envy-stockholm.myshopify.com/products/river-island-elastic-tennesee-bustier-top"/>
+    <title>River Island Elastic Tennesee Bustier Top</title>
+    <s:type>Beachwear</s:type>
+    <s:vendor>River Island</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0271/9799/products/image8-a.jpg?v=1418218006" /></td>
+    <td valign="bottom">
+      <p>
+        <strong>Vendor: </strong>River Island<br>
+        <strong>Type: </strong>Beachwear<br>
+        <strong>Price: </strong>
+            16.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">River Island brings us an eclectic collection of fashion forward styles. Look out for vibrantly printed party dresses, feminine detailing, statement jackets and a covetable range of denim including skinny cut jeans and cute denim shorts, which sits alongside their directional footwear and swimwear range.</td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:variant>
+      <id>https://envy-stockholm.myshopify.com/products/392283468</id>
+      <title>Small / Black</title>
+      <s:price currency="GBP">16.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://envy-stockholm.myshopify.com/products/392283468</id>
+      <title>Small / Blue</title>
+      <s:price currency="GBP">16.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://envy-stockholm.myshopify.com/products/392283468</id>
+      <title>Small / White</title>
+      <s:price currency="GBP">16.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://envy-stockholm.myshopify.com/products/392283468</id>
+      <title>Small / Pink</title>
+      <s:price currency="GBP">16.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://envy-stockholm.myshopify.com/products/392283468</id>
+      <title>Medium / Black</title>
+      <s:price currency="GBP">16.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://envy-stockholm.myshopify.com/products/392283468</id>
+      <title>Medium / Blue</title>
+      <s:price currency="GBP">16.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://envy-stockholm.myshopify.com/products/392283468</id>
+      <title>Medium / White</title>
+      <s:price currency="GBP">16.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://envy-stockholm.myshopify.com/products/392283468</id>
+      <title>Medium / Pink</title>
+      <s:price currency="GBP">16.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://envy-stockholm.myshopify.com/products/392283468</id>
+      <title>Large / Black</title>
+      <s:price currency="GBP">16.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://envy-stockholm.myshopify.com/products/392283468</id>
+      <title>Large / Blue</title>
+      <s:price currency="GBP">16.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://envy-stockholm.myshopify.com/products/392283468</id>
+      <title>Large / White</title>
+      <s:price currency="GBP">16.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://envy-stockholm.myshopify.com/products/392283468</id>
+      <title>Large / Pink</title>
+      <s:price currency="GBP">16.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://envy-stockholm.myshopify.com/products/392282744</id>
+    <published>2014-12-10T08:23:00-05:00</published>
+    <updated>2014-12-10T08:23:00-05:00</updated>
+    <link rel="alternate" type="text/html" href="https://envy-stockholm.myshopify.com/products/we-are-handsome-the-mighty-scoop-one-piece"/>
+    <title>We Are Handsome The Mighty Scoop One Piece</title>
+    <s:type>Beachwear</s:type>
+    <s:vendor>We Are Handsome</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0271/9799/products/image7-a.jpg?v=1418217880" /></td>
+    <td valign="bottom">
+      <p>
+        <strong>Vendor: </strong>We Are Handsome<br>
+        <strong>Type: </strong>Beachwear<br>
+        <strong>Price: </strong>
+            213.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">Born in Summer 2009, We Are Handsome is the embodiment of co-designers Indhra and Jeremy's love of the finer things in life. A sun drenched colour palette and bold landscape prints see We Are Handsome recalling the halcyon days of a childhood spent in Queensland, with every bikini and swimsuit 100% Australian designed and sewn.</td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:variant>
+      <id>https://envy-stockholm.myshopify.com/products/392282744</id>
+      <title>Small / White</title>
+      <s:price currency="GBP">213.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://envy-stockholm.myshopify.com/products/392282744</id>
+      <title>Small / Black</title>
+      <s:price currency="GBP">213.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://envy-stockholm.myshopify.com/products/392282744</id>
+      <title>Small / Blue</title>
+      <s:price currency="GBP">213.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://envy-stockholm.myshopify.com/products/392282744</id>
+      <title>Medium / White</title>
+      <s:price currency="GBP">213.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://envy-stockholm.myshopify.com/products/392282744</id>
+      <title>Medium / Black</title>
+      <s:price currency="GBP">213.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://envy-stockholm.myshopify.com/products/392282744</id>
+      <title>Medium / Blue</title>
+      <s:price currency="GBP">213.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://envy-stockholm.myshopify.com/products/392282744</id>
+      <title>Large / White</title>
+      <s:price currency="GBP">213.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://envy-stockholm.myshopify.com/products/392282744</id>
+      <title>Large / Black</title>
+      <s:price currency="GBP">213.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://envy-stockholm.myshopify.com/products/392282744</id>
+      <title>Large / Blue</title>
+      <s:price currency="GBP">213.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://envy-stockholm.myshopify.com/products/392281756</id>
+    <published>2014-12-10T08:20:00-05:00</published>
+    <updated>2014-12-10T08:20:00-05:00</updated>
+    <link rel="alternate" type="text/html" href="https://envy-stockholm.myshopify.com/products/seafolly-miami-high-neck-swimsuit"/>
+    <title>Seafolly Miami High Neck Swimsuit</title>
+    <s:type>Beachwear</s:type>
+    <s:vendor>Seafolly</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0271/9799/products/image6-a.jpg?v=1418217713" /></td>
+    <td valign="bottom">
+      <p>
+        <strong>Vendor: </strong>Seafolly<br>
+        <strong>Type: </strong>Beachwear<br>
+        <strong>Price: </strong>
+            90.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">Effortlessly encapsulating the laid-back Australian beach lifestyle through their swimwear collections, Seafolly are renowned for bold colours and innovative bikinis and one pieces. Priding themselves on high quality design and fabrication, Seafolly's eclectic textures and statement prints bring forth the label's philosophy. Bandeau bikini tops and skirted briefs complement their sophisticated range of swimsuits adorned with pleating and soft frills, as beach cover-ups complete the capsule collection.</td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:variant>
+      <id>https://envy-stockholm.myshopify.com/products/392281756</id>
+      <title>Small / White</title>
+      <s:price currency="GBP">90.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://envy-stockholm.myshopify.com/products/392281756</id>
+      <title>Small / Black</title>
+      <s:price currency="GBP">90.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://envy-stockholm.myshopify.com/products/392281756</id>
+      <title>Small / Blue</title>
+      <s:price currency="GBP">90.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://envy-stockholm.myshopify.com/products/392281756</id>
+      <title>Medium / White</title>
+      <s:price currency="GBP">90.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://envy-stockholm.myshopify.com/products/392281756</id>
+      <title>Medium / Black</title>
+      <s:price currency="GBP">90.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://envy-stockholm.myshopify.com/products/392281756</id>
+      <title>Medium / Blue</title>
+      <s:price currency="GBP">90.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://envy-stockholm.myshopify.com/products/392281756</id>
+      <title>Large / White</title>
+      <s:price currency="GBP">90.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://envy-stockholm.myshopify.com/products/392281756</id>
+      <title>Large / Black</title>
+      <s:price currency="GBP">90.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://envy-stockholm.myshopify.com/products/392281756</id>
+      <title>Large / Blue</title>
+      <s:price currency="GBP">90.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://envy-stockholm.myshopify.com/products/392281264</id>
+    <published>2014-12-10T08:19:00-05:00</published>
+    <updated>2014-12-10T08:19:00-05:00</updated>
+    <link rel="alternate" type="text/html" href="https://envy-stockholm.myshopify.com/products/talulah-memories-swimsuit"/>
+    <title>Talulah Memories Swimsuit</title>
+    <s:type>Beachwear</s:type>
+    <s:vendor>Talulah</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0271/9799/products/image5-a.jpg?v=1418217618" /></td>
+    <td valign="bottom">
+      <p>
+        <strong>Vendor: </strong>Talulah<br>
+        <strong>Type: </strong>Beachwear<br>
+        <strong>Price: </strong>
+            94.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">Designer Kelli Wharton’s label Talulah has shore style sewn up since launching its swimwear line in 2013. With a soaking of Aussie sunshine and visions of boho vacations, Talulah splash floral prints, tassels and beaded embellishments across their selection of silk kaftans, triangle bikinis, printed sarongs and one-pieces.</td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:variant>
+      <id>https://envy-stockholm.myshopify.com/products/392281264</id>
+      <title>Small / Black</title>
+      <s:price currency="GBP">94.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://envy-stockholm.myshopify.com/products/392281264</id>
+      <title>Small / White</title>
+      <s:price currency="GBP">94.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://envy-stockholm.myshopify.com/products/392281264</id>
+      <title>Small / Blue</title>
+      <s:price currency="GBP">94.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://envy-stockholm.myshopify.com/products/392281264</id>
+      <title>Medium / Black</title>
+      <s:price currency="GBP">94.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://envy-stockholm.myshopify.com/products/392281264</id>
+      <title>Medium / White</title>
+      <s:price currency="GBP">94.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://envy-stockholm.myshopify.com/products/392281264</id>
+      <title>Medium / Blue</title>
+      <s:price currency="GBP">94.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://envy-stockholm.myshopify.com/products/392281264</id>
+      <title>Large / Black</title>
+      <s:price currency="GBP">94.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://envy-stockholm.myshopify.com/products/392281264</id>
+      <title>Large / White</title>
+      <s:price currency="GBP">94.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://envy-stockholm.myshopify.com/products/392281264</id>
+      <title>Large / Blue</title>
+      <s:price currency="GBP">94.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://envy-stockholm.myshopify.com/products/392280880</id>
+    <published>2014-12-10T08:16:00-05:00</published>
+    <updated>2014-12-10T08:16:00-05:00</updated>
+    <link rel="alternate" type="text/html" href="https://envy-stockholm.myshopify.com/products/seafolly-kimono-rose-tamagotchi-beach-pant"/>
+    <title>Seafolly Kimono Rose Tamagotchi Beach Pant</title>
+    <s:type>Beachwear</s:type>
+    <s:vendor>Seafolly</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0271/9799/products/image4-a_adda227f-0078-4490-8608-a4d979496d53.jpg?v=1418217530" /></td>
+    <td valign="bottom">
+      <p>
+        <strong>Vendor: </strong>Seafolly<br>
+        <strong>Type: </strong>Beachwear<br>
+        <strong>Price: </strong>
+            96.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">Effortlessly encapsulating the laid-back Australian beach lifestyle through their swimwear collections, Seafolly are renowned for bold colours and innovative bikinis and one pieces. Priding themselves on high quality design and fabrication, Seafolly's eclectic textures and statement prints bring forth the label's philosophy. Bandeau bikini tops and skirted briefs complement their sophisticated range of swimsuits adorned with pleating and soft frills, as beach cover-ups complete the capsule collection.</td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:variant>
+      <id>https://envy-stockholm.myshopify.com/products/392280880</id>
+      <title>Small / Black</title>
+      <s:price currency="GBP">96.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://envy-stockholm.myshopify.com/products/392280880</id>
+      <title>Small / White</title>
+      <s:price currency="GBP">96.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://envy-stockholm.myshopify.com/products/392280880</id>
+      <title>Small / Pink</title>
+      <s:price currency="GBP">96.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://envy-stockholm.myshopify.com/products/392280880</id>
+      <title>Medium / Black</title>
+      <s:price currency="GBP">96.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://envy-stockholm.myshopify.com/products/392280880</id>
+      <title>Medium / White</title>
+      <s:price currency="GBP">96.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://envy-stockholm.myshopify.com/products/392280880</id>
+      <title>Medium / Pink</title>
+      <s:price currency="GBP">96.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://envy-stockholm.myshopify.com/products/392280880</id>
+      <title>Large / Black</title>
+      <s:price currency="GBP">96.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://envy-stockholm.myshopify.com/products/392280880</id>
+      <title>Large / White</title>
+      <s:price currency="GBP">96.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://envy-stockholm.myshopify.com/products/392280880</id>
+      <title>Large / Pink</title>
+      <s:price currency="GBP">96.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://envy-stockholm.myshopify.com/products/392280296</id>
+    <published>2014-12-10T08:15:00-05:00</published>
+    <updated>2014-12-10T08:15:00-05:00</updated>
+    <link rel="alternate" type="text/html" href="https://envy-stockholm.myshopify.com/products/seafolly-goddess-boyleg-maillot-swimsuit"/>
+    <title>Seafolly Goddess Boyleg Maillot Swimsuit</title>
+    <s:type>Beachwear</s:type>
+    <s:vendor>Seafolly</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0271/9799/products/image3-a_db10e387-77d0-4c1e-bbf0-38895022d9d5.jpg?v=1418217391" /></td>
+    <td valign="bottom">
+      <p>
+        <strong>Vendor: </strong>Seafolly<br>
+        <strong>Type: </strong>Beachwear<br>
+        <strong>Price: </strong>
+            96.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">Effortlessly encapsulating the laid-back Australian beach lifestyle through their swimwear collections, Seafolly are renowned for bold colours and innovative bikinis and one pieces. Priding themselves on high quality design and fabrication, Seafolly's eclectic textures and statement prints bring forth the label's philosophy. Bandeau bikini tops and skirted briefs complement their sophisticated range of swimsuits adorned with pleating and soft frills, as beach cover-ups complete the capsule collection.</td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:variant>
+      <id>https://envy-stockholm.myshopify.com/products/392280296</id>
+      <title>Small / White</title>
+      <s:price currency="GBP">96.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://envy-stockholm.myshopify.com/products/392280296</id>
+      <title>Small / Yellow</title>
+      <s:price currency="GBP">96.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://envy-stockholm.myshopify.com/products/392280296</id>
+      <title>Small / Red</title>
+      <s:price currency="GBP">96.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://envy-stockholm.myshopify.com/products/392280296</id>
+      <title>Medium / White</title>
+      <s:price currency="GBP">96.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://envy-stockholm.myshopify.com/products/392280296</id>
+      <title>Medium / Yellow</title>
+      <s:price currency="GBP">96.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://envy-stockholm.myshopify.com/products/392280296</id>
+      <title>Medium / Red</title>
+      <s:price currency="GBP">96.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://envy-stockholm.myshopify.com/products/392280296</id>
+      <title>Large / White</title>
+      <s:price currency="GBP">96.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://envy-stockholm.myshopify.com/products/392280296</id>
+      <title>Large / Yellow</title>
+      <s:price currency="GBP">96.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://envy-stockholm.myshopify.com/products/392280296</id>
+      <title>Large / Red</title>
+      <s:price currency="GBP">96.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://envy-stockholm.myshopify.com/products/392279744</id>
+    <published>2014-12-10T08:13:00-05:00</published>
+    <updated>2014-12-10T08:13:00-05:00</updated>
+    <link rel="alternate" type="text/html" href="https://envy-stockholm.myshopify.com/products/we-are-handsome-the-strelitzia-bikini-set"/>
+    <title>We Are Handsome The Strelitzia Bikini Set</title>
+    <s:type>Beachwear</s:type>
+    <s:vendor>Adidas</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0271/9799/products/image2-a_028f2077-c840-44c9-811e-3ca7cfb0f337.jpg?v=1418217298" /></td>
+    <td valign="bottom">
+      <p>
+        <strong>Vendor: </strong>Adidas<br>
+        <strong>Type: </strong>Beachwear<br>
+        <strong>Price: </strong>
+            135.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">Born in Summer 2009, We Are Handsome is the embodiment of co-designers Indhra and Jeremy's love of the finer things in life. A sun drenched colour palette and bold landscape prints see We Are Handsome recalling the halcyon days of a childhood spent in Queensland, with every bikini and swimsuit 100% Australian designed and sewn.</td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:variant>
+      <id>https://envy-stockholm.myshopify.com/products/392279744</id>
+      <title>Small / Black</title>
+      <s:price currency="GBP">135.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://envy-stockholm.myshopify.com/products/392279744</id>
+      <title>Small / White</title>
+      <s:price currency="GBP">135.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://envy-stockholm.myshopify.com/products/392279744</id>
+      <title>Small / Yellow</title>
+      <s:price currency="GBP">135.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://envy-stockholm.myshopify.com/products/392279744</id>
+      <title>Medium / Black</title>
+      <s:price currency="GBP">135.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://envy-stockholm.myshopify.com/products/392279744</id>
+      <title>Medium / White</title>
+      <s:price currency="GBP">135.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://envy-stockholm.myshopify.com/products/392279744</id>
+      <title>Medium / Yellow</title>
+      <s:price currency="GBP">135.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://envy-stockholm.myshopify.com/products/392279744</id>
+      <title>Large / Black</title>
+      <s:price currency="GBP">135.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://envy-stockholm.myshopify.com/products/392279744</id>
+      <title>Large / White</title>
+      <s:price currency="GBP">135.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://envy-stockholm.myshopify.com/products/392279744</id>
+      <title>Large / Yellow</title>
+      <s:price currency="GBP">135.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://envy-stockholm.myshopify.com/products/392277864</id>
+    <published>2014-12-10T08:07:00-05:00</published>
+    <updated>2014-12-10T08:07:00-05:00</updated>
+    <link rel="alternate" type="text/html" href="https://envy-stockholm.myshopify.com/products/we-are-handsome-the-white-knight-scoop-one-piece"/>
+    <title>We Are Handsome The White Knight Scoop One Piece</title>
+    <s:type>Beachwear</s:type>
+    <s:vendor>Adidas</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0271/9799/products/image1-a_a1d8c493-50ba-48c7-9981-adb4af5e0272.jpg?v=1418216927" /></td>
+    <td valign="bottom">
+      <p>
+        <strong>Vendor: </strong>Adidas<br>
+        <strong>Type: </strong>Beachwear<br>
+        <strong>Price: </strong>
+            213.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">Born in Summer 2009, We Are Handsome is the embodiment of co-designers Indhra and Jeremy's love of the finer things in life. A sun drenched colour palette and bold landscape prints see We Are Handsome recalling the halcyon days of a childhood spent in Queensland, with every bikini and swimsuit 100% Australian designed and sewn.</td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:variant>
+      <id>https://envy-stockholm.myshopify.com/products/392277864</id>
+      <title>Small / Black</title>
+      <s:price currency="GBP">213.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://envy-stockholm.myshopify.com/products/392277864</id>
+      <title>Small / White</title>
+      <s:price currency="GBP">213.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://envy-stockholm.myshopify.com/products/392277864</id>
+      <title>Small / Blue</title>
+      <s:price currency="GBP">213.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://envy-stockholm.myshopify.com/products/392277864</id>
+      <title>Medium / Black</title>
+      <s:price currency="GBP">213.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://envy-stockholm.myshopify.com/products/392277864</id>
+      <title>Medium / White</title>
+      <s:price currency="GBP">213.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://envy-stockholm.myshopify.com/products/392277864</id>
+      <title>Medium / Blue</title>
+      <s:price currency="GBP">213.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://envy-stockholm.myshopify.com/products/392277864</id>
+      <title>Large / Black</title>
+      <s:price currency="GBP">213.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://envy-stockholm.myshopify.com/products/392277864</id>
+      <title>Large / White</title>
+      <s:price currency="GBP">213.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://envy-stockholm.myshopify.com/products/392277864</id>
+      <title>Large / Blue</title>
+      <s:price currency="GBP">213.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://envy-stockholm.myshopify.com/products/392264068</id>
+    <published>2014-12-10T06:41:00-05:00</published>
+    <updated>2014-12-10T06:41:00-05:00</updated>
+    <link rel="alternate" type="text/html" href="https://envy-stockholm.myshopify.com/products/seafolly-romeo-rose-zip-front-bandeau-bikini-top"/>
+    <title>Seafolly Romeo Rose Zip Front Bandeau Bikini Top</title>
+    <s:type>Beachwear</s:type>
+    <s:vendor>Seafolly</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0271/9799/products/image4-a.jpg?v=1418211776" /></td>
+    <td valign="bottom">
+      <p>
+        <strong>Vendor: </strong>Seafolly<br>
+        <strong>Type: </strong>Beachwear<br>
+        <strong>Price: </strong>
+            54.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">Effortlessly encapsulating the laid-back Australian beach lifestyle through their swimwear collections, Seafolly are renowned for bold colours and innovative bikinis and one pieces. Priding themselves on high quality design and fabrication, Seafolly's eclectic textures and statement prints bring forth the label's philosophy. Bandeau bikini tops and skirted briefs complement their sophisticated range of swimsuits adorned with pleating and soft frills, as beach cover-ups complete the capsule collection.</td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:variant>
+      <id>https://envy-stockholm.myshopify.com/products/392264068</id>
+      <title>Small / Pink</title>
+      <s:price currency="GBP">54.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://envy-stockholm.myshopify.com/products/392264068</id>
+      <title>Small / Blue</title>
+      <s:price currency="GBP">54.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://envy-stockholm.myshopify.com/products/392264068</id>
+      <title>Small / White</title>
+      <s:price currency="GBP">54.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://envy-stockholm.myshopify.com/products/392264068</id>
+      <title>Medium / Pink</title>
+      <s:price currency="GBP">54.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://envy-stockholm.myshopify.com/products/392264068</id>
+      <title>Medium / Blue</title>
+      <s:price currency="GBP">54.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://envy-stockholm.myshopify.com/products/392264068</id>
+      <title>Medium / White</title>
+      <s:price currency="GBP">54.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://envy-stockholm.myshopify.com/products/392264068</id>
+      <title>Large / Pink</title>
+      <s:price currency="GBP">54.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://envy-stockholm.myshopify.com/products/392264068</id>
+      <title>Large / Blue</title>
+      <s:price currency="GBP">54.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://envy-stockholm.myshopify.com/products/392264068</id>
+      <title>Large / White</title>
+      <s:price currency="GBP">54.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://envy-stockholm.myshopify.com/products/392263816</id>
+    <published>2014-12-10T06:37:00-05:00</published>
+    <updated>2014-12-10T06:37:00-05:00</updated>
+    <link rel="alternate" type="text/html" href="https://envy-stockholm.myshopify.com/products/ginja-by-baku-cairo-paisley-print-flounce-bikini-top"/>
+    <title>Ginja By Baku Cairo Paisley Print Flounce Bikini Top</title>
+    <s:type>Beachwear</s:type>
+    <s:vendor>Baku</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0271/9799/products/image3-a.jpg?v=1418211597" /></td>
+    <td valign="bottom">
+      <p>
+        <strong>Vendor: </strong>Baku<br>
+        <strong>Type: </strong>Beachwear<br>
+        <strong>Price: </strong>
+            64.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">Australian swimwear leaders Baku have become synonymous with sleek separates and perfect fits. With an edit of bikinis and one-piece swimsuits in innovative designs and exclusive prints, Baku bring forth beach confidence through flattering cuts and bold colour palettes. Botanical blooms and block-colours set the tone, as ruffle trims and bandeau styles keep it feminine.</td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:variant>
+      <id>https://envy-stockholm.myshopify.com/products/392263816</id>
+      <title>Small / Pink</title>
+      <s:price currency="GBP">64.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://envy-stockholm.myshopify.com/products/392263816</id>
+      <title>Small / Blue</title>
+      <s:price currency="GBP">64.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://envy-stockholm.myshopify.com/products/392263816</id>
+      <title>Small / White</title>
+      <s:price currency="GBP">64.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://envy-stockholm.myshopify.com/products/392263816</id>
+      <title>Medium / Pink</title>
+      <s:price currency="GBP">64.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://envy-stockholm.myshopify.com/products/392263816</id>
+      <title>Medium / Blue</title>
+      <s:price currency="GBP">64.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://envy-stockholm.myshopify.com/products/392263816</id>
+      <title>Medium / White</title>
+      <s:price currency="GBP">64.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://envy-stockholm.myshopify.com/products/392263816</id>
+      <title>Large / Pink</title>
+      <s:price currency="GBP">64.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://envy-stockholm.myshopify.com/products/392263816</id>
+      <title>Large / Blue</title>
+      <s:price currency="GBP">64.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://envy-stockholm.myshopify.com/products/392263816</id>
+      <title>Large / White</title>
+      <s:price currency="GBP">64.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://envy-stockholm.myshopify.com/products/392263676</id>
+    <published>2014-12-10T06:34:00-05:00</published>
+    <updated>2014-12-10T06:34:00-05:00</updated>
+    <link rel="alternate" type="text/html" href="https://envy-stockholm.myshopify.com/products/seafolly-goddess-pleated-frill-triangle-bikini-top"/>
+    <title>Seafolly Goddess Pleated Frill Triangle Bikini Top</title>
+    <s:type>Beachwear</s:type>
+    <s:vendor>Seafolly</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0271/9799/products/image2-a.jpg?v=1418211411" /></td>
+    <td valign="bottom">
+      <p>
+        <strong>Vendor: </strong>Seafolly<br>
+        <strong>Type: </strong>Beachwear<br>
+        <strong>Price: </strong>
+            48.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">Effortlessly encapsulating the laid-back Australian beach lifestyle through their swimwear collections, Seafolly are renowned for bold colours and innovative bikinis and one pieces. Priding themselves on high quality design and fabrication, Seafolly's eclectic textures and statement prints bring forth the label's philosophy. Bandeau bikini tops and skirted briefs complement their sophisticated range of swimsuits adorned with pleating and soft frills, as beach cover-ups complete the capsule collection.</td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:variant>
+      <id>https://envy-stockholm.myshopify.com/products/392263676</id>
+      <title>Small / Blue</title>
+      <s:price currency="GBP">48.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://envy-stockholm.myshopify.com/products/392263676</id>
+      <title>Small / Red</title>
+      <s:price currency="GBP">48.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://envy-stockholm.myshopify.com/products/392263676</id>
+      <title>Small / Pink</title>
+      <s:price currency="GBP">48.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://envy-stockholm.myshopify.com/products/392263676</id>
+      <title>Medium / Blue</title>
+      <s:price currency="GBP">48.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://envy-stockholm.myshopify.com/products/392263676</id>
+      <title>Medium / Red</title>
+      <s:price currency="GBP">48.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://envy-stockholm.myshopify.com/products/392263676</id>
+      <title>Medium / Pink</title>
+      <s:price currency="GBP">48.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://envy-stockholm.myshopify.com/products/392263676</id>
+      <title>Large / Blue</title>
+      <s:price currency="GBP">48.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://envy-stockholm.myshopify.com/products/392263676</id>
+      <title>Large / Red</title>
+      <s:price currency="GBP">48.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://envy-stockholm.myshopify.com/products/392263676</id>
+      <title>Large / Pink</title>
+      <s:price currency="GBP">48.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://envy-stockholm.myshopify.com/products/392263196</id>
+    <published>2014-12-10T06:28:00-05:00</published>
+    <updated>2014-12-10T06:28:00-05:00</updated>
+    <link rel="alternate" type="text/html" href="https://envy-stockholm.myshopify.com/products/seafolly-shimmer-tie-front-bustier"/>
+    <title>Seafolly Shimmer Tie Front Bustier</title>
+    <s:type>Beachwear</s:type>
+    <s:vendor>Seafolly</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0271/9799/products/image1-a.jpg?v=1418211173" /></td>
+    <td valign="bottom">
+      <p>
+        <strong>Vendor: </strong>Seafolly<br>
+        <strong>Type: </strong>Beachwear<br>
+        <strong>Price: </strong>
+            53.00 - 153.00
+            <a href="https://envy-stockholm.myshopify.com/products/seafolly-shimmer-tie-front-bustier">(9 variants)</a>
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">Effortlessly encapsulating the laid-back Australian beach lifestyle through their swimwear collections, Seafolly are renowned for bold colours and innovative bikinis and one pieces. Priding themselves on high quality design and fabrication, Seafolly's eclectic textures and statement prints bring forth the label's philosophy. Bandeau bikini tops and skirted briefs complement their sophisticated range of swimsuits adorned with pleating and soft frills, as beach cover-ups complete the capsule collection.</td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:variant>
+      <id>https://envy-stockholm.myshopify.com/products/392263196</id>
+      <title>Small / Blue</title>
+      <s:price currency="GBP">53.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://envy-stockholm.myshopify.com/products/392263196</id>
+      <title>Small / Yellow</title>
+      <s:price currency="GBP">53.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://envy-stockholm.myshopify.com/products/392263196</id>
+      <title>Small / Red</title>
+      <s:price currency="GBP">53.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://envy-stockholm.myshopify.com/products/392263196</id>
+      <title>Medium / Blue</title>
+      <s:price currency="GBP">53.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://envy-stockholm.myshopify.com/products/392263196</id>
+      <title>Medium / Yellow</title>
+      <s:price currency="GBP">153.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://envy-stockholm.myshopify.com/products/392263196</id>
+      <title>Medium / Red</title>
+      <s:price currency="GBP">53.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://envy-stockholm.myshopify.com/products/392263196</id>
+      <title>Large / Blue</title>
+      <s:price currency="GBP">53.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://envy-stockholm.myshopify.com/products/392263196</id>
+      <title>Large / Yellow</title>
+      <s:price currency="GBP">53.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://envy-stockholm.myshopify.com/products/392263196</id>
+      <title>Large / Red</title>
+      <s:price currency="GBP">53.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://envy-stockholm.myshopify.com/products/161487297</id>
+    <published>2013-10-01T10:45:46-04:00</published>
+    <updated>2013-10-01T10:45:46-04:00</updated>
+    <link rel="alternate" type="text/html" href="https://envy-stockholm.myshopify.com/products/walk-that-walk-crocheted-cotton-blend-bikini"/>
+    <title>Walk That Walk crocheted cotton-blend bikini</title>
+    <s:type>Beachwear</s:type>
+    <s:vendor>Adidas</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0271/9799/products/8a_c3c52aec-e0f1-4fb1-b422-f60082b8be33.jpeg?v=1380638758" /></td>
+    <td valign="bottom">
+      <p>
+        <strong>Vendor: </strong>Adidas<br>
+        <strong>Type: </strong>Beachwear<br>
+        <strong>Price: </strong>
+            145.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><p>Based in Bondi Beach, Lisa Maree is a swimwear expert. This pretty crocheted halterneck bikini has been crafted by hand. Offset the sky-blue and white hues with gold accessories.</p></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:variant>
+      <id>https://envy-stockholm.myshopify.com/products/161487297</id>
+      <title>Default Title</title>
+      <s:price currency="GBP">145.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://envy-stockholm.myshopify.com/products/161487165</id>
+    <published>2013-10-01T10:45:06-04:00</published>
+    <updated>2013-10-01T10:45:06-04:00</updated>
+    <link rel="alternate" type="text/html" href="https://envy-stockholm.myshopify.com/products/the-poetic-license-cutout-crocheted-cotton-blend-swimsuit"/>
+    <title>The Poetic License cutout crocheted cotton-blend swimsuit</title>
+    <s:type>Beachwear</s:type>
+    <s:vendor>Adidas</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0271/9799/products/10a_b3cc995a-d6da-405e-a568-edd573a58bf6.jpeg?v=1380638718" /></td>
+    <td valign="bottom">
+      <p>
+        <strong>Vendor: </strong>Adidas<br>
+        <strong>Type: </strong>Beachwear<br>
+        <strong>Price: </strong>
+            140.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><p>Opt for a bold beachwear look in Lisa Maree's black crocheted swimsuit. Featuring padded cups, intricate paneling and a cutout back, this figure-hugging design is an eye-catching alternative to a two-piece.</p></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:variant>
+      <id>https://envy-stockholm.myshopify.com/products/161487165</id>
+      <title>Default Title</title>
+      <s:price currency="GBP">140.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://envy-stockholm.myshopify.com/products/161487005</id>
+    <published>2013-10-01T10:44:22-04:00</published>
+    <updated>2013-10-01T10:44:22-04:00</updated>
+    <link rel="alternate" type="text/html" href="https://envy-stockholm.myshopify.com/products/stardust-floral-print-underwired-bikini"/>
+    <title>Stardust floral-print underwired bikini</title>
+    <s:type>Beachwear</s:type>
+    <s:vendor>Adidas</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0271/9799/products/3a_a8642e52-82f0-4804-8229-7a3f897b1621.jpeg?v=1380638672" /></td>
+    <td valign="bottom">
+      <p>
+        <strong>Vendor: </strong>Adidas<br>
+        <strong>Type: </strong>Beachwear<br>
+        <strong>Price: </strong>
+            194.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><p>Australian swimwear brand Zimmermann is our go-to for feminine designs with a bohemian twist. With a supportive underwired top and ladder-detailed briefs, this floral-print bikini is high on our vacation wish list.</p></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:variant>
+      <id>https://envy-stockholm.myshopify.com/products/161487005</id>
+      <title>Default Title</title>
+      <s:price currency="GBP">194.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://envy-stockholm.myshopify.com/products/161486387</id>
+    <published>2013-10-01T10:43:36-04:00</published>
+    <updated>2013-10-01T10:43:36-04:00</updated>
+    <link rel="alternate" type="text/html" href="https://envy-stockholm.myshopify.com/products/solid-faux-leather-and-canvas-detailed-bikini-top"/>
+    <title>Solid faux leather and canvas-detailed bikini top</title>
+    <s:type>Beachwear</s:type>
+    <s:vendor>Adidas</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0271/9799/products/11a_e885b142-57b6-4363-bc79-fc97ed4b733d.jpeg?v=1380638626" /></td>
+    <td valign="bottom">
+      <p>
+        <strong>Vendor: </strong>Adidas<br>
+        <strong>Type: </strong>Beachwear<br>
+        <strong>Price: </strong>
+            105.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><p>Finished with faux leather-trimmed canvas details, Vix's white triangle bikini top is a glamorous vacation style. Tie-fastenings allow you to adjust for the perfect fit. Wear this fully lined design with the matching briefs.</p></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:variant>
+      <id>https://envy-stockholm.myshopify.com/products/161486387</id>
+      <title>Default Title</title>
+      <s:price currency="GBP">105.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://envy-stockholm.myshopify.com/products/161486309</id>
+    <published>2013-10-01T10:43:28-04:00</published>
+    <updated>2013-10-01T10:43:28-04:00</updated>
+    <link rel="alternate" type="text/html" href="https://envy-stockholm.myshopify.com/products/soleil-strapless-linen-mini-dress"/>
+    <title>Soleil strapless linen mini dress</title>
+    <s:type>Beachwear</s:type>
+    <s:vendor>Adidas</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0271/9799/products/7a_bdac7718-d5e5-4b5f-ab4a-8397e5f8cc3e.jpeg?v=1380638616" /></td>
+    <td valign="bottom">
+      <p>
+        <strong>Vendor: </strong>Adidas<br>
+        <strong>Type: </strong>Beachwear<br>
+        <strong>Price: </strong>
+            180.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><p>A lightweight white dress is a warm-weather essential. Heidi Klein's linen design features pretty floral embroidery and a scalloped hem. The elasticated bust and waist makes it effortless to slip on.</p></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:variant>
+      <id>https://envy-stockholm.myshopify.com/products/161486309</id>
+      <title>Default Title</title>
+      <s:price currency="GBP">180.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://envy-stockholm.myshopify.com/products/161486083</id>
+    <published>2013-10-01T10:42:22-04:00</published>
+    <updated>2013-10-01T10:42:22-04:00</updated>
+    <link rel="alternate" type="text/html" href="https://envy-stockholm.myshopify.com/products/qepi-printed-cotton-and-silk-blend-twill-kaftan"/>
+    <title>Qepi printed cotton and silk-blend twill kaftan</title>
+    <s:type>Beachwear</s:type>
+    <s:vendor>Adidas</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0271/9799/products/4a_473e174b-7365-46cf-b995-e19ada7d241a.jpeg?v=1380638553" /></td>
+    <td valign="bottom">
+      <p>
+        <strong>Vendor: </strong>Adidas<br>
+        <strong>Type: </strong>Beachwear<br>
+        <strong>Price: </strong>
+            185.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><p>The photographs from Mario Testino's Alta Moda exhibition showcase the color and intricacy of traditional Peruvian crafts. Made in collaboration with his charity, MATE, this cotton and silk-blend twill kaftan is printed with inflated images from the collection.</p></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:variant>
+      <id>https://envy-stockholm.myshopify.com/products/161486083</id>
+      <title>Default Title</title>
+      <s:price currency="GBP">185.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://envy-stockholm.myshopify.com/products/161486013</id>
+    <published>2013-10-01T10:41:55-04:00</published>
+    <updated>2013-10-01T10:41:55-04:00</updated>
+    <link rel="alternate" type="text/html" href="https://envy-stockholm.myshopify.com/products/pearl-embroidered-linen-tunic"/>
+    <title>Pearl embroidered linen tunic</title>
+    <s:type>Beachwear</s:type>
+    <s:vendor>Adidas</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0271/9799/products/9a_a8b84486-0359-4a2d-b6d8-2c1af281e45b.jpeg?v=1380638526" /></td>
+    <td valign="bottom">
+      <p>
+        <strong>Vendor: </strong>Adidas<br>
+        <strong>Type: </strong>Beachwear<br>
+        <strong>Price: </strong>
+            255.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><p>Cut for a loose fit, Tory Burch's lightweight linen tunic is a comfortable way to stay chic in the sun. Simply slip this embroidered midnight-blue design on over your swimsuit for effortless getaway style.</p></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:variant>
+      <id>https://envy-stockholm.myshopify.com/products/161486013</id>
+      <title>Default Title</title>
+      <s:price currency="GBP">255.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://envy-stockholm.myshopify.com/products/161485791</id>
+    <published>2013-10-01T10:40:51-04:00</published>
+    <updated>2013-10-01T10:40:51-04:00</updated>
+    <link rel="alternate" type="text/html" href="https://envy-stockholm.myshopify.com/products/luau-printed-bikini"/>
+    <title>Luau printed bikini</title>
+    <s:type>Beachwear</s:type>
+    <s:vendor>Adidas</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0271/9799/products/12a_565b94b5-9b14-4ef7-af82-5d968f1780fb.jpeg?v=1380638461" /></td>
+    <td valign="bottom">
+      <p>
+        <strong>Vendor: </strong>Adidas<br>
+        <strong>Type: </strong>Beachwear<br>
+        <strong>Price: </strong>
+            180.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><p><span class="en-desc">With a statement print and multi-strap back, Mara Hoffman's vibrant bikini ensures standout poolside style. Accessorize yours with a stack of friendship bracelets to channel the label's beautifully bohemian aesthetic.</span></p></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:variant>
+      <id>https://envy-stockholm.myshopify.com/products/161485791</id>
+      <title>Default Title</title>
+      <s:price currency="GBP">180.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://envy-stockholm.myshopify.com/products/161485511</id>
+    <published>2013-10-01T10:39:34-04:00</published>
+    <updated>2013-10-01T10:39:34-04:00</updated>
+    <link rel="alternate" type="text/html" href="https://envy-stockholm.myshopify.com/products/hook-and-hope-crocheted-cotton-coverup"/>
+    <title>Hook and Hope crocheted cotton coverup</title>
+    <s:type>Beachwear</s:type>
+    <s:vendor>Adidas</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0271/9799/products/1a_5442f92b-7fbc-4a40-8acc-49dad6b13a12.jpeg?v=1380638383" /></td>
+    <td valign="bottom">
+      <p>
+        <strong>Vendor: </strong>Adidas<br>
+        <strong>Type: </strong>Beachwear<br>
+        <strong>Price: </strong>
+            155.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><p>A chic beach coverup is a vacation essential. Lisa Maree's hand-crocheted cotton style is easy to slip on and off and will look great against tanned skin.</p></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:variant>
+      <id>https://envy-stockholm.myshopify.com/products/161485511</id>
+      <title>Default Title</title>
+      <s:price currency="GBP">155.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://envy-stockholm.myshopify.com/products/161485377</id>
+    <published>2013-10-01T10:38:49-04:00</published>
+    <updated>2013-10-01T10:38:49-04:00</updated>
+    <link rel="alternate" type="text/html" href="https://envy-stockholm.myshopify.com/products/eivissa-printed-halterneck-swimsuit"/>
+    <title>Eivissa printed halterneck swimsuit</title>
+    <s:type>Beachwear</s:type>
+    <s:vendor>Adidas</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0271/9799/products/6a_4cec6b1b-b50b-4373-8fc3-606de2f56211.jpeg?v=1380638344" /></td>
+    <td valign="bottom">
+      <p>
+        <strong>Vendor: </strong>Adidas<br>
+        <strong>Type: </strong>Beachwear<br>
+        <strong>Price: </strong>
+            190.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><p>Heidi Klein's pink and plum snake-print swimsuit is sure to make a statement. This halterneck design is crafted with underwired, molded cups for a smooth and supportive finish. Wear yours with a straw hat and shades.</p></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:variant>
+      <id>https://envy-stockholm.myshopify.com/products/161485377</id>
+      <title>Default Title</title>
+      <s:price currency="GBP">190.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://envy-stockholm.myshopify.com/products/161485243</id>
+    <published>2013-10-01T10:38:04-04:00</published>
+    <updated>2013-10-01T10:38:04-04:00</updated>
+    <link rel="alternate" type="text/html" href="https://envy-stockholm.myshopify.com/products/bonifacio-cutout-halterneck-swimsuit"/>
+    <title>Bonifacio cutout halterneck swimsuit</title>
+    <s:type>Beachwear</s:type>
+    <s:vendor>Adidas</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0271/9799/products/5a_ac809ccc-1455-41c7-ad9e-ae9b18a8927e.jpeg?v=1380638297" /></td>
+    <td valign="bottom">
+      <p>
+        <strong>Vendor: </strong>Adidas<br>
+        <strong>Type: </strong>Beachwear<br>
+        <strong>Price: </strong>
+            185.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><p>The one-piece reigns supreme this season - take a glamorous approach to the trend in Tara Matthews' color-pop coral swimsuit. A plunge front, complete with flattering gathering, and a skin-flashing back ensure a stunning silhouette.</p></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:variant>
+      <id>https://envy-stockholm.myshopify.com/products/161485243</id>
+      <title>Default Title</title>
+      <s:price currency="GBP">185.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://envy-stockholm.myshopify.com/products/161485141</id>
+    <published>2013-10-01T10:37:23-04:00</published>
+    <updated>2013-10-01T10:37:23-04:00</updated>
+    <link rel="alternate" type="text/html" href="https://envy-stockholm.myshopify.com/products/alaia-embroidered-voile-kaftan"/>
+    <title>Alaia embroidered voile kaftan</title>
+    <s:type>Beachwear</s:type>
+    <s:vendor>Adidas</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0271/9799/products/2a_3581d60a-d7b4-426e-bf10-76125cfe81b3.jpeg?v=1380638261" /></td>
+    <td valign="bottom">
+      <p>
+        <strong>Vendor: </strong>Adidas<br>
+        <strong>Type: </strong>Beachwear<br>
+        <strong>Price: </strong>
+            180.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><p>Woven from gauzy voile, Melissa Obadash's 'Alaia' kaftan is semi-sheer and lightweight – perfect for balmy beach days. We love all the detail that went into this piece, from the intricate neon embroidery to the pointelle accents and shimmering silver sequins. Wear this voluminous coverup over your favorite bikini.</p></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:variant>
+      <id>https://envy-stockholm.myshopify.com/products/161485141</id>
+      <title>Default Title</title>
+      <s:price currency="GBP">180.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+  </entry>
+</feed>

@@ -1,1163 +1,854 @@
 <%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
 <%@taglib uri="/struts-tags" prefix="s"%>
 
-<s:action name="product-all" executeResult="false" />
-
 <!DOCTYPE html>
 <!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
 <!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
 <!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
 <!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
 
-
-<!-- Mirrored from templatevisual.com/demo/pathos/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 13 Jul 2015 14:53:47 GMT -->
+<!-- Mirrored from envy-stockholm.myshopify.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 06 Oct 2015 15:56:13 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
 <head>
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+<meta charset="utf-8">
+
+<!--[if lt IE 9]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+
+<title>Envy - Stockholm</title>
+
+
+ 
+
+
 	<meta name="keywords" content="">
 
-	<title>Pathos | eCommerce HTML Template</title>
 
-    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+<!-- Mobile Meta -->
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.3.0/css/font-awesome.min.css">
-	<link rel="stylesheet" type="text/css" href="css/stroke.css">
-	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-	<link rel="stylesheet" type="text/css" href="css/animate.css">
-	<link rel="stylesheet" type="text/css" href="css/bootstrap-submenu.min.css">
-	<link rel="stylesheet" type="text/css" href="css/carousel.css">
-	<link rel="stylesheet" type="text/css" href="css/prettyPhoto.css">
-	<link rel="stylesheet" type="text/css" href="css/content_slider_style.css">
-	<link rel="stylesheet" type="text/css" href="rs-plugin/css/settings.css" media="screen" />
-	<link rel="stylesheet" type="text/css" href="style.css">
 
-	<!-- COLORS -->
-	<link rel="stylesheet" type="text/css" href="css/custom.css">
 
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
+<link rel="canonical" href="index" />
 
-	<!--[if gte IE 9]>
-	  <style type="text/css">
-	    .gradient {
-	       filter: none;
-	    }
-	  </style>
-	<![endif]-->
+<!-- CSS -->
+<link href="cdn.shopify.com/s/files/1/0271/9799/t/10/assets/stylea3ee.css?1172313162436649993" rel="stylesheet" type="text/css"  media="all"  />
+<link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css"  media="all"  />
+
+
+
+
+
+<link rel="shortcut icon" href="http://cdn.shopify.com/s/files/1/0271/9799/t/10/assets/favicon.ico?1172313162436649993">
+<link rel="sitemap" type="application/xml" title="Sitemap" href="sitemap.xml" />
+
+<script src="cdn.shopify.com/s/assets/themes_support/option_selection-54fd013c3dd1f914fc3ca277900ec7c1.js" type="text/javascript"></script>
+
+<script>
+//<![CDATA[
+      var Shopify = Shopify || {};
+      Shopify.shop = "envy-stockholm.myshopify.com";
+      Shopify.theme = {"name":"envy-5-2-1","id":10644540,"theme_store_id":null,"role":"main"};
+
+//]]>
+</script>
+
+
+
+<script id="__st">
+//<![CDATA[
+var __st={"a":2719799,"offset":-14400,"reqid":"796635ee-bca6-4531-8ee1-bcb737f10321","pageurl":"envy-stockholm.myshopify.com\/","u":"bbce1d6881fe","p":"home"};
+//]]>
+</script>
+<script>
+//<![CDATA[
+      (function() {
+        var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true;
+        s.src = 'cdn.shopify.com/s/javascripts/shopify_stats1bce.js?v=6';
+        var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
+      })();
+
+//]]>
+</script>
+<script type="text/javascript">
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-44505472-1', 'auto', {'allowLinker': true});ga('send', 'pageview');
+      (function(){
+        ga('require', 'linker');
+        function addListener(element, type, callback) {
+          if (element.addEventListener) {
+            element.addEventListener(type, callback);
+          }
+          else if (element.attachEvent) {
+            element.attachEvent('on' + type, callback);
+          }
+        }
+        function decorate(event) {
+          event = event || window.event;
+          var target = event.target || event.srcElement;
+          if (target && (target.action || target.href)) {
+            ga(function (tracker) {
+              var linkerParam = tracker.get('linkerParam');
+              document.cookie = '_shopify_ga=' + linkerParam + '; ' + 'path=/';
+            });
+          }
+        }
+        addListener(window, 'load', function(){
+          for (var i=0; i<document.forms.length; i++) {
+            if(document.forms[i].action && document.forms[i].action.indexOf('/cart') >= 0) {
+              addListener(document.forms[i], 'submit', decorate);
+            }
+          }
+          for (var i=0; i<document.links.length; i++) {
+            if(document.links[i].href && document.links[i].href.indexOf('/checkout') >= 0) {
+              addListener(document.links[i], 'click', decorate);
+            }
+          }
+        })
+      }());
+    </script><script type="text/javascript" src="cdn.shopify.com/s/assets/themes_support/ga_urchin_forms-f888be82dfc735c04a5e0b253a366bb5.js"></script>
+
+
+
 
 </head>
 <body>
 
-    <div id="preloader">
-        <div id="spinner"></div>
-        <img class="preloader" src="images/loader.gif" alt="">
-    </div><!-- end loader -->
-    
-	<div id="wrapper">
-		<header class="header">
-			<nav class="navbar navbar-default" role="navigation">
-				<div class="container">
-				    <!-- Brand and toggle get grouped for better mobile display -->
-					<div class="navbar-header">
-						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-brand-centered">
-					        <span class="sr-only">Toggle navigation</span>
-					        <span class="icon-bar"></span>
-					        <span class="icon-bar"></span>
-					        <span class="icon-bar"></span>
-						</button>
-						<div class="navbar-brand navbar-brand-centered">
-							<a href="index-2.html"><img src="images/logo.png" alt=""></a>
-						</div>
-				    </div>
-				    <!-- Collect the nav links, forms, and other content for toggling -->
-					<div class="collapse navbar-collapse" id="navbar-brand-centered">
-						<ul class="nav navbar-nav">
-					        <li><a href="index-2.html">Home</a></li>
-							<li class="dropdown"><a href="categories.html" tabindex="0" data-toggle="dropdown">Category <span class="fa fa-angle-down"></span></a>
-								<ul class="dropdown-menu" role="menu">
-									<li><a href="categories.html" tabindex="0">DENIM SHIRT</a></li>
-									<li><a href="categories.html" tabindex="0">SHORT SLEEVE SHIRT</a></li>
-									<li><a href="categories.html" tabindex="0">BLAZERS</a></li>
-									<li><a href="categories.html" tabindex="0">JACKET</a></li>
-									<li><a href="categories.html" tabindex="0">DENIM SHIRT</a></li>
-									<li><a href="categories.html" tabindex="0">SHORT SLEEVE SHIRT</a></li>
-								</ul>
-							</li>
-							<li class="dropdown"><a href="#" tabindex="0" data-toggle="dropdown">Pages <span class="fa fa-angle-down"></span></a>
-								<ul class="dropdown-menu" role="menu">
-									<li><a href="page-fullwidth.html" tabindex="0">Fullwidth</a></li>
-									<li><a href="page-sidebar.html" tabindex="0">Page Sidebar</a></li>
-									<li><a href="404.html" tabindex="0">Not Found</a></li>
-									<li><a href="elements.html" tabindex="0">Elements</a></li>
-								</ul>
-							</li>
-					        <li><a href="categories.html">Accessories</a></li>
-						</ul>
-						<ul class="nav navbar-nav navbar-right">
-							<li class="dropdown"><a href="#" tabindex="0" data-toggle="dropdown">Shop <span class="fa fa-angle-down"></span></a>
-								<ul class="dropdown-menu" role="menu">
-									<li><a href="categories.html" tabindex="0">Shop Default</a></li>
-									<li><a href="shop-sidebar.html" tabindex="0">Shop Sidebar</a></li>
-									<li><a href="shop-cart.html" tabindex="0">Shopping Cart</a></li>
-									<li><a href="shop-checkout.html" tabindex="0">Shop Checkout</a></li>
-									<li><a href="shop-single.html" tabindex="0">Shop Single</a></li>
-								</ul>
-							</li>
-					        <li><a href="blog.html">Blog</a></li>
-					        <li><a href="contact.html">Contact</a></li>	
-							<li class="dropdown"><a class="cart" href="#" tabindex="0" data-toggle="dropdown"><span class="yellow">3</span> $1.245</a>
-								<ul class="dropdown-menu" role="menu">
-									<li class="shopcart">
-										<table class="table">
-											<tbody>
-												<tr class="row">
-									            <td class="col-md-3"><img src="upload/cart_01.png" class="img-responsive" alt=""></td>
-									            <td class="col-md-7">
-									            	<h4>AUTUMN WINTER</h4>
-									            	<small> Woman Dress</small>
-									            	<span class="old">$25.00</span>
-									            	<span class="new">$12.00</span>
-									            </td>
-									            <td class="col-md-2"><a href="#" class="closeme"><i class="fa fa-close"></i></a></td>
-												</tr>
+<div id="mobile-navigation">
+	<nav class="nav">
+		<ul>
+					<li><strong><a href="cart.html">Checkout</a></strong></li>
+			
+					
+							      
+							      
+							        
+							        
+							          <li><a href="index">Home</a></li>
+							        
+							      
+							      
+							        
+							        
+							          <li><a href="collections/all.html">Catalog</a></li>
+							        
+							      
+							      
+							        
+							        
+							          <li><a href="blogs/news.html">Blog</a></li>
+							        
+							      
+							      
+							        
+							        
+							          <li><a href="pages/about-us.html">About Us</a></li>
+							        
+							      
+					
+					
+								
+								<li><a href="account/login.html">My Account</a></li>
+								<li><a href="account/logout.html" id="customer_logout_link">Log out</a></li>
+					
+								
+			
+		</ul>
+	</nav>
+</div> 
 
-												<tr class="row">
-									            <td class="col-md-3"><img src="upload/cart_02.png" class="img-responsive" alt=""></td>
-									            <td class="col-md-7">
-									            	<h4>BLACK SABBAT</h4>
-									            	<small> Woman Dress</small>
-									            	<span class="old">$25.00</span>
-									            	<span class="new">$12.00</span>
-									            </td>
-									            <td class="col-md-2"><a href="#" class="closeme"><i class="fa fa-close"></i></a></td>
-												</tr>
-											</tbody>
-										</table>
-										<div class="text-center">
-											<h4>Total : $24.00</h4>
-										</div><!-- end text-center -->
-										<div class="cart-buttons row-fluid">
-											<div class="col-md-6">
-												<a href="#" class="btn btn-primary btn-block"><i class="fa fa-shopping-cart"></i> VIEW CART</a>
-											</div>
-											<div class="col-md-6">
-												<a href="#" class="btn btn-primary btn-block btn-second">Checkout <i class="fa fa-angle-right"></i></a>
-											</div>
-										</div>
-									</li>
-								</ul>
-							</li>
-							<li class="dropdown">
-								<div class="a">
-									<div id="dmsearch" class="dmsearch">
-										<form id="searchform" method="get">
-											<span class="dm-search-container">
-												<input id="s" class="dmsearch-input" type="text" name="s" value="" placeholder="Search on the site...">
-						                    </span>
-											<input id="go" class="dmsearch-submit" type="submit" value="">
-											<i class="fa fa-search"></i>
-										</form> <!-- end searchform -->
-									</div><!-- end search -->
-								</div>
-							</li>
-						</ul>
-					</div><!-- /.navbar-collapse -->
-				</div><!-- /.container-fluid -->
-			</nav>
-		</header>
-		<div class="header-after"></div>
 
-		<div class="header-bottom">
-			<div class="headerpirice">
-				<a href="#"><img src="images/dollar.png" alt=""></a> 
-			</div>
+	
+
+
+<header id="site-header" class="clearfix custom-font">
+
+<div class="container visible-xs">
+
+	<div class="row">
+
+		<div class="col-xs-2">
+			<a id="responsive-menu-button" href="#sidr-mobile">
+				<i class="fa fa-bars fa-3x"></i>
+			</a>
 		</div>
 
-		<section class="slider-section boxedcontainer">
-			<div class="tp-banner-container">
-				<div class="tp-banner">
-					<ul>
-						<li data-transition="slidevertical" data-slotamount="1" data-masterspeed="500" data-thumb="upload/slider_bg.gif" data-saveperformance="off" data-title="Water Spirit">
-							<img src="upload/slider_bg.gif"  alt="" data-bgposition="center bottom" data-bgfit="cover" data-bgrepeat="no-repeat">
-                            <!-- LAYER NR.1 -->
-                            <div class="tp-caption lft customout rs-parallaxlevel-0"
-                                data-x="0"
-                                data-y="50" 
-                                data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
-                                data-speed="700"
-                                data-start="1100"
-                                data-easing="Power3.easeInOut"
-                                data-elementdelay="0.1"
-                                data-endelementdelay="0.1"
-                                style="z-index: 4;"><img src="images/dummy.png" alt="" data-lazyload="upload/slider_01.png">
-                            </div>
-							<!-- LAYER NR. 2 -->
-                            <div class="tp-caption slider_01 skewfromright randomrotateout tp-resizeme"
-                                data-x="620"
-                                data-y="140" 
-                                data-speed="1000"
-                                data-start="1000"
-                                data-easing="Power3.easeInOut"
-                                data-splitin="none"
-                                data-splitout="none"
-                                data-elementdelay="0.1"
-                                data-endelementdelay="0.1"
-                                data-endspeed="1000"
-                                style="z-index: 9; max-width: auto; max-height: auto; white-space: nowrap;"><img src="images/dummy.png" alt="" data-lazyload="upload/slider_02.png"> Midnight Collection
-                            </div>
-							<!-- LAYER NR. 3 -->
-                            <div class="tp-caption slider_02 skewfromright randomrotateout tp-resizeme"
-                                data-x="620"
-                                data-y="190" 
-                                data-speed="1000"
-                                data-start="1300"
-                                data-easing="Power3.easeInOut"
-                                data-splitin="none"
-                                data-splitout="none"
-                                data-elementdelay="0.1"
-                                data-endelementdelay="0.1"
-                                data-endspeed="1000"
-                                style="z-index: 9; max-width: auto; max-height: auto; white-space: nowrap;">FASHION TRENDS <span>2016</span>
-                            </div>
-							<!-- LAYER NR. 4 -->
-                            <div class="tp-caption slider_03 skewfromright randomrotateout tp-resizeme"
-                                data-x="624"
-                                data-y="255" 
-                                data-speed="1000"
-                                data-start="1600"
-                                data-easing="Power3.easeInOut"
-                                data-splitin="none"
-                                data-splitout="none"
-                                data-elementdelay="0.1"
-                                data-endelementdelay="0.1"
-                                data-endspeed="1000"
-                                style="z-index: 9; max-width: auto; max-height: auto; white-space: nowrap;">LUXURY SHIRTS FOR CONFIDENT WOMENS
-                            </div>
-                            <!-- LAYER NR.5 -->
-                            <div class="tp-caption lft customout rs-parallaxlevel-0"
-                                data-x="623"
-                                data-y="287" 
-                                data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
-                                data-speed="700"
-                                data-start="1100"
-                                data-easing="Power3.easeInOut"
-                                data-elementdelay="0.1"
-                                data-endelementdelay="0.1"
-                                style="z-index: 4;"><img src="images/dummy.png" alt="" data-lazyload="upload/slider_03.png">
-                            </div>
-							<!-- LAYER NR. 6 -->
-                            <div class="tp-caption slider_04 skewfromright randomrotateout tp-resizeme"
-                                data-x="624"
-                                data-y="325" 
-                                data-speed="1000"
-                                data-start="1800"
-                                data-easing="Power3.easeInOut"
-                                data-splitin="none"
-                                data-splitout="none"
-                                data-elementdelay="0.1"
-                                data-endelementdelay="0.1"
-                                data-endspeed="1000"
-                                style="z-index: 9; max-width: auto; max-height: auto; white-space: nowrap;">ORDER MORE THAN $100 & GET UP TO <span>50%</span> OFF
-                            </div>
-							<!-- LAYER NR. 7 -->
-                            <div class="tp-caption slider_button_01 skewfromright randomrotateout tp-resizeme"
-                                data-x="624"
-                                data-y="380" 
-                                data-speed="1000"
-                                data-start="2000"
-                                data-easing="Power3.easeInOut"
-                                data-splitin="none"
-                                data-splitout="none"
-                                data-elementdelay="0.1"
-                                data-endelementdelay="0.1"
-                                data-endspeed="1000"
-                                style="z-index: 9; max-width: auto; max-height: auto; white-space: nowrap;"><a href="#">Shop Now</a>
-                            </div>
-						</li>
-						<li data-transition="slidevertical" data-slotamount="1" data-masterspeed="500" data-thumb="upload/slider_bg.gif" data-saveperformance="off" data-title="Water Spirit">
-							<img src="upload/slider_bg.gif"  alt="" data-bgposition="center bottom" data-bgfit="cover" data-bgrepeat="no-repeat">
-                            <!-- LAYER NR.1 -->
-                            <div class="tp-caption lft customout rs-parallaxlevel-0"
-                                data-x="600"
-                                data-y="0" 
-                                data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
-                                data-speed="700"
-                                data-start="1100"
-                                data-easing="Power3.easeInOut"
-                                data-elementdelay="0.1"
-                                data-endelementdelay="0.1"
-                                style="z-index: 4;"><img src="images/dummy.png" alt="" data-lazyload="upload/slider_04.png">
-                            </div>
-							<!-- LAYER NR. 2 -->
-                            <div class="tp-caption slider_01 skewfromright randomrotateout tp-resizeme"
-                                data-x="120"
-                                data-y="140" 
-                                data-speed="1000"
-                                data-start="1000"
-                                data-easing="Power3.easeInOut"
-                                data-splitin="none"
-                                data-splitout="none"
-                                data-elementdelay="0.1"
-                                data-endelementdelay="0.1"
-                                data-endspeed="1000"
-                                style="z-index: 9; max-width: auto; max-height: auto; white-space: nowrap;"><img src="images/dummy.png" alt="" data-lazyload="upload/slider_05.png"> Collection
-                            </div>
-							<!-- LAYER NR. 3 -->
-                            <div class="tp-caption slider_02 skewfromright randomrotateout tp-resizeme"
-                                data-x="120"
-                                data-y="190" 
-                                data-speed="1000"
-                                data-start="1300"
-                                data-easing="Power3.easeInOut"
-                                data-splitin="none"
-                                data-splitout="none"
-                                data-elementdelay="0.1"
-                                data-endelementdelay="0.1"
-                                data-endspeed="1000"
-                                style="z-index: 9; max-width: auto; max-height: auto; white-space: nowrap;">WEEKEND BIGGEST SALE
-                            </div>
-							<!-- LAYER NR. 4 -->
-                            <div class="tp-caption slider_03 lightcolor skewfromright randomrotateout tp-resizeme"
-                                data-x="124"
-                                data-y="265" 
-                                data-speed="1000"
-                                data-start="1600"
-                                data-easing="Power3.easeInOut"
-                                data-splitin="none"
-                                data-splitout="none"
-                                data-elementdelay="0.1"
-                                data-endelementdelay="0.1"
-                                data-endspeed="1000"
-                                style="z-index: 9; max-width: auto; max-height: auto; white-space: nowrap;">FASHION COMMUNICATIONS<br> ACROSS THE MEDIA ONLINE
-                            </div>
-							<!-- LAYER NR. 5 -->
-                            <div class="tp-caption slider_05 skewfromright randomrotateout tp-resizeme"
-                                data-x="315"
-                                data-y="255" 
-                                data-speed="1000"
-                                data-start="1800"
-                                data-easing="Power3.easeInOut"
-                                data-splitin="none"
-                                data-splitout="none"
-                                data-elementdelay="0.1"
-                                data-endelementdelay="0.1"
-                                data-endspeed="1000"
-                                style="z-index: 9; max-width: auto; max-height: auto; white-space: nowrap;">FANCY DRESS
-                            </div>
-							<!-- LAYER NR. 7 -->
-                            <div class="tp-caption slider_button_02 skewfromright randomrotateout tp-resizeme"
-                                data-x="340"
-                                data-y="350" 
-                                data-speed="1000"
-                                data-start="2000"
-                                data-easing="Power3.easeInOut"
-                                data-splitin="none"
-                                data-splitout="none"
-                                data-elementdelay="0.1"
-                                data-endelementdelay="0.1"
-                                data-endspeed="1000"
-                                style="z-index: 9; max-width: auto; max-height: auto; white-space: nowrap;"><a href="#">SHOP CLOTH & ACCESSORIES <i class="fa fa-angle-right"></i></a>
-                            </div>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</section>
+		<div class="col-xs-10">
 		
-		<section class="section white">
-			<div class="slider-after"></div>
-			<div class="container">
-				<div class="row">
-					<div class="col-md-4 col-sm-4 col-xs-12 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
-						<a href="#"><img src="upload/left-banner.png" alt="" class="img-responsive"></a>
-					</div>
-					<div class="col-md-4 col-sm-4 col-xs-12 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.4s">
-						<a href="#"><img src="upload/middle-banner.png" alt="" class="img-responsive"></a>
-					</div>
-					<div class="col-md-4 col-sm-4 col-xs-12 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.6s">
-						<a href="#"><img src="upload/right-banner.png" alt="" class="img-responsive"></a>
-					</div>
-				</div><!-- end row -->
-
-				<hr class="light">
-
-				<div class="row">
-					<div class="col-md-4 col-sm-4 col-xs-12">
-						<div class="service-box">
-							<img src="images/icon_01.png" alt="" class="alignleft wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
-							<h4>FAST DELIVERY</h4>
-							<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy.</p>
-						</div><!-- end service-box -->
-					</div><!-- end col -->
-					<div class="col-md-4 col-sm-4 col-xs-12">
-						<div class="service-box">
-							<img src="images/icon_02.png" alt="" class="alignleft wow fadeIn" data-wow-duration="1s" data-wow-delay="0.4s">
-							<h4>FASHION FOR MEN & WOMEN</h4>
-							<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy.</p>
-						</div><!-- end service-box -->
-					</div><!-- end col -->
-					<div class="col-md-4 col-sm-4 col-xs-12">
-						<div class="service-box">
-							<img src="images/icon_03.png" alt="" class="alignleft wow fadeIn" data-wow-duration="1s" data-wow-delay="0.6s">
-							<h4>CONTACT US</h4>
-							<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy.</p>
-						</div><!-- end service-box -->
-					</div><!-- end col -->
-				</div><!-- end row -->
-			</div><!-- end container -->
-		</section><!-- end section -->
-
-		<section class="section white withbg">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12">
-						<div class="section-title text-center">
-							<h2><span>Best</span> Sellers</h2>
-							<h4>RECENT PRODUCTS</h4>
-						</div><!-- end title -->
-					</div><!-- end 12 -->
-				</div><!-- end row -->
-
-				<hr class="light">
-
-				<div class="row">
-					<div class="col-md-12">
-						<div id="customtab">
-						  <!-- Nav tabs -->
-							<ul class="nav nav-tabs" role="tablist">
-							    <li role="presentation" class="active"><a href="#tab1" class="active" aria-controls="tab1" role="tab" data-toggle="tab">NEW ITEMS</a></li>
-							    <li role="presentation"><a href="#tab2" aria-controls="tab2" role="tab" data-toggle="tab">BEST SELLERS</a></li>
-							    <li role="presentation"><a href="#tab3" aria-controls="tab3" role="tab" data-toggle="tab">BRAND</a></li>
-							    <li role="presentation"><a href="#tab4" aria-controls="tab4" role="tab" data-toggle="tab">TRENDING</a></li>
-							</ul>
-
-						  	<!-- Tab panes -->
-							<div class="tab-content">
-							    <div role="tabpanel" class="tab-pane active" id="tab1">
-							    	<div class="row">
-							    		<div class="col-md-3 col-md-6 col-xs-12">
-							    			<div class="shop-item-tab">
-							    				<div class="entry">
-							    					<img src="upload/shop_07.png" alt="" class="img-responsive">
-							    					<div class="magnifier">
-							    						<div class="visible-buttons">
-							    							<div class="shopbuttons">
-								    							<a class="magnibutton" href="shop-single.html" title=""><i class="fa fa-search"></i></a>
-								    							<a class="readbutton" href="shop-single.html" title=""><i class="fa fa-check-square-o "></i> Ready Stock</a>
-								    							<a class="cartbutton" href="shop-cart.html" title=""><i class="icon icon-ShoppingCart"></i></a>
-								    						</div>
-							    						</div><!-- end visible-buttons -->
-							    					</div><!-- end magnifier -->
-							    				</div><!-- entry -->
-							    				<div class="shop-item-desc text-center">
-								    				<h4><a href="shop-single.html">BLACK SABBAT <span>Women Dress</span></a></h4>
-								    				<span class="new">$12.00</span>
-												</div><!-- end desc -->
-							    			</div><!-- end shop-item-tab -->
-							    		</div>
-							    		<div class="col-md-3 col-md-6 col-xs-12">
-							    			<div class="shop-item-tab">
-							    				<div class="entry">
-							    					<img src="upload/shop_08.png" alt="" class="img-responsive">
-							    					<div class="magnifier">
-							    						<div class="visible-buttons">
-							    							<div class="shopbuttons">
-								    							<a class="magnibutton" href="shop-single.html" title=""><i class="fa fa-search"></i></a>
-								    							<a class="readbutton" href="shop-single.html" title=""><i class="fa fa-check-square-o "></i> Ready Stock</a>
-								    							<a class="cartbutton" href="shop-cart.html" title=""><i class="icon icon-ShoppingCart"></i></a>
-								    						</div>
-							    						</div><!-- end visible-buttons -->
-							    					</div><!-- end magnifier -->
-							    				</div><!-- entry -->
-							    				<div class="shop-item-desc text-center">
-								    				<h4><a href="shop-single.html">AUTUMN WINTER <span>Women Dress</span></a></h4>
-								    				<span class="new">$17.00</span>
-												</div><!-- end desc -->
-							    			</div><!-- end shop-item-tab -->
-							    		</div>
-							    		<div class="col-md-3 col-md-6 col-xs-12">
-							    			<div class="shop-item-tab">
-							    				<div class="entry">
-							    					<img src="upload/shop_09.png" alt="" class="img-responsive">
-							    					<div class="magnifier">
-							    						<div class="visible-buttons">
-							    							<div class="shopbuttons">
-								    							<a class="magnibutton" href="shop-single.html" title=""><i class="fa fa-search"></i></a>
-								    							<a class="readbutton" href="shop-single.html" title=""><i class="fa fa-check-square-o "></i> Ready Stock</a>
-								    							<a class="cartbutton" href="shop-cart.html" title=""><i class="icon icon-ShoppingCart"></i></a>
-								    						</div>
-							    						</div><!-- end visible-buttons -->
-							    					</div><!-- end magnifier -->
-							    				</div><!-- entry -->
-							    				<div class="shop-item-desc text-center">
-								    				<h4><a href="shop-single.html">BRIEFT BLACK <span>Women Dress</span></a></h4>
-								    				<span class="new">$10.00</span>
-												</div><!-- end desc -->
-							    			</div><!-- end shop-item-tab -->
-							    		</div>
-							    		<div class="col-md-3 col-md-6 col-xs-12">
-							    			<div class="shop-item-tab">
-							    				<div class="entry">
-							    					<img src="upload/shop_10.png" alt="" class="img-responsive">
-							    					<div class="magnifier">
-							    						<div class="visible-buttons">
-							    							<div class="shopbuttons">
-								    							<a class="magnibutton" href="shop-single.html" title=""><i class="fa fa-search"></i></a>
-								    							<a class="readbutton" href="shop-single.html" title=""><i class="fa fa-check-square-o "></i> Ready Stock</a>
-								    							<a class="cartbutton" href="shop-cart.html" title=""><i class="icon icon-ShoppingCart"></i></a>
-								    						</div>
-							    						</div><!-- end visible-buttons -->
-							    					</div><!-- end magnifier -->
-							    				</div><!-- entry -->
-							    				<div class="shop-item-desc text-center">
-								    				<h4><a href="shop-single.html">FLUSAS FEMININ <span>Women Dress</span></a></h4>
-								    				<span class="new">$15.00</span>
-												</div><!-- end desc -->
-							    			</div><!-- end shop-item-tab -->
-							    		</div>
-							    	</div>
-							    </div><!-- end tabpanel -->
-							  
-							    <div role="tabpanel" class="tab-pane" id="tab2">
-							    	<div class="row">
-							    		<div class="col-md-3 col-md-6 col-xs-12">
-							    			<div class="shop-item-tab">
-							    				<div class="entry">
-							    					<img src="upload/shop_09.png" alt="" class="img-responsive">
-							    					<div class="magnifier">
-							    						<div class="visible-buttons">
-							    							<div class="shopbuttons">
-								    							<a class="magnibutton" href="shop-single.html" title=""><i class="fa fa-search"></i></a>
-								    							<a class="readbutton" href="shop-single.html" title=""><i class="fa fa-check-square-o "></i> Ready Stock</a>
-								    							<a class="cartbutton" href="shop-cart.html" title=""><i class="icon icon-ShoppingCart"></i></a>
-								    						</div>
-							    						</div><!-- end visible-buttons -->
-							    					</div><!-- end magnifier -->
-							    				</div><!-- entry -->
-							    				<div class="shop-item-desc text-center">
-								    				<h4><a href="shop-single.html">BRIEFT BLACK <span>Women Dress</span></a></h4>
-								    				<span class="new">$10.00</span>
-												</div><!-- end desc -->
-							    			</div><!-- end shop-item-tab -->
-							    		</div>
-							    		<div class="col-md-3 col-md-6 col-xs-12">
-							    			<div class="shop-item-tab">
-							    				<div class="entry">
-							    					<img src="upload/shop_10.png" alt="" class="img-responsive">
-							    					<div class="magnifier">
-							    						<div class="visible-buttons">
-							    							<div class="shopbuttons">
-								    							<a class="magnibutton" href="shop-single.html" title=""><i class="fa fa-search"></i></a>
-								    							<a class="readbutton" href="shop-single.html" title=""><i class="fa fa-check-square-o "></i> Ready Stock</a>
-								    							<a class="cartbutton" href="shop-cart.html" title=""><i class="icon icon-ShoppingCart"></i></a>
-								    						</div>
-							    						</div><!-- end visible-buttons -->
-							    					</div><!-- end magnifier -->
-							    				</div><!-- entry -->
-							    				<div class="shop-item-desc text-center">
-								    				<h4><a href="shop-single.html">FLUSAS FEMININ <span>Women Dress</span></a></h4>
-								    				<span class="new">$15.00</span>
-												</div><!-- end desc -->
-							    			</div><!-- end shop-item-tab -->
-							    		</div>
-							    		<div class="col-md-3 col-md-6 col-xs-12">
-							    			<div class="shop-item-tab">
-							    				<div class="entry">
-							    					<img src="upload/shop_07.png" alt="" class="img-responsive">
-							    					<div class="magnifier">
-							    						<div class="visible-buttons">
-							    							<div class="shopbuttons">
-								    							<a class="magnibutton" href="shop-single.html" title=""><i class="fa fa-search"></i></a>
-								    							<a class="readbutton" href="shop-single.html" title=""><i class="fa fa-check-square-o "></i> Ready Stock</a>
-								    							<a class="cartbutton" href="shop-cart.html" title=""><i class="icon icon-ShoppingCart"></i></a>
-								    						</div>
-							    						</div><!-- end visible-buttons -->
-							    					</div><!-- end magnifier -->
-							    				</div><!-- entry -->
-							    				<div class="shop-item-desc text-center">
-								    				<h4><a href="shop-single.html">BLACK SABBAT <span>Women Dress</span></a></h4>
-								    				<span class="new">$12.00</span>
-												</div><!-- end desc -->
-							    			</div><!-- end shop-item-tab -->
-							    		</div>
-							    		<div class="col-md-3 col-md-6 col-xs-12">
-							    			<div class="shop-item-tab">
-							    				<div class="entry">
-							    					<img src="upload/shop_08.png" alt="" class="img-responsive">
-							    					<div class="magnifier">
-							    						<div class="visible-buttons">
-							    							<div class="shopbuttons">
-								    							<a class="magnibutton" href="shop-single.html" title=""><i class="fa fa-search"></i></a>
-								    							<a class="readbutton" href="shop-single.html" title=""><i class="fa fa-check-square-o "></i> Ready Stock</a>
-								    							<a class="cartbutton" href="shop-cart.html" title=""><i class="icon icon-ShoppingCart"></i></a>
-								    						</div>
-							    						</div><!-- end visible-buttons -->
-							    					</div><!-- end magnifier -->
-							    				</div><!-- entry -->
-							    				<div class="shop-item-desc text-center">
-								    				<h4><a href="shop-single.html">AUTUMN WINTER <span>Women Dress</span></a></h4>
-								    				<span class="new">$17.00</span>
-												</div><!-- end desc -->
-							    			</div><!-- end shop-item-tab -->
-							    		</div>
-							    	</div>
-							    </div><!-- end tabpanel -->
-
-							    <div role="tabpanel" class="tab-pane" id="tab3">
-							    	<div class="row">
-							    		<div class="col-md-3 col-md-6 col-xs-12">
-							    			<div class="shop-item-tab">
-							    				<div class="entry">
-							    					<img src="upload/shop_10.png" alt="" class="img-responsive">
-							    					<div class="magnifier">
-							    						<div class="visible-buttons">
-							    							<div class="shopbuttons">
-								    							<a class="magnibutton" href="shop-single.html" title=""><i class="fa fa-search"></i></a>
-								    							<a class="readbutton" href="shop-single.html" title=""><i class="fa fa-check-square-o "></i> Ready Stock</a>
-								    							<a class="cartbutton" href="shop-cart.html" title=""><i class="icon icon-ShoppingCart"></i></a>
-								    						</div>
-							    						</div><!-- end visible-buttons -->
-							    					</div><!-- end magnifier -->
-							    				</div><!-- entry -->
-							    				<div class="shop-item-desc text-center">
-								    				<h4><a href="shop-single.html">FLUSAS FEMININ <span>Women Dress</span></a></h4>
-								    				<span class="new">$15.00</span>
-												</div><!-- end desc -->
-							    			</div><!-- end shop-item-tab -->
-							    		</div>
-							    		<div class="col-md-3 col-md-6 col-xs-12">
-							    			<div class="shop-item-tab">
-							    				<div class="entry">
-							    					<img src="upload/shop_09.png" alt="" class="img-responsive">
-							    					<div class="magnifier">
-							    						<div class="visible-buttons">
-							    							<div class="shopbuttons">
-								    							<a class="magnibutton" href="shop-single.html" title=""><i class="fa fa-search"></i></a>
-								    							<a class="readbutton" href="shop-single.html" title=""><i class="fa fa-check-square-o "></i> Ready Stock</a>
-								    							<a class="cartbutton" href="shop-cart.html" title=""><i class="icon icon-ShoppingCart"></i></a>
-								    						</div>
-							    						</div><!-- end visible-buttons -->
-							    					</div><!-- end magnifier -->
-							    				</div><!-- entry -->
-							    				<div class="shop-item-desc text-center">
-								    				<h4><a href="shop-single.html">BRIEFT BLACK <span>Women Dress</span></a></h4>
-								    				<span class="new">$10.00</span>
-												</div><!-- end desc -->
-							    			</div><!-- end shop-item-tab -->
-							    		</div>
-							    		<div class="col-md-3 col-md-6 col-xs-12">
-							    			<div class="shop-item-tab">
-							    				<div class="entry">
-							    					<img src="upload/shop_07.png" alt="" class="img-responsive">
-							    					<div class="magnifier">
-							    						<div class="visible-buttons">
-							    							<div class="shopbuttons">
-								    							<a class="magnibutton" href="shop-single.html" title=""><i class="fa fa-search"></i></a>
-								    							<a class="readbutton" href="shop-single.html" title=""><i class="fa fa-check-square-o "></i> Ready Stock</a>
-								    							<a class="cartbutton" href="shop-cart.html" title=""><i class="icon icon-ShoppingCart"></i></a>
-								    						</div>
-							    						</div><!-- end visible-buttons -->
-							    					</div><!-- end magnifier -->
-							    				</div><!-- entry -->
-							    				<div class="shop-item-desc text-center">
-								    				<h4><a href="shop-single.html">BLACK SABBAT <span>Women Dress</span></a></h4>
-								    				<span class="new">$12.00</span>
-												</div><!-- end desc -->
-							    			</div><!-- end shop-item-tab -->
-							    		</div>
-							    		<div class="col-md-3 col-md-6 col-xs-12">
-							    			<div class="shop-item-tab">
-							    				<div class="entry">
-							    					<img src="upload/shop_08.png" alt="" class="img-responsive">
-							    					<div class="magnifier">
-							    						<div class="visible-buttons">
-							    							<div class="shopbuttons">
-								    							<a class="magnibutton" href="shop-single.html" title=""><i class="fa fa-search"></i></a>
-								    							<a class="readbutton" href="shop-single.html" title=""><i class="fa fa-check-square-o "></i> Ready Stock</a>
-								    							<a class="cartbutton" href="shop-cart.html" title=""><i class="icon icon-ShoppingCart"></i></a>
-								    						</div>
-							    						</div><!-- end visible-buttons -->
-							    					</div><!-- end magnifier -->
-							    				</div><!-- entry -->
-							    				<div class="shop-item-desc text-center">
-								    				<h4><a href="shop-single.html">AUTUMN WINTER <span>Women Dress</span></a></h4>
-								    				<span class="new">$17.00</span>
-												</div><!-- end desc -->
-							    			</div><!-- end shop-item-tab -->
-							    		</div>
-							    	</div>
-							    </div><!-- end tabpanel -->
-
-							    <div role="tabpanel" class="tab-pane" id="tab4">
-							    	<div class="row">
-							    		<div class="col-md-3 col-md-6 col-xs-12">
-							    			<div class="shop-item-tab">
-							    				<div class="entry">
-							    					<img src="upload/shop_10.png" alt="" class="img-responsive">
-							    					<div class="magnifier">
-							    						<div class="visible-buttons">
-							    							<div class="shopbuttons">
-								    							<a class="magnibutton" href="shop-single.html" title=""><i class="fa fa-search"></i></a>
-								    							<a class="readbutton" href="shop-single.html" title=""><i class="fa fa-check-square-o "></i> Ready Stock</a>
-								    							<a class="cartbutton" href="shop-cart.html" title=""><i class="icon icon-ShoppingCart"></i></a>
-								    						</div>
-							    						</div><!-- end visible-buttons -->
-							    					</div><!-- end magnifier -->
-							    				</div><!-- entry -->
-							    				<div class="shop-item-desc text-center">
-								    				<h4><a href="shop-single.html">FLUSAS FEMININ <span>Women Dress</span></a></h4>
-								    				<span class="new">$15.00</span>
-												</div><!-- end desc -->
-							    			</div><!-- end shop-item-tab -->
-							    		</div>
-							    		<div class="col-md-3 col-md-6 col-xs-12">
-							    			<div class="shop-item-tab">
-							    				<div class="entry">
-							    					<img src="upload/shop_07.png" alt="" class="img-responsive">
-							    					<div class="magnifier">
-							    						<div class="visible-buttons">
-							    							<div class="shopbuttons">
-								    							<a class="magnibutton" href="shop-single.html" title=""><i class="fa fa-search"></i></a>
-								    							<a class="readbutton" href="shop-single.html" title=""><i class="fa fa-check-square-o "></i> Ready Stock</a>
-								    							<a class="cartbutton" href="shop-cart.html" title=""><i class="icon icon-ShoppingCart"></i></a>
-								    						</div>
-							    						</div><!-- end visible-buttons -->
-							    					</div><!-- end magnifier -->
-							    				</div><!-- entry -->
-							    				<div class="shop-item-desc text-center">
-								    				<h4><a href="shop-single.html">BLACK SABBAT <span>Women Dress</span></a></h4>
-								    				<span class="new">$12.00</span>
-												</div><!-- end desc -->
-							    			</div><!-- end shop-item-tab -->
-							    		</div>
-							    		<div class="col-md-3 col-md-6 col-xs-12">
-							    			<div class="shop-item-tab">
-							    				<div class="entry">
-							    					<img src="upload/shop_09.png" alt="" class="img-responsive">
-							    					<div class="magnifier">
-							    						<div class="visible-buttons">
-							    							<div class="shopbuttons">
-								    							<a class="magnibutton" href="shop-single.html" title=""><i class="fa fa-search"></i></a>
-								    							<a class="readbutton" href="shop-single.html" title=""><i class="fa fa-check-square-o "></i> Ready Stock</a>
-								    							<a class="cartbutton" href="shop-cart.html" title=""><i class="icon icon-ShoppingCart"></i></a>
-								    						</div>
-							    						</div><!-- end visible-buttons -->
-							    					</div><!-- end magnifier -->
-							    				</div><!-- entry -->
-							    				<div class="shop-item-desc text-center">
-								    				<h4><a href="shop-single.html">BRIEFT BLACK <span>Women Dress</span></a></h4>
-								    				<span class="new">$10.00</span>
-												</div><!-- end desc -->
-							    			</div><!-- end shop-item-tab -->
-							    		</div>
-							    		<div class="col-md-3 col-md-6 col-xs-12">
-							    			<div class="shop-item-tab">
-							    				<div class="entry">
-							    					<img src="upload/shop_08.png" alt="" class="img-responsive">
-							    					<div class="magnifier">
-							    						<div class="visible-buttons">
-							    							<div class="shopbuttons">
-								    							<a class="magnibutton" href="shop-single.html" title=""><i class="fa fa-search"></i></a>
-								    							<a class="readbutton" href="shop-single.html" title=""><i class="fa fa-check-square-o "></i> Ready Stock</a>
-								    							<a class="cartbutton" href="shop-cart.html" title=""><i class="icon icon-ShoppingCart"></i></a>
-								    						</div>
-							    						</div><!-- end visible-buttons -->
-							    					</div><!-- end magnifier -->
-							    				</div><!-- entry -->
-							    				<div class="shop-item-desc text-center">
-								    				<h4><a href="shop-single.html">AUTUMN WINTER <span>Women Dress</span></a></h4>
-								    				<span class="new">$17.00</span>
-												</div><!-- end desc -->
-							    			</div><!-- end shop-item-tab -->
-							    		</div>
-							    	</div>
-							    </div><!-- end tabpanel -->
-
-
-
-							</div><!-- end tab-content -->
-						</div><!-- end customtab -->
-					</div><!-- end 12 -->
-				</div><!-- end row -->
-			</div><!-- end container -->
-		</section><!-- end section -->
-
-		<section class="section white nopadding">
-			<div class="ads-after"></div>
-			<div class="container-fluid">
-				<div class="row">
-					<div class="col-md-6 col-sm-6 col-xs-12 nopadding bigbanner wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.2s">
-						<a href="#"><img src="upload/banner-left.png" alt="" class="img-responsive"></a>
-					</div><!-- end 12 -->
-					<div class="col-md-6 col-sm-6 col-xs-12 nopadding bigbanner wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.2s">
-						<a href="#"><img src="upload/banner-right.png" alt="" class="img-responsive"></a>
-					</div><!-- end 12 -->
-				</div><!-- end row -->
-			</div><!-- end container -->
-		</section><!-- end section -->
-
-		<section class="section white">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12">
-						<div class="section-title text-center">
-							<h2><span>Promo</span> Information</h2>
-							<h4>MONHTLY SPECIAL OFFER</h4>
-							<h5>Start from 2 June 2015 - end 2 July 2015</h5>
-						</div><!-- end title -->
-					</div><!-- end 12 -->
-				</div><!-- end row -->
-
-				<hr class="light">
-
-				<div class="row">
-					<div class="col-md-4 col-sm-4 col-xs-12">
-						<div class="shop-item wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
-							<a href="#"><img src="upload/shop_01.png" alt="" class="img-responsive alignleft"></a>
-							<h4>VERSUS VERSACE <span>Women Dress</span></h4>
-							<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy.</p>
-							<div class="price">
-							<span class="old">$25.00</span>
-							<span class="new">$12.00</span>
-							</div>
-							<a href="#" class="btn btn-sm btn-primary btn-border"><i class="icon icon-ShoppingCart"></i> Cart</a>
-						</div><!-- end shop item -->
-					</div>
-					<div class="col-md-4 col-sm-4 col-xs-12">
-						<div class="shop-item wow fadeIn" data-wow-duration="1s" data-wow-delay="0.4s">
-							<a href="#"><img src="upload/shop_02.png" alt="" class="img-responsive alignleft"></a>
-							<h4>AUTUMN WINTER <span>Women Dress</span></h4>
-							<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy.</p>
-							<div class="price">
-							<span class="old">$25.00</span>
-							<span class="new">$12.00</span>
-							</div>
-							<a href="#" class="btn btn-sm btn-primary btn-border"><i class="icon icon-ShoppingCart"></i> Cart</a>
-						</div><!-- end shop item -->
-					</div>
-					<div class="col-md-4 col-sm-4 col-xs-12">
-						<div class="shop-item wow fadeIn" data-wow-duration="1s" data-wow-delay="0.6s">
-							<a href="#"><img src="upload/shop_03.png" alt="" class="img-responsive alignleft"></a>
-							<h4>FLUSAS FEMININ <span>Women Dress</span></h4>
-							<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy.</p>
-							<div class="price">
-							<span class="old">$25.00</span>
-							<span class="new">$12.00</span>
-							</div>
-							<a href="#" class="btn btn-sm btn-primary btn-border"><i class="icon icon-ShoppingCart"></i> Cart</a>
-						</div><!-- end shop item -->
-					</div>
-				</div><!-- end row -->
-
-				<hr class="light">
-
-				<div class="row">
-					<div class="col-md-4 col-sm-4 col-xs-12">
-						<div class="shop-item wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
-							<a href="#"><img src="upload/shop_04.png" alt="" class="img-responsive alignleft"></a>
-							<h4>BLACK SABBAT <span>Women Dress</span></h4>
-							<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy.</p>
-							<div class="price">
-							<span class="old">$25.00</span>
-							<span class="new">$12.00</span>
-							</div>
-							<a href="#" class="btn btn-sm btn-primary btn-border"><i class="icon icon-ShoppingCart"></i> Cart</a>
-						</div><!-- end shop item -->
-					</div>
-					<div class="col-md-4 col-sm-4 col-xs-12">
-						<div class="shop-item wow fadeIn" data-wow-duration="1s" data-wow-delay="0.4s">
-							<a href="#"><img src="upload/shop_05.png" alt="" class="img-responsive alignleft"></a>
-							<h4>AUTUMN WINTER <span>Women Dress</span></h4>
-							<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy.</p>
-							<div class="price">
-							<span class="old">$25.00</span>
-							<span class="new">$12.00</span>
-							</div>
-							<a href="#" class="btn btn-sm btn-primary btn-border"><i class="icon icon-ShoppingCart"></i> Cart</a>
-						</div><!-- end shop item -->
-					</div>
-					<div class="col-md-4 col-sm-4 col-xs-12">
-						<div class="shop-item wow fadeIn" data-wow-duration="1s" data-wow-delay="0.6s">
-							<a href="#"><img src="upload/shop_06.png" alt="" class="img-responsive alignleft"></a>
-							<h4>FLUSAS FEMININ <span>Women Dress</span></h4>
-							<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy.</p>
-							<div class="price">
-							<span class="old">$25.00</span>
-							<span class="new">$12.00</span>
-							</div>
-							<a href="#" class="btn btn-sm btn-primary btn-border"><i class="icon icon-ShoppingCart"></i> Cart</a>
-						</div><!-- end shop item -->
-					</div>
-				</div><!-- end row -->
-			</div><!-- end container -->
-		</section><!-- end section -->
-
-		<section class="section grey">
-			<div class="ads-after"></div>
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12">
-						<div class="section-title text-center">
-							<h2><span>News</span> from blog</h2>
-							<h4>Latest News</h4>
-							<h5>All news about fashion 2015 - 2016</h5>
-						</div><!-- end title -->
-					</div><!-- end 12 -->
-				</div><!-- end row -->
-
-				<hr class="light">
-				<hr class="light">
-				<hr class="light">
-
-				<div id="owl-blog" class="">
-					<div class="owl-blog-item">
-						<div class="row-fluid">
-							<div class="col-md-6 col-sm-6 col-xs-12 nopadding">
-								<div class="blog-image">
-									<a href="single.html"><img src="upload/blog_01.png" alt="" class="img-responsive"></a>
-									<span class="date">20</span>
-								</div><!-- end blog image -->
-							</div><!-- end col -->
-
-							<div class="col-md-6 col-sm-6 col-xs-12 nopadding white">
-								<div class="blog-desc">
-									<span class="comments-count"><a href="#"><i class="fa fa-comments"> 1.452</i></a></span>
-									<span class="date">APRIL<br>2015</span>
-									<h4><a href="single.html">THELIST: SUMMER’S FOLK SCENE</a></h4>
-									<p>Artisanal handiworks are the pieces de resist  this summer</p>
-									<a href="#" class="btn btn-sm btn-default btn-border">MORE</a>
-								</div><!-- end blog image -->
-							</div><!-- end col -->
-						</div><!-- end row -->
-					</div><!-- end row -->
-
-					<div class="owl-blog-item">
-						<div class="row-fluid">
-							<div class="col-md-6 col-sm-6 col-xs-12 nopadding">
-								<div class="blog-image">
-									<a href="single.html"><img src="upload/blog_02.png" alt="" class="img-responsive"></a>
-									<span class="date">20</span>
-								</div><!-- end blog image -->
-							</div><!-- end col -->
-
-							<div class="col-md-6 col-sm-6 col-xs-12 nopadding white">
-								<div class="blog-desc">
-									<span class="comments-count"><a href="#"><i class="fa fa-comments"> 1.452</i></a></span>
-									<span class="date">APRIL<br>2015</span>
-									<h4><a href="single.html">THELIST: SUMMER’S FOLK SCENE</a></h4>
-									<p>Artisanal handiworks are the pieces de resist  this summer</p>
-									<a href="#" class="btn btn-sm btn-default btn-border">MORE</a>
-								</div><!-- end blog image -->
-							</div><!-- end col -->
-						</div><!-- end row -->
-					</div><!-- end row -->
-				</div><!-- end owl -->
-			</div><!-- end container -->
-		</section><!-- end section -->
-
-		<section class="parallax" data-parallax="scroll" data-image-src="upload/parallax_01.jpg">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12">
-						<div class="section-title text-center">
-							<h2><span>What</span> They said</h2>
-							<h4>Testimonial</h4>
-						</div><!-- end title -->
-					</div><!-- end 12 -->
-				</div><!-- end row -->
-
-				<hr class="light">
-
-				<div class="content_slider_wrapper" id="slider1">
-					<div class="circle_slider_text_wrapper" id="sw0" style="display: none;">
-						<div class="content_slider_text_block_wrap">
-							<h3>Caterina Wilson <span>COMPANY.INC</span></h3>
-							<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. </p>
-						</div>
-						<div class="clear"></div>	
-					</div>
-					<div class="circle_slider_text_wrapper" id="sw1" style="display: none;">
-					<!-- content for the second layer, id="sw1" -->
-						<div class="content_slider_text_block_wrap">
-							<h3>Caterina Wilson <span>COMPANY.INC</span></h3>
-							<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. </p>
-						</div>
-						<div class="clear"></div>	
-					</div>
-					<div class="circle_slider_text_wrapper" id="sw2" style="display: none;">
-						<div class="content_slider_text_block_wrap">
-							<h3>Caterina Wilson <span>COMPANY.INC</span></h3>
-							<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. </p>
-						</div>
-						<div class="clear"></div>	
-					</div>
-				</div>
-
-			</div><!-- end container -->
-		</section><!-- end section -->
-
-		<section class="section white littlepadding">
-			<div class="container">
-				<div id="owl-client">
-					<div class="owl-client-item">
-						<a href="#"><img src="upload/client_01.png" alt="" class="img-responsive"></a>
-					</div><!-- end owl item -->
-
-					<div class="owl-client-item">
-						<a href="#"><img src="upload/client_02.png" alt="" class="img-responsive"></a>
-					</div><!-- end owl item -->
-
-					<div class="owl-client-item">
-						<a href="#"><img src="upload/client_03.png" alt="" class="img-responsive"></a>
-					</div><!-- end owl item -->
-
-					<div class="owl-client-item">
-						<a href="#"><img src="upload/client_04.png" alt="" class="img-responsive"></a>
-					</div><!-- end owl item -->
-
-					<div class="owl-client-item">
-						<a href="#"><img src="upload/client_05.png" alt="" class="img-responsive"></a>
-					</div><!-- end owl item -->
-				</div><!-- end owl -->
-			</div><!-- end container -->
-		</section><!-- end section -->
-
-		<footer class="footer">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-3 col-sm-6 col-xs-12">
-						<div class="widget">
-							<div class="widget-title">
-								<h4>NEWSLETTER SUBSCRIBE</h4>
-							</div><!-- end widget-title -->
-							<div class="newsletter">
-							<p>Lorem ipsum dolor sit amet, cons adipiscing elit, sed diam nonumy dolor.</p>
-							<form class="form-inline">
-								<div class="form-group">
-							    <div class="input-group">
-									<input type="text" class="form-control" id="exampleInputAmount" placeholder="Your Email">
-									<div class="input-group-addon"><i class="icon icon-Mail"></i></div>
-							    </div>
-								</div>
-							</form>
-							</div><!-- end newsletter -->
-						</div><!-- end widget -->
-					</div><!-- end col -->
-
-					<div class="col-md-2 col-sm-6 col-xs-12">
-						<div class="widget">
-							<div class="widget-title">
-								<h4>MY ACCOUNT</h4>
-							</div><!-- end widget-title -->
-							<ul>
-								<li><a href="#">My Account</a></li>
-								<li><a href="#">Personal Information</a></li>
-								<li><a href="#">Address</a></li>
-								<li><a href="#">Discount</a></li>
-								<li><a href="#">Order Hstory</a></li>
-								<li><a href="#">My Credit Slip</a></li>
-							</ul>
-						</div><!-- end widget -->
-					</div><!-- end col -->
-
-					<div class="col-md-2 col-sm-6 col-xs-12">
-						<div class="widget">
-							<div class="widget-title">
-								<h4>OUR SERVICES</h4>
-							</div><!-- end widget-title -->
-							<ul>
-								<li><a href="#">Shipping & Return</a></li>
-								<li><a href="#">international Shipping</a></li>
-								<li><a href="#">Secure Shopping</a></li>
-								<li><a href="#">Affliates</a></li>
-								<li><a href="#">Careers</a></li>
-								<li><a href="#">FAQ</a></li>
-							</ul>
-						</div><!-- end widget -->
-					</div><!-- end col -->
-
-					<div class="col-md-2 col-sm-6 col-xs-12">
-						<div class="widget">
-							<div class="widget-title">
-								<h4>INFORMATION</h4>
-							</div><!-- end widget-title -->
-							<ul>
-								<li><a href="#">New Products</a></li>
-								<li><a href="#">Top Seller</a></li>
-								<li><a href="#">Special</a></li>
-								<li><a href="#">Manufacturer</a></li>
-								<li><a href="#">Suppliers</a></li>
-								<li><a href="#">Our Stores</a></li>
-							</ul>
-						</div><!-- end widget -->
-					</div><!-- end col -->
-
-					<div class="col-md-3 col-sm-6 col-xs-12">
-						<div class="widget">
-							<div class="widget-title">
-								<h4>CONTACT US</h4>
-							</div><!-- end widget-title -->
-
-							<div class="contact-details">
-								<p>Lorem ipsum dolor sit amet, cons<br> adipiscing elit.</p>
-								<ul>
-									<li><i class="fa fa-map-marker"></i> 404 DESIGNER,  NEW YORK</li>
-									<li><i class="icon icon-Mail"></i> INFO@PHATOS.COM</li>
-									<li><i class="icon icon-Phone"></i> +100 - 800 - 456789</li>
-								</ul>
-								<div class="social">
-									<a href="#"><i class="fa fa-facebook"></i></a>
-									<a href="#"><i class="fa fa-twitter"></i></a>
-									<a href="#"><i class="fa fa-google-plus"></i></a>
-									<a href="#"><i class="fa fa-linkedin"></i></a>
-								</div><!-- end social -->
-							</div>
-						</div><!-- end widget -->
-					</div><!-- end col -->
-				</div><!-- end row -->
-			</div><!-- end container -->
-		</footer><!-- end footer -->
-
-		<div class="copyrights">
-			<div class="container">	
-				<div class="row clearfix">
-					<div class="col-md-6">
-						<p>Copyright © <a href="#">Pathos Fashion 2015</a>. All Right Reserved</p>
-					</div>
-					<div class="col-md-6">
-						<img src="images/payments.png" alt="" class="img-responsive">
-					</div>
-				</div><!-- end row -->
-			</div><!-- end container -->
+			<form id="search" action="https://envy-stockholm.myshopify.com/search">
+			<div id="search-wrapper">
+				<input id="search_text" name="q" type="text" size="20" onblur="if(this.value=='')this.value=this.defaultValue;" onfocus="if(this.value==this.defaultValue)this.value='';" value="Search"/>
+				<input id="search_submit" type="submit" border="0" value="&#xf002;" />
+				<div class="clear"></div>
+			</div>
+			</form>
+		
 		</div>
 
-	</div><!-- end wrapper -->
+	</div>
 
-	<script src="js/jquery.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/bootstrap-submenu.min.js"></script>
-	<script src="js/retina.js"></script>
-	<script src="js/wow.js"></script>
-	<script src="js/parallax.js"></script>
-	<script src="js/carousel.js"></script>
-	<script src="js/jquery.content_slider.min.js" type="text/javascript"></script>
-	<script src="js/jquery.mousewheel.js" type="text/javascript"></script>
-	<script src="js/jquery.prettyPhoto.js" type="text/javascript" charset="utf-8"></script>
-	<script src="rs-plugin/js/jquery.themepunch.tools.min.js"></script>
-    <script src="rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
-	<script src="js/custom.js"></script>
+</div>
+
+<div class="container hidden-xs">
+
+<div class="row">
+
+		
+
+		<div class="col-md-7 col-sm-12">
+		
+			<nav class="navbar" role="navigation">
+
+				<div>
+					<ul class="nav navbar-nav">
+				      
+				      
+				        
+				        
+				          <li><a href="index">Home</a></li>
+				        
+				      
+				      
+				        
+				        
+				          <li><a href="collections/all.html">Catalog</a></li>
+				        
+				      
+				      
+				        
+				        
+				          <li><a href="blogs/news.html">Blog</a></li>
+				        
+				      
+				      
+				        
+				        
+				          <li><a href="pages/about-us.html">About Us</a></li>
+				        
+				      
+				
+						
+				      		<li class="customer-account-links">
+				        
+				        	<a href="account/login.html" id="customer_login_link">Log in</a>
+				        	
+			        			<li><a href="account/register.html" id="customer_register_link">Create Account</a></li>
+			        		
+				        
+				      		</li>
+				      	
+				      	
+				    </ul>
+				</div>
+				
+			</nav>
+		
+		</div>
+		
+		
+	
+	
+		<div class="
+		
+		
+			col-md-3 col-sm-6
+		
+		
+		
+		">
+		
+			<form id="search" action="https://envy-stockholm.myshopify.com/search">
+			<div id="search-wrapper">
+				<input id="search_text" name="q" type="text" size="20" onblur="if(this.value=='')this.value=this.defaultValue;" onfocus="if(this.value==this.defaultValue)this.value='';" value="Search"/>
+				<input id="search_submit" type="submit" border="0" value="&#xf002;" />
+				<div class="clear"></div>
+			</div>
+			</form>
+		
+		</div>
+		
+		<div class="col-md-2 col-sm-6">
+		
+			<div id="cart-brief">                   
+				<div class="cart-link">
+			         <h4><a href="#sidr" class="custom-font slide-menu"><i class="fa fa-shopping-cart"></i> Your Cart</a></h4>
+				</div>
+			</div><!-- #cart-brief -->
+		
+		</div>
+	
+	</div>
+
+</div><!-- .container -->
+
+</header>
+
+<div id="sidr" style="display: none;">
+<!-- Your content -->
+		<div>
+			<h4><span class="cart-item-count">0</span></h4>
+			<span class="cart-item-count-text">items in your cart</span>	
+		</div>
+		
+		<div>
+			<h4><span class="cart-item-price">&pound;0.00</span></h4>
+			<span class="cart-item-price-text">total cart value</span>
+		</div>
+		
+		<div class="slide-checkout-buttons">
+			<a href="#sidr" class="btn btn-default slide-menu">Continue Shopping</a><br />
+			<a href="cart.html" class="btn btn-default">Your Cart</a>
+		</div>
+	</ul>
+</div> 
+
+<div class="container" id="page-layout">
+
+<div class="row">
+	<h1 id="site-title">
+	  <a href="index" title="Home">
+	     
+	      <img src="cdn.shopify.com/s/files/1/0271/9799/t/10/assets/logoa3ee.png?1172313162436649993" alt="Envy - Stockholm" /> 
+	    
+	  </a>
+	</h1>
+</div>
+
+
+
+<div class="row hidden-xs">
+	<div class="product-nav-wrapper-main col-md-12">
+		<div id="product-nav-wrapper" class="custom-font">
+			<ul class="nav nav-pills">
+					
+						
+						
+							<li class="dropdown">
+								<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+									<span class="nav-label">Fashion</span><span class="caret"></span>
+								</a>
+								<ul class="dropdown-menu">
+									
+										<li><a href="collections/beachwear.html">Beachwear</a></li>
+									
+										<li><a href="collections/shorts.html">Shorts</a></li>
+									
+								</ul>
+							</li>
+						
+					
+						
+						
+							<li><a href="collections/beachwear.html">Beachwear</a></li>
+						
+					
+						
+						
+							<li><a href="collections/watches.html">Watches</a></li>
+						
+				
+			</ul>
+		</div>
+	</div>
+</div>
+
+</div>
+		
+	
+
+
+<div id="main" role="main">
+
+	<div class="container">
+
+		
+		
+
+<div class="row">
+
+<div class="flexslider-container col-lg-12">
+	<div class="flexslider">
+    <ul class="slides">
+
+        
+        <li>
+          
+            <img src="cdn.shopify.com/s/files/1/0271/9799/t/10/assets/carousel-item-1a3ee.jpg?1172313162436649993" alt="" />
+          
+			
+        </li>
+        
+        
+        
+        <li>
+          
+          <img src="cdn.shopify.com/s/files/1/0271/9799/t/10/assets/carousel-item-2a3ee.jpg?1172313162436649993" alt="" />
+          
+
+
+			
+        </li>
+        
+        
+		
+        	<li>
+			
+				<img src="cdn.shopify.com/s/files/1/0271/9799/t/10/assets/carousel-item-3a3ee.jpg?1172313162436649993" alt="" />
+        	
+
+			
+		</li>
+        
+        
+        
+        
+        
+      
+        
+    </ul>
+  </div>
+</div>
+</div>
+
+
+
+
+<div id="hp-two-promoboxs" class="row">
+
+	<div class="col-md-6 col-sm-6 col-xs-6">
+
+    
+      <img src="cdn.shopify.com/s/files/1/0271/9799/t/10/assets/promobox-item-1a3ee.jpg?1172313162436649993" alt="" />
+    
+
+	</div>
+
+	<div class="col-md-6 col-sm-6 col-xs-6">
+
+    
+      <img src="cdn.shopify.com/s/files/1/0271/9799/t/10/assets/promobox-item-2a3ee.jpg?1172313162436649993" alt="" />
+    
+
+	</div>
+</div>
+
+
+
+<div id="featured" class="">
+
+	<div class="title-bar custom-font">
+		<h2>Featured Products</h2>
+		<div class="clear"></div>
+	</div>
+
+	<div class="row">
+	
+		<ul class="featured-products">
+		
+		
+		
+		<li class="col-md-3 alpha col-sm-3 col-xs-12">
+		
+		
+		<div class="indiv-product">
+	<a href="products/seafolly-shimmer-tie-front-bustier.html" title="Seafolly Shimmer Tie Front Bustier">
+		<img src="cdn.shopify.com/s/files/1/0271/9799/products/image1-a_large6fe6.jpg?v=1418211173'" alt="Seafolly Shimmer Tie Front Bustier" class="animated fadeIn" id="collection-image-anim">
+	</a>
+	
+	<div class="hp-title">
+		<a href="products/seafolly-shimmer-tie-front-bustier.html">
+			<div class="indiv-product-title-text">Seafolly Shimmer Tie Front Bustier</div>
+			
+			
+		
+			<span class="money-styling custom-font">
+		
+				
+		
+					
+					
+						<small>from</small> &pound;53.00
+					
+				
+
+			</span>
+		</a>
+	</div>
+</div>
+		
+	   	</li>
+		
+		
+		
+		<li class="col-md-3 col-sm-3 col-xs-12">
+		
+		
+		<div class="indiv-product">
+	<a href="products/ginja-by-baku-cairo-paisley-print-flounce-bikini-top.html" title="Ginja By Baku Cairo Paisley Print Flounce Bikini Top">
+		<img src="cdn.shopify.com/s/files/1/0271/9799/products/image3-a_large9465.jpg?v=1418211597'" alt="Ginja By Baku Cairo Paisley Print Flounce Bikini Top" class="animated fadeIn" id="collection-image-anim">
+	</a>
+	
+	<div class="hp-title">
+		<a href="products/ginja-by-baku-cairo-paisley-print-flounce-bikini-top.html">
+			<div class="indiv-product-title-text">Ginja By Baku Cairo Paisley Print Flounce Bikini Top</div>
+			
+			
+		
+			<span class="money-styling custom-font">
+		
+				
+		
+					
+					
+						&pound;64.00
+					
+				
+
+			</span>
+		</a>
+	</div>
+</div>
+		
+	   	</li>
+		
+		
+		
+		<li class="col-md-3 col-sm-3 col-xs-12">
+		
+		
+		<div class="indiv-product">
+	<a href="products/seafolly-goddess-pleated-frill-triangle-bikini-top.html" title="Seafolly Goddess Pleated Frill Triangle Bikini Top">
+		<img src="cdn.shopify.com/s/files/1/0271/9799/products/image2-a_large68c5.jpg?v=1418211411'" alt="Seafolly Goddess Pleated Frill Triangle Bikini Top" class="animated fadeIn" id="collection-image-anim">
+	</a>
+	
+	<div class="hp-title">
+		<a href="products/seafolly-goddess-pleated-frill-triangle-bikini-top.html">
+			<div class="indiv-product-title-text">Seafolly Goddess Pleated Frill Triangle Bikini Top</div>
+			
+			
+				<div class="sale-badge">Sale</div>
+			
+		
+			<span class="money-styling custom-font">
+		
+				
+					<h5 class="custom-font compare-at-price">&pound;99.00</h5>
+				
+		
+				
+					<p class="product-dets-sold-out">Sold Out</p>
+				
+
+			</span>
+		</a>
+	</div>
+</div>
+		
+	   	</li>
+		
+		
+		
+		<li class="col-md-3 omega col-sm-3 col-xs-12">
+		
+		
+		<div class="indiv-product">
+	<a href="products/seafolly-romeo-rose-zip-front-bandeau-bikini-top.html" title="Seafolly Romeo Rose Zip Front Bandeau Bikini Top">
+		<img src="cdn.shopify.com/s/files/1/0271/9799/products/image4-a_large0ff4.jpg?v=1418211776'" alt="Seafolly Romeo Rose Zip Front Bandeau Bikini Top" class="animated fadeIn" id="collection-image-anim">
+	</a>
+	
+	<div class="hp-title">
+		<a href="products/seafolly-romeo-rose-zip-front-bandeau-bikini-top.html">
+			<div class="indiv-product-title-text">Seafolly Romeo Rose Zip Front Bandeau Bikini Top</div>
+			
+			
+		
+			<span class="money-styling custom-font">
+		
+				
+		
+					
+					
+						&pound;54.00
+					
+				
+
+			</span>
+		</a>
+	</div>
+</div>
+		
+	   	</li>
+		
+		</ul>
+	</div>
+	
+</div>
+
+
+
+<div class="instagram-wrapper">
+
+	<div class="title-bar custom-font">
+		<h2>Instagram</h2>
+		<div class="clear"></div>
+	</div>
+	
+	<div id="instafeed" class="row"></div>
+
+</div>
+
+
+		
+		
+	</div>
+	
+</div>
+
+<footer>
+	
+<div class="container">
+
+<div class="row">
+
+<div class="col-md-3 col-sm-6">
+
+	
+		
+		<div id="frontpage-article">
+			<div class="article">
+		  		<h3>Welcome</h3>
+	  			<div class="article-body textile">
+		  			<p><strong>You made it! Congratulations on starting your own online store!</strong></p>
+<p>This is your shop&#8217;s <strong>frontpage</strong>, and it&#8217;s the first thing your customers will see when they arrive. You&#8217;ll be able to organize and style this page however you like.</p>
+<p><strong>You can start adding products to your shop by heading into the <a href="admin/auth/login.html">Admin Area</a>.</strong></p>
+				</div>
+			</div>
+		</div>
+	
+	
+</div>
+	
+<div class="col-md-3 col-sm-6 links-footer">
+	
+	<h3>Links</h3>
+	
+	<ul>
+		
+			<li >
+				<a href="search.html">Search</a>
+			</li>
+		
+			<li >
+				<a href="pages/about-us.html">About Us</a>
+			</li>
+		
+	</ul>
+
+</div>
+
+<div class="col-md-3 col-sm-6 mailing-list-footer">
+
+	<h3>Join our Mailing List</h3> 
+	
+	<form action="http://wetheme.us7.list-manage.com/subscribe/post?u=8e7ef1a261109d7ccaea33664&amp;id=a48126f447" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank" class="form-inline">	
+	  <div class="form-group">
+	  	<label for="newsletter-email">Email address:</label>
+	  	<div class="input-group">
+			<input type="email" value="" placeholder="Enter email" name="EMAIL" id="mail" class="input-group-field email form-control" aria-label="translation missing: en.general.newsletter_form.newsletter_email" autocorrect="off" autocapitalize="off">
+			<span class="input-group-btn"><input type="submit" class="btn btn-default" name="subscribe" id="subscribe" value="Join"></span>
+		</div>
+	</div>
+	</form>
+
+</div>
+
+<div class="col-md-3 col-sm-6">
+
+	
+	
+	<h3>Payment Methods</h3>
+	
+	<div id="footer-payment-methods">
+	         <img src="cdn.shopify.com/s/files/1/0271/9799/t/10/assets/card-american-expressa3ee.png?1172313162436649993" alt="" /> 
+	     <img src="cdn.shopify.com/s/files/1/0271/9799/t/10/assets/card-discovera3ee.png?1172313162436649993" alt="" /> 
+	         <img src="cdn.shopify.com/s/files/1/0271/9799/t/10/assets/card-visaa3ee.png?1172313162436649993" alt="" />      
+	   <img src="cdn.shopify.com/s/files/1/0271/9799/t/10/assets/card-mastercarda3ee.png?1172313162436649993" alt="" />      
+	      <img src="cdn.shopify.com/s/files/1/0271/9799/t/10/assets/card-maestroa3ee.png?1172313162436649993" alt="" /> 
+	       <img src="cdn.shopify.com/s/files/1/0271/9799/t/10/assets/card-cirrusa3ee.png?1172313162436649993" alt="" />  
+	       <img src="cdn.shopify.com/s/files/1/0271/9799/t/10/assets/card-paypala3ee.png?1172313162436649993" alt="" /> 
+	       <img src="cdn.shopify.com/s/files/1/0271/9799/t/10/assets/card-googlea3ee.png?1172313162436649993" alt="" />      
+	</div>
+	
+	
+	
+	
+	<h3>Social Networks</h3>
+	
+	<div id="footer-right">
+	  <ul id="sm-icons" class="clearfix">
+	  	<li id="sm-twitter"><a href="http://www.twitter.com/" class="ir">&nbsp;</a></li>
+	  	<li id="sm-facebook"><a href="http://www.facebook.com/" class="ir">&nbsp;</a></li>
+	  	<li id="sm-pinterest"><a href="http://www.instagram.com/" class="ir">&nbsp;</a></li>
+	    <li id="sm-youtube"><a href="http://www.youtube.com/" class="ir">&nbsp;</a></li>
+	    <li id="sm-flickr"><a href="http://www.flickr.com/" class="ir">&nbsp;</a></li>
+	    <li id="sm-instagram"><a href="http://www.instagram.com/" class="ir">&nbsp;</a></li>	    
+	  </ul>
+	</div>
+	
+
+</div>
+
+</div><!-- .row -->
+
+</div><!-- container -->
+
+</footer>
+
+<div class="bottom-footer">
+	
+<div class="container">
+
+<div class="row">
+
+<div class="col-md-9">
+<p>
+<a href="index">Envy - Stockholm</a> | <a target="_blank" rel="nofollow" href="https://www.shopify.co.uk/website">This website runs on Shopify</a> | Designed by <a href="http://www.wetheme.com/" title="Designed by WeTheme">WeTheme</a>
+</p>
+</div>
+	
+</div><!-- row -->
+
+</div><!-- container -->
+
+</div><!-- bottom-footer -->
+
+<script src="cdn.shopify.com/s/files/1/0271/9799/t/10/assets/jquery-1.11.0.mina3ee.js?1172313162436649993" type="text/javascript"></script>
+
+<script src="cdn.shopify.com/s/files/1/0271/9799/t/10/assets/pluginsa3ee.js?1172313162436649993" type="text/javascript"></script>
+
+<script src="cdn.shopify.com/s/files/1/0271/9799/t/10/assets/customa3ee.js?1172313162436649993" type="text/javascript"></script>
+
+
+
+	 
+
+		<div style="display:none;">
+			<div id="envy-auto-popup-2">
+				<div class="envy-auto-popup-2-left">
+					<h3 class="custom-font">Join our Mailing List!</h3>
+					
+						<p>Join today for 10% off your first order!</p>
+					
+					
+					<div id="subs-container" class="clearfix">
+						<div id="mc_embed_signup">
+							<form action="http://wetheme.us7.list-manage.com/subscribe/post?u=8e7ef1a261109d7ccaea33664&amp;id=a48126f447" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+								<input type="email" value="" name="EMAIL" class="form-control" id="mce-EMAIL" placeholder="Enter email" required>
+								<input type="submit" value="Join" name="subscribe" id="mc-embedded-subscribe" class="btn btn-default">
+							</form>
+						</div>
+					</div>
+					
+					
+					
+					<ul id="sm-icons" class="clearfix">
+						<li id="sm-twitter"><a href="http://www.twitter.com/" class="ir">&nbsp;</a></li>
+						<li id="sm-facebook"><a href="http://www.facebook.com/" class="ir">&nbsp;</a></li>
+						<li id="sm-pinterest"><a href="http://www.instagram.com/" class="ir">&nbsp;</a></li>
+					  	<li id="sm-youtube"><a href="http://www.youtube.com/" class="ir">&nbsp;</a></li>
+					  	<li id="sm-flickr"><a href="http://www.flickr.com/" class="ir">&nbsp;</a></li>
+					  	<li id="sm-instagram"><a href="http://www.instagram.com/" class="ir">&nbsp;</a></li>	    
+					</ul>
+					
+					
+				</div>
+				<div class="envy-auto-popup-2-right">
+					<img src="cdn.shopify.com/s/files/1/0271/9799/t/10/assets/popup-newsletter-sidea3ee.png?1172313162436649993" />
+				</div>
+				
+			</div>
+		</div>
+		
+		<script type="text/javascript">
+		if($(window).width() > 768){
+			$(document).ready(function(){
+				var check_cookie = $.cookie('envy-welcome-popup');
+				if(check_cookie == null){
+					$.cookie('envy-welcome-popup', 'true', { expires: 7 });
+					$.fancybox({
+						href: "#envy-auto-popup-2",
+						padding: 0
+					});
+				}
+			});
+		};
+		</script>
+ 
+	
+
+
+
+
+
+
+
+	
+	
+	
+	<script type="text/javascript">
+	    var userFeed = new Instafeed({
+	        get: 'user',
+	        userId: 13228105,
+	        accessToken: '233919945.467ede5.9bfe1ab12bf747d3993b8a8def084b74',
+	        template: '<div class="col-md-2 col-sm-2 col-xs-6"><a class="fancybox-instagram" href="{{image}}"><img src="{{image}}" class="img-responsive"/></a></div>',        
+	        limit: 6,
+	        resolution: 'standard_resolution'
+	    });
+	    userFeed.run();
+	</script>
+	
+	
+
+
+
+<script type="text/javascript">
+$(window).load(function() {
+	$('.flexslider').flexslider({
+		animation: "slide",
+		directionNav: true,
+		controlNav: false,
+		controlsContainer: ".flexslider-container",
+		startAt: 0,
+		slideshowSpeed: 4000
+  });
+});
+</script>
+
+	
+
+
+
+
+
+<script type="text/javascript" charset="utf-8">
+//<![CDATA[
+jQuery(function() {
+  jQuery('nav a').each(function() {
+    if (jQuery(this).attr('href')  ===  window.location.pathname) {
+      jQuery(this).addClass('current');
+    }
+  });
+});  
+//]]>
+</script>
 
 </body>
 
-<!-- Mirrored from templatevisual.com/demo/pathos/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 13 Jul 2015 14:56:23 GMT -->
+<!-- Mirrored from envy-stockholm.myshopify.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 06 Oct 2015 15:57:02 GMT -->
 </html>

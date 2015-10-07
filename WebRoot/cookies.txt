@@ -1,0 +1,7 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+envy-stockholm.myshopify.com	TRUE	/admin	FALSE	1999999999	_secure_admin_session_id	439c26924d318641763e4e4df6eac482
+envy-stockholm.myshopify.com	TRUE	/	FALSE	1999999999	_secure_session_id	9530620d122bb09ae52814eb255f44a2
+envy-stockholm.myshopify.com	TRUE	/	FALSE	1999999999	request_method	GET
+envy-stockholm.myshopify.com	TRUE	/	FALSE	1999999999	_session_id	e9be68cb3fa9789d5cc1eb61dc62ad7b
+

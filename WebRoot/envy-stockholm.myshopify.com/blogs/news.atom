@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xml:lang="en-US" xmlns="http://www.w3.org/2005/Atom" xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:s="http://jadedpixel.com/-/spec/shopify">
+  <id>https://envy-stockholm.myshopify.com/blogs/news.atom</id>
+  <link rel="alternate" type="text/html" href="https://envy-stockholm.myshopify.com/blogs/news"/>
+  <link rel="self" type="application/atom+xml" href="https://envy-stockholm.myshopify.com/blogs/news.atom"/>
+  <title>Envy - Stockholm - News</title>
+  <updated>2015-03-17T09:19:00-04:00</updated>
+  <author>
+    <name>Envy - Stockholm</name>
+  </author>
+  <entry>
+    <id>https://envy-stockholm.myshopify.com/blogs/news/17796652-competition-win-a-custom-surfboard</id>
+    <published>2015-03-17T09:19:00-04:00</published>
+    <updated>2015-03-17T09:19:23-04:00</updated>
+    <link rel="alternate" type="text/html" href="https://envy-stockholm.myshopify.com/blogs/news/17796652-competition-win-a-custom-surfboard"/>
+    <title>Competition! Win a Custom Surfboard!</title>
+    <author>
+      <name>Richard Davies</name>
+    </author>
+    <summary type="html">
+      <![CDATA[<p><img src="//cdn.shopify.com/s/files/1/0271/9799/files/stockholm-blog-2.jpg?208450422368871724"></p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras diam ipsum, ullamcorper vel fringilla nec, facilisis quis quam. Maecenas eleifend erat efficitur libero aliquet ornare. Vivamus sollicitudin tempus elit, vitae maximus ligula placerat eu. Curabitur ornare tellus ac magna fermentum finibus. Vestibulum mattis id purus quis suscipit. Cras tincidunt sodales justo, non volutpat velit molestie vel. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Morbi gravida lacus orci, id dictum sapien fringilla eget.</p><p><a class="read-more" href="https://envy-stockholm.myshopify.com/blogs/news/17796652-competition-win-a-custom-surfboard">More</a></p>]]>
+    </summary>
+    <content type="html">
+      <![CDATA[<div id="lipsum">
+<p><img src="//cdn.shopify.com/s/files/1/0271/9799/files/stockholm-blog-2.jpg?208450422368871724"></p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras diam ipsum, ullamcorper vel fringilla nec, facilisis quis quam. Maecenas eleifend erat efficitur libero aliquet ornare. Vivamus sollicitudin tempus elit, vitae maximus ligula placerat eu. Curabitur ornare tellus ac magna fermentum finibus. Vestibulum mattis id purus quis suscipit. Cras tincidunt sodales justo, non volutpat velit molestie vel. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Morbi gravida lacus orci, id dictum sapien fringilla eget.</p>
+<p>Aenean consectetur massa arcu, eu tincidunt est iaculis quis. Curabitur luctus et massa congue luctus. Donec tempus feugiat convallis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam ultricies nisi egestas mauris tempus tempor nec et arcu. Nulla id nisl et augue tristique tincidunt non quis velit. Duis lobortis, mi non dapibus imperdiet, mi diam maximus odio, in bibendum tortor enim a odio. Fusce velit lacus, suscipit et convallis at, egestas eu sem. Duis ullamcorper urna vitae purus fermentum, in vehicula ipsum fringilla.</p>
+<p>Donec sed nisl ut felis vulputate lobortis. Nullam mattis faucibus turpis, vel feugiat nibh ornare nec. Pellentesque neque est, vehicula non justo nec, placerat feugiat elit. Etiam convallis accumsan nunc, vel ultrices mi ultricies eget. Praesent id malesuada enim. Praesent sit amet metus vitae diam sollicitudin elementum sed vel lacus. Suspendisse quis sem quam. Morbi porttitor eleifend sapien finibus venenatis. Nam sodales, ipsum nec congue hendrerit, neque ligula pulvinar mi, nec viverra orci purus id dolor. Nullam pellentesque vehicula nunc in scelerisque. Etiam in egestas sapien. Quisque non efficitur urna.</p>
+<p>Pellentesque mi erat, lacinia vel pharetra eget, luctus sit amet odio. Praesent magna velit, pellentesque nec tincidunt sit amet, elementum a dolor. Donec cursus pulvinar magna eget ultrices. Suspendisse nec interdum sapien. Aenean at luctus libero. Proin non justo sed ipsum commodo aliquam a a dolor. Maecenas sagittis vestibulum enim, vitae volutpat arcu placerat eu. Cras nec congue dolor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+<p>Etiam porta sagittis interdum. Cras eget tristique nunc. Aenean vestibulum nisl condimentum bibendum ullamcorper. Maecenas fermentum nunc sit amet orci finibus vestibulum. Ut maximus eget nisi a porta. Suspendisse porta ipsum vel mauris faucibus, at cursus metus ultricies. Proin pulvinar molestie tincidunt.</p>
+</div>]]>
+    </content>
+  </entry>
+  <entry>
+    <id>https://envy-stockholm.myshopify.com/blogs/news/9256759-taylor-wins-the-latest-teahupoo-open</id>
+    <published>2013-09-24T08:31:00-04:00</published>
+    <updated>2015-03-17T08:46:24-04:00</updated>
+    <link rel="alternate" type="text/html" href="https://envy-stockholm.myshopify.com/blogs/news/9256759-taylor-wins-the-latest-teahupoo-open"/>
+    <title>Taylor wins the latest Teahupo&apos;o Open</title>
+    <author>
+      <name>Richard Davies</name>
+    </author>
+    <summary type="html">
+      <![CDATA[<p><img src="https://cdn.shopify.com/s/files/1/0271/9799/files/stockholm-blog-1_8918176a-4da2-4c50-8f0e-65f55e3cd93d.jpg?5298570107973924421"></p>
+<div id="lipsum">
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam aliquet bibendum neque ac tincidunt. Aenean vitae lectus convallis, sollicitudin sapien id, porta lectus. Cras mauris leo, condimentum ac bibendum non, vulputate vel lacus. Donec ac congue metus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam suscipit nulla arcu, vitae rhoncus justo maximus condimentum. Vestibulum non rutrum massa, eget commodo</p>
+</div><p><a class="read-more" href="https://envy-stockholm.myshopify.com/blogs/news/9256759-taylor-wins-the-latest-teahupoo-open">More</a></p>]]>
+    </summary>
+    <content type="html">
+      <![CDATA[<p><img src="//cdn.shopify.com/s/files/1/0271/9799/files/stockholm-blog-1_8918176a-4da2-4c50-8f0e-65f55e3cd93d.jpg?5298570107973924421"></p>
+<div id="lipsum">
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam aliquet bibendum neque ac tincidunt. Aenean vitae lectus convallis, sollicitudin sapien id, porta lectus. Cras mauris leo, condimentum ac bibendum non, vulputate vel lacus. Donec ac congue metus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam suscipit nulla arcu, vitae rhoncus justo maximus condimentum. Vestibulum non rutrum massa, eget commodo ipsum.</p>
+<p>Duis placerat nisl nibh, sit amet mollis massa placerat eu. Sed velit leo, feugiat vel risus at, imperdiet accumsan nisl. Vivamus vitae varius nibh. Donec pulvinar laoreet tortor, vitae dictum nulla tempus sit amet. In efficitur, leo sit amet semper accumsan, diam eros lobortis velit, quis consectetur turpis est eget urna. Integer quis hendrerit lorem. Etiam molestie mi in enim imperdiet, non elementum justo aliquam. Duis venenatis sapien vel est tristique ullamcorper. Donec justo ligula, posuere ut laoreet vitae, maximus auctor turpis. Phasellus tristique convallis venenatis. Aliquam erat volutpat. Maecenas nec neque eget lorem mollis tempus at et felis. Morbi vitae eros sit amet odio ornare accumsan at vitae enim.</p>
+<p>Nulla mauris augue, sodales et mattis at, ultrices quis dolor. Vestibulum id arcu ut risus consequat suscipit eget nec nibh. Vivamus sit amet euismod urna. Etiam lobortis, odio mattis consectetur consequat, nulla neque imperdiet urna, non ultricies dolor nulla sed est. Integer finibus tincidunt lobortis. Aliquam efficitur felis vitae dolor gravida elementum. Sed vitae est in dolor suscipit interdum euismod sed purus. Integer sit amet orci et libero interdum vehicula eget ut turpis. Vestibulum augue sem, pharetra sed congue quis, dictum in tellus.</p>
+<p>Pellentesque tristique id odio in aliquet. Nunc nunc justo, rutrum id dolor vitae, pharetra sodales augue. Curabitur lobortis velit tellus, at tincidunt neque cursus in. Vivamus iaculis enim pulvinar felis aliquam sagittis. Sed a orci nisi. Mauris et tempus neque, at cursus ipsum. Nullam non risus vel leo facilisis mollis quis tincidunt mauris. Aliquam a feugiat ligula, in interdum neque. Maecenas fermentum malesuada massa sed laoreet. Aliquam vel congue urna. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Praesent ligula enim, tristique ac odio eget, auctor ultrices ligula.</p>
+<p>Sed aliquet ex vel risus efficitur rhoncus. Pellentesque vitae varius lorem. Suspendisse iaculis sollicitudin diam quis euismod. Nam dui arcu, feugiat ac ligula et, semper sollicitudin tellus. Proin ut consectetur lacus. Vivamus porta vehicula magna quis pretium. Proin vel ex hendrerit, blandit quam sit amet, iaculis turpis.</p>
+</div>]]>
+    </content>
+  </entry>
+</feed>
