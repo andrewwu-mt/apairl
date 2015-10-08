@@ -84,9 +84,6 @@
 		<property name="sizeDAO">
 			<ref bean="SizeDAO" />
 		</property>
-		<property name="colorDAO">
-			<ref bean="ColorDAO" />
-		</property>
 	</bean>
 	
 	<bean id="CartAction" class="com.apairl.action.CartAction" scope="prototype">
@@ -107,9 +104,6 @@
 		</property>
 		<property name="sizeDAO">
 			<ref bean="SizeDAO" />
-		</property>
-		<property name="colorDAO">
-			<ref bean="ColorDAO" />
 		</property>
 	</bean>
 	

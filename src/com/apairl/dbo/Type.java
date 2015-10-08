@@ -13,7 +13,7 @@ public class Type implements java.io.Serializable {
 
 	private Integer typeId;
 	private String name;
-	private Set products = new HashSet(0);
+	private Set stocks = new HashSet(0);
 
 	// Constructors
 
@@ -27,9 +27,9 @@ public class Type implements java.io.Serializable {
 	}
 
 	/** full constructor */
-	public Type(String name, Set products) {
+	public Type(String name, Set stocks) {
 		this.name = name;
-		this.products = products;
+		this.stocks = stocks;
 	}
 
 	// Property accessors
@@ -50,12 +50,12 @@ public class Type implements java.io.Serializable {
 		this.name = name;
 	}
 
-	public Set getProducts() {
-		return this.products;
+	public Set getStocks() {
+		return stocks;
 	}
 
-	public void setProducts(Set products) {
-		this.products = products;
+	public void setStocks(Set stocks) {
+		this.stocks = stocks;
 	}
 
 }

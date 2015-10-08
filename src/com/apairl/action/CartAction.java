@@ -12,14 +12,12 @@ import org.apache.struts2.ServletActionContext;
 
 import com.apairl.dao.CartDAO;
 import com.apairl.dao.CartProductDAO;
-import com.apairl.dao.ColorDAO;
 import com.apairl.dao.ExchangeDAO;
 import com.apairl.dao.ProductDAO;
 import com.apairl.dao.SizeDAO;
 import com.apairl.dao.StockDAO;
 import com.apairl.dbo.Cart;
 import com.apairl.dbo.CartProduct;
-import com.apairl.dbo.Color;
 import com.apairl.dbo.Customer;
 import com.apairl.dbo.Product;
 import com.apairl.dbo.Size;
@@ -38,11 +36,9 @@ public class CartAction extends ActionSupport{
 	private CartDAO cartDAO;
 	private CartProductDAO cartProductDAO;
 	private SizeDAO sizeDAO;
-	private ColorDAO colorDAO;
 	
 	private Integer qty;
 	private Integer sizeId;
-	private Integer colorId;
 	private Integer cartId;
 	private Integer cartProductId;
 	private int total;
@@ -92,9 +88,6 @@ public class CartAction extends ActionSupport{
 		
 		Size size = sizeDAO.findById(sizeId);
 		cp.setSize(size);
-		
-		Color color = colorDAO.findById(colorId);
-		cp.setColor(color);
 		
 		cp.setQty(qty);
 		cp.setSum(p.getPrice() * qty);
@@ -317,14 +310,6 @@ public class CartAction extends ActionSupport{
 		this.sizeDAO = sizeDAO;
 	}
 
-	public ColorDAO getColorDAO() {
-		return colorDAO;
-	}
-
-	public void setColorDAO(ColorDAO colorDAO) {
-		this.colorDAO = colorDAO;
-	}
-
 	public Integer getQty() {
 		return qty;
 	}
@@ -339,14 +324,6 @@ public class CartAction extends ActionSupport{
 
 	public void setSizeId(Integer sizeId) {
 		this.sizeId = sizeId;
-	}
-
-	public Integer getColorId() {
-		return colorId;
-	}
-
-	public void setColorId(Integer colorId) {
-		this.colorId = colorId;
 	}
 
 	public Integer getCartId() {

@@ -14,7 +14,6 @@ public class OrderProduct implements java.io.Serializable {
 	private Integer qty;
 	private Integer sum;
 	private Size size;
-	private Color color;
 
 	// Constructors
 
@@ -23,13 +22,12 @@ public class OrderProduct implements java.io.Serializable {
 	}
 
 	/** full constructor */
-	public OrderProduct(Order order, Product product, Integer qty, Integer sum, Size size, Color color) {
+	public OrderProduct(Order order, Product product, Integer qty, Integer sum, Size size) {
 		this.order = order;
 		this.product = product;
 		this.qty = qty;
 		this.sum = sum;
 		this.size = size;
-		this.color = color;
 	}
 
 	public Integer getOrderProductId() {
@@ -78,14 +76,6 @@ public class OrderProduct implements java.io.Serializable {
 
 	public void setSize(Size size) {
 		this.size = size;
-	}
-
-	public Color getColor() {
-		return color;
-	}
-
-	public void setColor(Color color) {
-		this.color = color;
 	}
 
 }

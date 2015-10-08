@@ -13,11 +13,11 @@
         <property name="name" type="java.lang.String">
             <column name="name" length="45" not-null="true" />
         </property>
-        <set name="products" inverse="true">
+        <set name="stocks" inverse="true">
             <key>
                 <column name="type_id" not-null="true" />
             </key>
-            <one-to-many class="com.apairl.dbo.Product" />
+            <one-to-many class="com.apairl.dbo.Stock" />
         </set>
     </class>
 </hibernate-mapping>

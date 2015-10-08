@@ -11,16 +11,15 @@ import org.apache.log4j.Logger;
 import org.apache.struts2.ServletActionContext;
 
 import com.apairl.dao.CategoryDAO;
-import com.apairl.dao.ColorDAO;
 import com.apairl.dao.ProductDAO;
 import com.apairl.dao.ProductUrlDAO;
 import com.apairl.dao.SizeDAO;
 import com.apairl.dao.StockDAO;
 import com.apairl.dao.TypeDAO;
-import com.apairl.dbo.Color;
 import com.apairl.dbo.Product;
 import com.apairl.dbo.Size;
 import com.apairl.dbo.Stock;
+import com.apairl.dbo.Type;
 import com.opensymphony.xwork2.ActionSupport;
 
 public class ProductAction extends ActionSupport{
@@ -38,13 +37,12 @@ public class ProductAction extends ActionSupport{
 	private CategoryDAO categoryDAO;
 	private ProductUrlDAO productSrcDAO;
 	private SizeDAO sizeDAO;
-	private ColorDAO colorDAO;
 	
 	private Integer typeId;
 	private String productName;
 	private String searchKeyword;
 	
-	
+	private Integer stockId;
 	private Integer sizeId;
 	private Integer colorId;
 	private Integer productId;
@@ -52,8 +50,14 @@ public class ProductAction extends ActionSupport{
 	private String name;
 	private String description;
 	private Integer price;
+	private Integer priceCompare;
+	private Integer qty;
+	private List<Integer> qtyList;
+	private List<Integer> qtyTopList;
+	private List<Integer> qtyBotList;
 	private Integer active;
 	private String shortName;
+	private Short isSeparate;
 	private String aboutProduct;
 	
 	//upload file
@@ -130,28 +134,76 @@ public class ProductAction extends ActionSupport{
 			product.setName(name);
 			product.setDescription(description);
 			product.setPrice(price);
+			product.setPriceCompare(priceCompare);
 			product.setActive(active);
 			product.setInsertDate(new Timestamp(System.currentTimeMillis()));
 			product.setUpdateDate(new Timestamp(System.currentTimeMillis()));
 			productDAO.save(product);
 			
-			Stock stock = new Stock();
-			stock.setQty(0);
-			
-			Size size = sizeDAO.findById(sizeId);
-			stock.setSize(size);
-			
-			Color color = colorDAO.findById(colorId);
-			stock.setColor(color);
-			
-			stock.setProduct(product);
-			stockDAO.save(stock);
+			List<Size> sizeList = sizeDAO.findAll();
+			if(isSeparate == 0){
+				Type type = typeDAO.findById(0);
+				
+				for(int i=0 ; i<sizeList.size() ; i++){
+					Size size = sizeList.get(i);
+					Integer qty = qtyList.get(i);
+					
+					Stock stock = new Stock();
+					stock.setType(type);
+					stock.setQty(qty);
+					stock.setSize(size);
+					stock.setProduct(product);
+					stockDAO.save(stock);
+				}
+			} else {
+				Type typeTop = typeDAO.findById(1);
+				Type typeBot = typeDAO.findById(2);
+				
+				for(int i=0 ; i<sizeList.size() ; i++){
+					Size size = sizeList.get(i);
+					Integer qtyTop = qtyTopList.get(i);
+					Integer qtyBot = qtyBotList.get(i);
+					
+					Stock stockTop = new Stock();
+					Stock stockBot = new Stock();
+
+					stockTop.setType(typeTop);
+					stockTop.setQty(qtyTop);
+					stockTop.setSize(size);
+					stockTop.setProduct(product);
+
+					stockBot.setType(typeBot);
+					stockBot.setQty(qtyBot);
+					stockBot.setSize(size);
+					stockBot.setProduct(product);
+					
+					stockDAO.save(stockTop);
+					stockDAO.save(stockBot);
+				}
+			}
 			
 		}catch(Exception e){
 			log.error("Save product failed", e);
 			return "saveerror";
 		}
 		return "successsave";
+	}
+
+	public String quickUpdateRecord(){
+		try{
+			Product product = productDAO.findById(productId);
+			product.setPrice(price);
+			product.setPriceCompare(priceCompare);
+			productDAO.update(product);
+			
+			Stock stock = stockDAO.findById(stockId);
+			stock.setQty(qty);
+			
+		}catch(Exception e){
+			log.error("Update product failed", e);
+			return "updateerror";
+		}
+		return SUCCESS;
 	}
 	
 	public String updateRecord(){
@@ -160,6 +212,7 @@ public class ProductAction extends ActionSupport{
 			product.setName(name);
 			product.setDescription(description);
 			product.setPrice(price);
+			product.setPriceCompare(priceCompare);
 			product.setActive(active);
 			productDAO.update(product);
 			
@@ -332,14 +385,6 @@ public class ProductAction extends ActionSupport{
 		this.sizeDAO = sizeDAO;
 	}
 
-	public ColorDAO getColorDAO() {
-		return colorDAO;
-	}
-
-	public void setColorDAO(ColorDAO colorDAO) {
-		this.colorDAO = colorDAO;
-	}
-
 	public Integer getSizeId() {
 		return sizeId;
 	}
@@ -366,6 +411,62 @@ public class ProductAction extends ActionSupport{
 
 	public static Logger getLog() {
 		return log;
+	}
+
+	public Integer getStockId() {
+		return stockId;
+	}
+
+	public void setStockId(Integer stockId) {
+		this.stockId = stockId;
+	}
+
+	public Integer getPriceCompare() {
+		return priceCompare;
+	}
+
+	public void setPriceCompare(Integer priceCompare) {
+		this.priceCompare = priceCompare;
+	}
+
+	public Integer getQty() {
+		return qty;
+	}
+
+	public void setQty(Integer qty) {
+		this.qty = qty;
+	}
+
+	public List<Integer> getQtyList() {
+		return qtyList;
+	}
+
+	public void setQtyList(List<Integer> qtyList) {
+		this.qtyList = qtyList;
+	}
+
+	public List<Integer> getQtyTopList() {
+		return qtyTopList;
+	}
+
+	public void setQtyTopList(List<Integer> qtyTopList) {
+		this.qtyTopList = qtyTopList;
+	}
+
+	public List<Integer> getQtyBotList() {
+		return qtyBotList;
+	}
+
+	public void setQtyBotList(List<Integer> qtyBotList) {
+		this.qtyBotList = qtyBotList;
+	}
+
+	public Short getIsSeparate() {
+		return isSeparate;
+	}
+
+	public void setIsSeparate(Short isSeparate) {
+		this.isSeparate = isSeparate;
 	}
 	
 }

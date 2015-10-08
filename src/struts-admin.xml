@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+
+	<constant name="struts.objectFactory" value="spring" />
+	<constant name="struts.multipart.maxSize" value="9999999999" />
+	
+    <package name="admin" namespace="/admin" extends="struts-default, json-default">  
+		<result-types>  
+			<result-type name="result-message" class="ResultMessage" />  
+		</result-types> 
+      	<interceptors>
+			<interceptor name="checkAdmin" class="AdminInterceptor"></interceptor>
+		</interceptors>
+		
+		<global-results>
+			<result name="login-admin" type="result-message">../admin</result>
+		</global-results>
+    
+		<action name="*" class="IndexAction" >
+			<interceptor-ref name="checkAdmin"/>
+			<interceptor-ref name="defaultStack"/>
+			<result name="success">/WEB-INF/jsp/admin/{1}.jsp</result>
+		</action>
+		
+		<action name="login" class="AdminAction" method="login">
+			<result name="error" type="result-message">login-page</result>
+			<result name="successlogin" type="result-message">stock-list</result>
+		</action>
+		
+		<!-- Ship Start -->
+		<action name="ship-update-status" class="AdminAction" method="updateShipStatus">
+			<interceptor-ref name="checkAdmin"/>
+			<interceptor-ref name="defaultStack"/>
+				<result name="success" type="result-message">${#request.path}</result>
+		</action>
+		<action name="ship-del" class="AdminAction" method="deleteShipRecord">
+			<interceptor-ref name="checkAdmin"/>
+			<interceptor-ref name="defaultStack"/>
+				<result name="successdelete" type="result-message">${#request.path}</result>
+		</action>
+		
+		<action name="ship-all" class="AdminAction" method="allShipRecords" />
+		<action name="ship-update" class="AdminAction" method="updateShipRecord">
+			<interceptor-ref name="checkAdmin"/>
+			<interceptor-ref name="defaultStack"/>
+				<result name="success" type="result-message">ship-list</result>
+		</action>
+		
+		<!-- Ship End -->
+		
+		<!-- User Start -->
+
+		<action name="user-all" class="AdminAction" method="allUserRecords" />
+		<action name="user-get" class="AdminAction" method="getUserRecord" />
+		
+		<action name="user-save" class="AdminAction" method="saveUserRecord" >
+			<interceptor-ref name="checkAdmin"/>
+			<interceptor-ref name="defaultStack"/>
+				<result name="successsave" type="result-message">user-list</result>
+		</action>
+		
+		<action name="user-update" class="AdminAction" method="updateUserRecord" >
+			<interceptor-ref name="checkAdmin"/>
+			<interceptor-ref name="defaultStack"/>
+				<result name="success" type="result-message">user-list</result>
+		</action>
+		
+		<action name="user-delete" class="AdminAction" method="deleteUserRecord" >
+			<interceptor-ref name="checkAdmin"/>
+			<interceptor-ref name="defaultStack"/>
+				<result name="successdelete" type="result-message">user-list</result>
+				<result name="deleteusererror" type="result-message">${#request.path}</result>
+		</action>
+		
+		<!-- User End -->
+		
+		<!-- Stock Start -->
+		
+		<action name="stock-update" class="AdminAction" method="update">
+			<interceptor-ref name="checkAdmin"/>
+			<interceptor-ref name="defaultStack"/>
+				<result name="success" type="result-message">stock-list</result>
+		</action>
+		
+		<!-- Stock End -->
+		
+		<!-- Product Start -->
+		
+        <action name="product-save" class="ProductAction" method="saveRecord">
+			<interceptor-ref name="checkAdmin"/>
+			<interceptor-ref name="defaultStack"/>
+        	<result name="saveerror" type="result-message">product-add</result>
+        	<result name="successsave"  type="result-message">stock-list</result>
+		</action>
+		
+        <action name="product-update-quick" class="ProductAction" method="quickUpdateRecord">
+			<interceptor-ref name="checkAdmin"/>
+			<interceptor-ref name="defaultStack"/>
+        	<result name="updateerror" type="result-message">stock-list</result>
+        	<result name="success" type="result-message">stock-list</result>
+		</action>
+		
+        <action name="product-update" class="ProductAction" method="updateRecord">
+			<interceptor-ref name="checkAdmin"/>
+			<interceptor-ref name="defaultStack"/>
+        	<result name="updateerror" type="result-message">product-edit?id=${#request.productId}</result>
+        	<result name="success"  type="result-message">stock-list</result>
+		</action>
+		
+        <action name="product-delete" class="ProductAction" method="saveRecord">
+			<interceptor-ref name="checkAdmin"/>
+			<interceptor-ref name="defaultStack"/>
+        	<result name="deleteerror" type="result-message">stock-list</result>
+        	<result name="successdelete"  type="result-message">stock-list</result>
+		</action>
+		
+		<!-- Product End -->
+		
+    </package>
+
+</struts>    

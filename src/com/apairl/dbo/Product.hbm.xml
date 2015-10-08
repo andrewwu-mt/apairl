@@ -19,6 +19,9 @@
         <property name="price" type="java.lang.Integer">
             <column name="price" not-null="true" />
         </property>
+        <property name="priceCompare" type="java.lang.Integer">
+            <column name="price_compare" not-null="true" />
+        </property>
         <property name="insertDate" type="java.sql.Timestamp">
             <column name="insert_date" length="19" not-null="true" />
         </property>
@@ -30,6 +33,9 @@
         </property>
         <property name="urlPath" type="java.lang.String">
             <column name="url_path" length="500" />
+        </property>
+        <property name="isSeparate" type="short">
+            <column name="is_separate" length="1" />
         </property>
         
         <set name="productUrls" inverse="true">

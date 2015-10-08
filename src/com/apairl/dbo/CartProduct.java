@@ -14,7 +14,6 @@ public class CartProduct implements java.io.Serializable {
 	private Integer qty;
 	private Integer sum;
 	private Size size;
-	private Color color;
 
 	// Constructors
 
@@ -23,13 +22,12 @@ public class CartProduct implements java.io.Serializable {
 	}
 
 	/** full constructor */
-	public CartProduct(Cart cart, Product product, Integer qty, Integer sum, Size size, Color color) {
+	public CartProduct(Cart cart, Product product, Integer qty, Integer sum, Size size) {
 		this.cart = cart;
 		this.product = product;
 		this.qty = qty;
 		this.sum = sum;
 		this.size = size;
-		this.color = color;
 	}
 
 	public Integer getCartProductId() {
@@ -78,14 +76,6 @@ public class CartProduct implements java.io.Serializable {
 
 	public void setSize(Size size) {
 		this.size = size;
-	}
-
-	public Color getColor() {
-		return color;
-	}
-
-	public void setColor(Color color) {
-		this.color = color;
 	}
 
 }

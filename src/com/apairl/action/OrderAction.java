@@ -61,7 +61,6 @@ public class OrderAction extends ActionSupport{
 			OrderProduct op = new OrderProduct();
 			op.setOrder(order);
 			op.setProduct(cp.getProduct());
-			op.setColor(cp.getColor());
 			op.setSize(cp.getSize());
 			op.setQty(cp.getQty());
 			op.setSum(cp.getSum());

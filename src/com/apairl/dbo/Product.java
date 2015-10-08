@@ -16,10 +16,12 @@ public class Product implements java.io.Serializable {
 	private String name;
 	private String description;
 	private Integer price;
+	private Integer priceCompare;
 	private Timestamp insertDate;
 	private Timestamp updateDate;
 	private Integer active;
 	private String urlPath;
+	private Short isSeparate;
 	private Set productUrls = new HashSet(0);
 
 	// Constructors
@@ -30,15 +32,17 @@ public class Product implements java.io.Serializable {
 
 	/** full constructor */
 	public Product(String name, String description,
-			Integer price, Timestamp insertDate,
-			Timestamp updateDate, Integer active, String urlPath, Set productUrls) {
+			Integer price, Integer priceCompare, Timestamp insertDate,
+			Timestamp updateDate, Integer active, String urlPath, Short isSeparate, Set productUrls) {
 		this.name = name;
 		this.description = description;
 		this.price = price;
+		this.priceCompare = priceCompare;
 		this.insertDate = insertDate;
 		this.updateDate = updateDate;
 		this.active = active;
 		this.urlPath = urlPath;
+		this.isSeparate = isSeparate;
 		this.productUrls = productUrls;
 	}
 
@@ -112,6 +116,22 @@ public class Product implements java.io.Serializable {
 
 	public void setProductUrls(Set productUrls) {
 		this.productUrls = productUrls;
+	}
+
+	public Integer getPriceCompare() {
+		return priceCompare;
+	}
+
+	public void setPriceCompare(Integer priceCompare) {
+		this.priceCompare = priceCompare;
+	}
+
+	public Short getIsSeparate() {
+		return isSeparate;
+	}
+
+	public void setIsSeparate(Short isSeparate) {
+		this.isSeparate = isSeparate;
 	}
 
 }

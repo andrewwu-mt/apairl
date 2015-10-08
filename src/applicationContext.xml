@@ -109,8 +109,4 @@
 			<ref bean="sessionFactory" />
 		</property>
 	</bean>
-	<bean id="ColorDAO" class="com.apairl.dao.ColorDAO">
-		<property name="sessionFactory">
-			<ref bean="sessionFactory" />
-		</property>
-	</bean></beans>
+</beans>
