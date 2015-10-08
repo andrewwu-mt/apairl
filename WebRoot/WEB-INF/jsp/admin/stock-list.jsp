@@ -10,6 +10,8 @@
 <head>
 <meta charset="UTF-8">
 <jsp:include page="header-2.jsp"/>
+<s:action name="stock-all" executeResult="false" />
+
 <script>
 $(document).ready(function(){
 	$("#btn").click(function(){
@@ -42,14 +44,14 @@ $(document).ready(function(){
 					<th></th>
 				</tr>
 				
-				<s:iterator value="stockList">
+				<s:iterator value="#request.stockList">
 						<tr>
 							<td><s:property value="%{product.category.name}" /></td>		
 			                <td><a href="product-edit?id=${product.productId}"><s:property value="%{product.name}" /></a></td>	                
 							<td><s:property value="%{type.name}" /></td>			                
-							<td><s:property value="%{size}" /></td>			                
-			                <td><fmt:formatNumber groupingUsed="true"><s:textfield name="price" value="%{product.price}" /></fmt:formatNumber></td>
-			                <td><fmt:formatNumber groupingUsed="true"><s:textfield name="priceCompare" value="%{product.priceCompare}" /></fmt:formatNumber></td>
+							<td><s:property value="%{size.value}" /></td>			                
+			                <td><fmt:formatNumber groupingUsed="true"><s:property value="%{product.price}" /></fmt:formatNumber></td>
+			                <td><fmt:formatNumber groupingUsed="true"><s:property value="%{product.priceCompare}" /></fmt:formatNumber></td>
 			                <td><s:textfield name="qty" value="%{qty}"/></td>
 			                <td><a href="product-update-quick?stockId=${stockId}" >Update</a></td>
 		                </tr>

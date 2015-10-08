@@ -75,11 +75,8 @@
 		<property name="categoryDAO">
 			<ref bean="CategoryDAO" />
 		</property>
-		<property name="productSrcDAO">
-			<ref bean="ProductSrcDAO" />
-		</property>
-		<property name="srcDAO">
-			<ref bean="SrcDAO" />
+		<property name="productUrlDAO">
+			<ref bean="ProductUrlDAO" />
 		</property>
 		<property name="sizeDAO">
 			<ref bean="SizeDAO" />

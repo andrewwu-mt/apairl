@@ -59,7 +59,6 @@ public class AdminAction extends ActionSupport {
 	private List<Integer> productIds;
 	private List<Integer> numbers;
 	
-	private List<Stock> stockList;
 	private List<Order> orderList;
 	
 
@@ -189,8 +188,11 @@ public class AdminAction extends ActionSupport {
 	
 	
 	//Stock Records
-	public String getRecord(){
-		stockList = stockDAO.findAll();
+	public String allStockRecords(){
+		HttpServletRequest request = ServletActionContext.getRequest();
+		List<Stock> stockList = stockDAO.findAll();
+		request.setAttribute("stockList", stockList);
+		
 		return SUCCESS;
 	}
 	
@@ -353,14 +355,6 @@ public class AdminAction extends ActionSupport {
 
 	public void setStockDAO(StockDAO stockDAO) {
 		this.stockDAO = stockDAO;
-	}
-
-	public List<Stock> getStockList() {
-		return stockList;
-	}
-
-	public void setStockList(List<Stock> stockList) {
-		this.stockList = stockList;
 	}
 
 	public int getId() {

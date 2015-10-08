@@ -16,6 +16,7 @@ import com.apairl.dao.ProductUrlDAO;
 import com.apairl.dao.SizeDAO;
 import com.apairl.dao.StockDAO;
 import com.apairl.dao.TypeDAO;
+import com.apairl.dbo.Category;
 import com.apairl.dbo.Product;
 import com.apairl.dbo.Size;
 import com.apairl.dbo.Stock;
@@ -35,7 +36,7 @@ public class ProductAction extends ActionSupport{
 	private TypeDAO typeDAO;
 	private StockDAO stockDAO;
 	private CategoryDAO categoryDAO;
-	private ProductUrlDAO productSrcDAO;
+	private ProductUrlDAO productUrlDAO;
 	private SizeDAO sizeDAO;
 	
 	private Integer typeId;
@@ -52,9 +53,6 @@ public class ProductAction extends ActionSupport{
 	private Integer price;
 	private Integer priceCompare;
 	private Integer qty;
-	private List<Integer> qtyList;
-	private List<Integer> qtyTopList;
-	private List<Integer> qtyBotList;
 	private Integer active;
 	private String shortName;
 	private Short isSeparate;
@@ -101,18 +99,10 @@ public class ProductAction extends ActionSupport{
 	}
 	
 	public String getRecord(){
-		Product product = null;
-
-		if(productName != null && !"".equals(productName)){
-			product = (Product) productDAO.findByName(productName).get(0);
-		} else {
-			product = productDAO.findById(productId);
-		}
-		
-		List<Stock> stockList = stockDAO.findByProperty("product.productId", product.getProductId());
-		
 		HttpServletRequest request = ServletActionContext.getRequest();
-		request.setAttribute("stockList", stockList);
+		Product product = productDAO.findById(productId);
+		product.setDescription(product.getDescription().replace("<br>", "\n"));
+		request.setAttribute("product", product);
 		
 		return SUCCESS;
 	}
@@ -129,16 +119,21 @@ public class ProductAction extends ActionSupport{
 	//Admin permission
 	
 	public String saveRecord(){
+		HttpServletRequest request = ServletActionContext.getRequest();
 		try{
+			Category cate = categoryDAO.findById(categoryId);
 			Product product = new Product();
+			product.setCategory(cate);
 			product.setName(name);
-			product.setDescription(description);
+			product.setDescription(description.replace("\n", "<br>").replace("\r", ""));
 			product.setPrice(price);
 			product.setPriceCompare(priceCompare);
 			product.setActive(active);
+			product.setIsSeparate(isSeparate);
 			product.setInsertDate(new Timestamp(System.currentTimeMillis()));
 			product.setUpdateDate(new Timestamp(System.currentTimeMillis()));
 			productDAO.save(product);
+			request.setAttribute("productId", product.getProductId());
 			
 			List<Size> sizeList = sizeDAO.findAll();
 			if(isSeparate == 0){
@@ -146,7 +141,7 @@ public class ProductAction extends ActionSupport{
 				
 				for(int i=0 ; i<sizeList.size() ; i++){
 					Size size = sizeList.get(i);
-					Integer qty = qtyList.get(i);
+					Integer qty = 0;
 					
 					Stock stock = new Stock();
 					stock.setType(type);
@@ -161,8 +156,8 @@ public class ProductAction extends ActionSupport{
 				
 				for(int i=0 ; i<sizeList.size() ; i++){
 					Size size = sizeList.get(i);
-					Integer qtyTop = qtyTopList.get(i);
-					Integer qtyBot = qtyBotList.get(i);
+					Integer qtyTop = 0;
+					Integer qtyBot = 0;
 					
 					Stock stockTop = new Stock();
 					Stock stockBot = new Stock();
@@ -207,13 +202,20 @@ public class ProductAction extends ActionSupport{
 	}
 	
 	public String updateRecord(){
+		HttpServletRequest request = ServletActionContext.getRequest();
 		try{
+			request.setAttribute("productId", productId);
+			
+			Category cate = categoryDAO.findById(categoryId);
 			Product product = productDAO.findById(productId);
+			product.setCategory(cate);
 			product.setName(name);
-			product.setDescription(description);
+			product.setDescription(description.replace("\n", "<br>").replace("\r", ""));
 			product.setPrice(price);
 			product.setPriceCompare(priceCompare);
 			product.setActive(active);
+			product.setIsSeparate(isSeparate);
+			product.setUpdateDate(new Timestamp(System.currentTimeMillis()));
 			productDAO.update(product);
 			
 		}catch(Exception e){
@@ -369,14 +371,6 @@ public class ProductAction extends ActionSupport{
 		this.typeId = typeId;
 	}
 
-	public ProductUrlDAO getProductSrcDAO() {
-		return productSrcDAO;
-	}
-
-	public void setProductSrcDAO(ProductUrlDAO productSrcDAO) {
-		this.productSrcDAO = productSrcDAO;
-	}
-
 	public SizeDAO getSizeDAO() {
 		return sizeDAO;
 	}
@@ -437,36 +431,20 @@ public class ProductAction extends ActionSupport{
 		this.qty = qty;
 	}
 
-	public List<Integer> getQtyList() {
-		return qtyList;
-	}
-
-	public void setQtyList(List<Integer> qtyList) {
-		this.qtyList = qtyList;
-	}
-
-	public List<Integer> getQtyTopList() {
-		return qtyTopList;
-	}
-
-	public void setQtyTopList(List<Integer> qtyTopList) {
-		this.qtyTopList = qtyTopList;
-	}
-
-	public List<Integer> getQtyBotList() {
-		return qtyBotList;
-	}
-
-	public void setQtyBotList(List<Integer> qtyBotList) {
-		this.qtyBotList = qtyBotList;
-	}
-
 	public Short getIsSeparate() {
 		return isSeparate;
 	}
 
 	public void setIsSeparate(Short isSeparate) {
 		this.isSeparate = isSeparate;
+	}
+
+	public ProductUrlDAO getProductUrlDAO() {
+		return productUrlDAO;
+	}
+
+	public void setProductUrlDAO(ProductUrlDAO productUrlDAO) {
+		this.productUrlDAO = productUrlDAO;
 	}
 	
 }

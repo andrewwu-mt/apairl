@@ -25,7 +25,7 @@
   <div class="shell">
     <!-- Header -->
     <div id="header">
-      <h1 id="logo"><a href="../index"><img src="../css/images/logo.png" /></a></h1>
+      <h1 id="logo"><a href="stock-list"><img src="../css/images/logo.png" /></a></h1>
       <div id="navigation">
         <ul>
           <li><a href="stock-list">Inventory List</a></li>

@@ -16,5 +16,8 @@
         <property name="urlPath" type="java.lang.String">
             <column name="url_path" length="500" />
         </property>
+        <property name="isThumb" type="short">
+            <column name="is_thumb" length="1" />
+        </property>
     </class>
 </hibernate-mapping>

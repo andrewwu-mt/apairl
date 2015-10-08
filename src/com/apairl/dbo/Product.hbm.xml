@@ -37,6 +37,9 @@
         <property name="isSeparate" type="short">
             <column name="is_separate" length="1" />
         </property>
+        <many-to-one name="category" class="com.apairl.dbo.Category" fetch="select" lazy="false">
+            <column name="category_id" not-null="true" />
+        </many-to-one>
         
         <set name="productUrls" inverse="true">
             <key>

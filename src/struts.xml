@@ -30,28 +30,6 @@
 		<action name="slide-all" class="SlideAction" method="allRecords" />
 		<!-- Slide End -->
 		
-		<!-- ProductUrl Start -->
-		<action name="product-url-get-by-product" class="ProductUrlAction" method="getRecordsByProductId" />
-		
-		<action name="product-url-save-primary" class="ProductUrlAction" method="savePrimaryThumbnail">
-			<interceptor-ref name="checkAdmin"/>
-			<interceptor-ref name="defaultStack"/>
-			<result name="success" type="result-message">product-edit?id=${#request.productId}</result>
-		</action>
-		
-		<action name="product-url-save" class="ProductUrlAction" method="saveRecord">
-			<interceptor-ref name="checkAdmin"/>
-			<interceptor-ref name="defaultStack"/>
-			<result name="successsave" type="result-message">product-edit?id=${#request.productId}</result>
-		</action>
-		
-		<action name="product-url-delete" class="ProductUrlAction" method="deleteRecord">
-			<interceptor-ref name="checkAdmin"/>
-			<interceptor-ref name="defaultStack"/>
-			<result name="successdelete" type="result-message">product-edit?id=${#request.productId}</result>
-		</action>
-		<!-- ProductSrc End -->
-		
 		<!-- Exchange Start -->
 		<action name="exchange-get" class="ExchangeAction" method="getRecord" />
 		<!-- Exchange End -->

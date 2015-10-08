@@ -7,6 +7,7 @@ import javax.servlet.http.HttpServletRequest;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.struts2.ServletActionContext;
+import org.jfree.util.Log;
 
 import com.apairl.dao.ProductDAO;
 import com.apairl.dao.ProductUrlDAO;
@@ -23,9 +24,9 @@ public class ProductUrlAction extends ActionSupport{
 	private Integer productUrlId;
 
 	//upload file
-	private File fileUpload;
-	private String fileUploadContentType;
-	private String fileUploadFileName;
+	private File[] fileUpload;
+	private String[] fileUploadContentType;
+	private String[] fileUploadFileName;
 	
 	public String getRecordsByProductId(){
 		List productUrlList = productUrlDAO.findByProperty("product.productId", productId);
@@ -36,40 +37,43 @@ public class ProductUrlAction extends ActionSupport{
 		return SUCCESS;
 	}
 	
-	public String saveUrl(){
+	public void saveUrl(String path){
 		try{
-			String osName = System.getProperty("os.name");
-			String path = "C:/apache-tomcat-7.0.54/webapps/apairl/products/";
-			if(!osName.contains("Windows")) path = "/usr/share/tomcat/webapps/apairl/products/";
-	
-			File file = new File(path, fileUploadFileName);
-	        if(fileUploadFileName.contains(".jpg") || fileUploadFileName.contains(".jpeg")){
-	        	FileUtils.copyFile(fileUpload, file);
-	        }
+			for(int i=0 ; i<fileUpload.length ; i++){
+				File file = new File(path, fileUploadFileName[i]);
+		        if(fileUploadFileName[i].contains(".jpg") || fileUploadFileName[i].contains(".jpeg")){
+		        	FileUtils.copyFile(fileUpload[i], file);
+		        }
+			}
 		} catch(Exception e){
-			return null;
+			Log.error("", e);
 		}
-        return "products/" + fileUploadFileName;
 	}
 	
 	public String saveRecord(){
-		if(fileUploadFileName != null){
-			HttpServletRequest request = ServletActionContext.getRequest();
-			request.setAttribute("productId", productId);
-			
-			try{
+		try{
+			if(fileUploadFileName != null){
+				HttpServletRequest request = ServletActionContext.getRequest();
+				request.setAttribute("productId", productId);
 				Product product = productDAO.findById(productId);
-				String urlPath = saveUrl();
-				ProductUrl productUrl = new ProductUrl();
-				productUrl.setProduct(product);
-				productUrl.setUrlPath(urlPath);
-				productUrlDAO.save(productUrl);
-			}catch(Exception e){
-				e.printStackTrace();
+				String workingDir = System.getProperty( "catalina.base" );
+				String path = workingDir + "\\webapps\\apairl\\img\\product\\";
+				saveUrl(path);
+				
+				for(int i=0 ; i<fileUploadFileName.length ; i++){
+					ProductUrl productUrl = new ProductUrl();
+					productUrl.setProduct(product);
+					productUrl.setUrlPath(path + fileUploadFileName[i]);
+					productUrlDAO.save(productUrl);
+				}
+				return "successsave";
+			} else {
 				return "saveerror";
 			}
+		}catch(Exception e){
+			e.printStackTrace();
+			return "saveerror";
 		}
-		return "successsave";
 	}
 	
 	public String deleteRecord(){
@@ -117,27 +121,27 @@ public class ProductUrlAction extends ActionSupport{
 		this.productUrlId = productUrlId;
 	}
 
-	public File getFileUpload() {
+	public File[] getFileUpload() {
 		return fileUpload;
 	}
 
-	public void setFileUpload(File fileUpload) {
+	public void setFileUpload(File[] fileUpload) {
 		this.fileUpload = fileUpload;
 	}
 
-	public String getFileUploadContentType() {
+	public String[] getFileUploadContentType() {
 		return fileUploadContentType;
 	}
 
-	public void setFileUploadContentType(String fileUploadContentType) {
+	public void setFileUploadContentType(String[] fileUploadContentType) {
 		this.fileUploadContentType = fileUploadContentType;
 	}
 
-	public String getFileUploadFileName() {
+	public String[] getFileUploadFileName() {
 		return fileUploadFileName;
 	}
 
-	public void setFileUploadFileName(String fileUploadFileName) {
+	public void setFileUploadFileName(String[] fileUploadFileName) {
 		this.fileUploadFileName = fileUploadFileName;
 	}
 

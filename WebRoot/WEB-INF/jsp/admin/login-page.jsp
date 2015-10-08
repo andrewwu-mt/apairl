@@ -14,7 +14,7 @@
 </head>
 <body>
 		<div id="content">
-			<s:form action="admin/login" validate="true" id="login-form" theme="simple">
+			<s:form action="login" namespace="/admin" validate="true" id="login-form" theme="simple">
 				<label>Account:</label>
 				<s:textfield name="username" cssClass="rounded-corners" />&nbsp;&nbsp;&nbsp;
 				<label>Password:</label>
