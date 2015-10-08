@@ -10,7 +10,6 @@ public class Category implements java.io.Serializable {
 
 	private Integer categoryId;
 	private String name;
-	private Type type;
 
 	// Constructors
 
@@ -19,9 +18,8 @@ public class Category implements java.io.Serializable {
 	}
 
 	/** full constructor */
-	public Category(String name, Type type) {
+	public Category(String name) {
 		this.name = name;
-		this.type = type;
 	}
 
 	public Integer getCategoryId() {
@@ -38,14 +36,6 @@ public class Category implements java.io.Serializable {
 
 	public void setName(String name) {
 		this.name = name;
-	}
-
-	public Type getType() {
-		return type;
-	}
-
-	public void setType(Type type) {
-		this.type = type;
 	}
 
 }

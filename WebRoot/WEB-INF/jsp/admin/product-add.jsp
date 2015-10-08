@@ -10,8 +10,9 @@
 <head>
 <meta charset="UTF-8">
 <jsp:include page="header-2.jsp"/>
-<s:action name="type-all" executeResult="false" />
-<s:action name="category-all" executeResult="false" />
+<s:action name="type-all" namespace="/" executeResult="false" />
+<s:action name="category-all" namespace="/" executeResult="false" />
+<s:action name="size-all" namespace="/" executeResult="false" />
 
 </head>
 <body>

@@ -26,8 +26,6 @@ $(document).ready(function(){
 				<caption>
 					<h2>Inventory list</h2>
 					<br>
-					<input id="btn" type="button" value="Update" class="submit-rounded"/>
-					<br>
 					<a href="product-add">Add product</a>
 					<br>
 					<hr>
