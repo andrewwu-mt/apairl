@@ -53,11 +53,23 @@
 		
 		
 		<table class="list">
+			<tr>
+				<th colspan="2">Upload images</th>
+			</tr>
+			<tr>
+				<td>Current images</td>
+				<td>
+					<s:form action="" cssClass="list2" method="POST" namespace="admin">
+						<s:iterator value="%{product.productUrls">
+							<input type="radio" name="isThumb" value="male" >
+							<img src="%{urlPath}" height="307" width="240" />
+						</s:iterator>
+					</s:form>
+				</td>
+			</tr>
+			
 			<s:form cssClass="list2" action="product-url-save" method="POST" enctype="multipart/form-data" namespace="admin">
 				<s:hidden name="productId" value="%{#request.product.productId}" />
-				<tr>
-					<th colspan="2">Upload images</th>
-				</tr>
 				<tr>
 					<td>Image</td>
 					<td>

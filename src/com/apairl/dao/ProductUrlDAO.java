@@ -62,6 +62,36 @@ public class ProductUrlDAO extends HibernateDaoSupport  {
         }
     }
     
+    public void resetAllThumbByProductId(Integer productId){
+    	Session session = this.getHibernateTemplate().getSessionFactory().openSession();
+    	try{
+    		String queryString = "update ap_product_url set is_thumb = 0 where product_id = " + productId;
+    		SQLQuery query = session.createSQLQuery(queryString);
+    		query.executeUpdate();
+    		session.flush();
+    		session.clear();
+    	}catch(Exception e){
+    		log.error("", e);
+    	}finally{
+    		session.close();
+    	}
+    }
+    
+    public void updateThumbByProductUrlId(Integer productUrlId){
+    	Session session = this.getHibernateTemplate().getSessionFactory().openSession();
+    	try{
+    		String queryString = "update ap_product_url set is_thumb = 1 where product_url_id = " + productUrlId;
+    		SQLQuery query = session.createSQLQuery(queryString);
+    		query.executeUpdate();
+    		session.flush();
+    		session.clear();
+    	}catch(Exception e){
+    		log.error("", e);
+    	}finally{
+    		session.close();
+    	}
+    }
+    
     public List findByProperty(String propertyName, Object value) {
       log.debug("finding ProductUrl instance with property: " + propertyName
             + ", value: " + value);

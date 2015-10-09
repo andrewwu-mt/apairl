@@ -34,8 +34,9 @@ $(document).ready(function(){
 					<br>
 				</caption>
 				<tr>
-					<th>Category</th>
+					<th>Image</th>
 					<th>Product name</th>
+					<th>Category</th>
 					<th>Type</th>
 					<th>Size</th>
 					<th>Price</th>
@@ -46,6 +47,7 @@ $(document).ready(function(){
 				
 				<s:iterator value="#request.stockList">
 						<tr>
+							<td><img src="${product.thumbUrl}" /></td>
 							<td><s:property value="%{product.category.name}" /></td>		
 			                <td><a href="product-edit?id=${product.productId}"><s:property value="%{product.name}" /></a></td>	                
 							<td><s:property value="%{type.name}" /></td>			                

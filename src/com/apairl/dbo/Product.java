@@ -144,4 +144,15 @@ public class Product implements java.io.Serializable {
 		this.category = category;
 	}
 
+	public String getThumbUrl(){
+		for(Object pu : productUrls){
+			ProductUrl puMdl = (ProductUrl) pu;
+			Short isThumb = puMdl.getIsThumb();
+			if(isThumb == 1){
+				return puMdl.getUrlPath();
+			}
+		}
+		return "";
+	}
+	
 }

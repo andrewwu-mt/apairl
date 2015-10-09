@@ -22,11 +22,19 @@ public class ProductUrlAction extends ActionSupport{
 	
 	private Integer productId;
 	private Integer productUrlId;
+	private Short isThumb;
 
 	//upload file
 	private File[] fileUpload;
 	private String[] fileUploadContentType;
 	private String[] fileUploadFileName;
+	
+	public String updateThumb(){
+		productUrlDAO.resetAllThumbByProductId(productId);
+		productUrlDAO.updateThumbByProductUrlId(productUrlId);
+		
+		return SUCCESS;
+	}
 	
 	public String getRecordsByProductId(){
 		List productUrlList = productUrlDAO.findByProperty("product.productId", productId);
@@ -64,6 +72,7 @@ public class ProductUrlAction extends ActionSupport{
 					ProductUrl productUrl = new ProductUrl();
 					productUrl.setProduct(product);
 					productUrl.setUrlPath(path + fileUploadFileName[i]);
+					productUrl.setIsThumb((short) 0);
 					productUrlDAO.save(productUrl);
 				}
 				return "successsave";
@@ -143,6 +152,14 @@ public class ProductUrlAction extends ActionSupport{
 
 	public void setFileUploadFileName(String[] fileUploadFileName) {
 		this.fileUploadFileName = fileUploadFileName;
+	}
+
+	public Short getIsThumb() {
+		return isThumb;
+	}
+
+	public void setIsThumb(Short isThumb) {
+		this.isThumb = isThumb;
 	}
 
 }
