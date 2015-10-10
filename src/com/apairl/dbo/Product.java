@@ -145,6 +145,8 @@ public class Product implements java.io.Serializable {
 	}
 
 	public String getThumbUrl(){
+		String path = "img/no_img.jpg";
+		
 		for(Object pu : productUrls){
 			ProductUrl puMdl = (ProductUrl) pu;
 			Short isThumb = puMdl.getIsThumb();
@@ -152,7 +154,7 @@ public class Product implements java.io.Serializable {
 				return puMdl.getUrlPath();
 			}
 		}
-		return "";
+		return path;
 	}
 	
 }

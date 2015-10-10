@@ -16,7 +16,22 @@
 	<s:param name="productId" value="#parameters.id" /> 
 </s:action>
 
+<script type="text/javascript">
+$(document).ready(function(){
+	$("[name='isThumb']").click(function(){
+		var productId = $("#productId").val();
+		var productUrlId = $(this).val();
+
+		$.post( "product-url-save-primary", { productId: productId, productUrlId: productUrlId }, function( data ) {
+	    	alert("Primary thumbnail updated");
+	       	return false;
+	    });
+	});
+
+});
+</script>
 </head>
+
 <body>
 	<div id="content" align="center">
 	
@@ -51,25 +66,27 @@
 			</s:form>
 		</table>
 		
-		
 		<table class="list">
-			<tr>
-				<th colspan="2">Upload images</th>
-			</tr>
-			<tr>
-				<td>Current images</td>
-				<td>
-					<s:form action="" cssClass="list2" method="POST" namespace="admin">
-						<s:iterator value="%{product.productUrls">
-							<input type="radio" name="isThumb" value="male" >
-							<img src="%{urlPath}" height="307" width="240" />
-						</s:iterator>
-					</s:form>
-				</td>
-			</tr>
-			
 			<s:form cssClass="list2" action="product-url-save" method="POST" enctype="multipart/form-data" namespace="admin">
-				<s:hidden name="productId" value="%{#request.product.productId}" />
+				<s:hidden id="productId" name="productId" value="%{#request.product.productId}" />
+				
+				<tr>
+					<th colspan="2">Upload images</th>
+				</tr>
+				<tr>
+					<td>Current images</td>
+					<td>
+						<s:iterator value="#request.product.productUrls">
+							<s:if test="%{isThumb == 1}">
+								<input type="radio" name="isThumb" value="${productUrlId}" checked>
+							</s:if>
+							<s:else>
+								<input type="radio" name="isThumb" value="${productUrlId}" >
+							</s:else>
+							<img src="../${urlPath}" width="69" height="88" />
+						</s:iterator>
+					</td>
+				</tr>
 				<tr>
 					<td>Image</td>
 					<td>

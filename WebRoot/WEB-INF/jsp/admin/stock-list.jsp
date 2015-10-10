@@ -47,9 +47,9 @@ $(document).ready(function(){
 				
 				<s:iterator value="#request.stockList">
 						<tr>
-							<td><img src="${product.thumbUrl}" /></td>
-							<td><s:property value="%{product.category.name}" /></td>		
-			                <td><a href="product-edit?id=${product.productId}"><s:property value="%{product.name}" /></a></td>	                
+							<td><img src="../${product.thumbUrl}" width="69" height="88"/></td>
+			                <td><a href="product-edit?id=${product.productId}"><s:property value="%{product.name}" /></a></td>	   
+							<td><s:property value="%{product.category.name}" /></td>		             
 							<td><s:property value="%{type.name}" /></td>			                
 							<td><s:property value="%{size.value}" /></td>			                
 			                <td><fmt:formatNumber groupingUsed="true"><s:property value="%{product.price}" /></fmt:formatNumber></td>

@@ -29,7 +29,9 @@ public class ProductUrlAction extends ActionSupport{
 	private String[] fileUploadContentType;
 	private String[] fileUploadFileName;
 	
-	public String updateThumb(){
+	public String savePrimaryThumbnail(){
+		HttpServletRequest request = ServletActionContext.getRequest();
+		request.setAttribute("productId", productId);
 		productUrlDAO.resetAllThumbByProductId(productId);
 		productUrlDAO.updateThumbByProductUrlId(productUrlId);
 		
@@ -65,14 +67,17 @@ public class ProductUrlAction extends ActionSupport{
 				request.setAttribute("productId", productId);
 				Product product = productDAO.findById(productId);
 				String workingDir = System.getProperty( "catalina.base" );
-				String path = workingDir + "\\webapps\\apairl\\img\\product\\";
+				String folderPath = "img/product/";
+				String path = workingDir + "/webapps/apairl/" + folderPath;
 				saveUrl(path);
 				
 				for(int i=0 ; i<fileUploadFileName.length ; i++){
 					ProductUrl productUrl = new ProductUrl();
 					productUrl.setProduct(product);
-					productUrl.setUrlPath(path + fileUploadFileName[i]);
-					productUrl.setIsThumb((short) 0);
+					productUrl.setUrlPath(folderPath + fileUploadFileName[i]);
+					Short isThumb = 0;
+					if(i == 0) isThumb = 1;
+					productUrl.setIsThumb(isThumb);
 					productUrlDAO.save(productUrl);
 				}
 				return "successsave";

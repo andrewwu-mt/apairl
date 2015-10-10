@@ -41,7 +41,7 @@
             <column name="category_id" not-null="true" />
         </many-to-one>
         
-        <set name="productUrls" inverse="true" lazy="false">
+        <set name="productUrls" inverse="true" lazy="false" order-by="product_url_id asc">
             <key>
                 <column name="product_id" not-null="true" />
             </key>
