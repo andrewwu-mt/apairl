@@ -38,6 +38,7 @@ $(document).ready(function(){
 		<table class="list">
 			<s:form action="product-update" validate="true" id="doupdate" cssClass="list2" namespace="admin" >
 				<s:hidden name="productId" value="%{#request.product.productId}" />
+				<s:hidden name="isSeparate" value="%{#request.product.isSeparate}" />
 			
 				<tr>
 					<th>Field</th>

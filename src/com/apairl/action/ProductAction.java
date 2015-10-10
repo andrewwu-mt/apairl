@@ -186,14 +186,9 @@ public class ProductAction extends ActionSupport{
 
 	public String quickUpdateRecord(){
 		try{
-			Product product = productDAO.findById(productId);
-			product.setPrice(price);
-			product.setPriceCompare(priceCompare);
-			productDAO.update(product);
-			
 			Stock stock = stockDAO.findById(stockId);
 			stock.setQty(qty);
-			
+			stockDAO.update(stock);
 		}catch(Exception e){
 			log.error("Update product failed", e);
 			return "updateerror";

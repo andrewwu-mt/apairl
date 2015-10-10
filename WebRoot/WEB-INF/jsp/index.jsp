@@ -9,6 +9,8 @@
 <!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
 <!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
 
+<s:action name="product-all" executeResult="false" />
+
 <head>
 	<meta charset="utf-8">
 	
@@ -64,118 +66,30 @@
 	
 		<div class="row">
 			<ul class="featured-products">
-			<li class="col-md-3 alpha col-sm-3 col-xs-12">
-			<div class="indiv-product">
-				<a href="products/seafolly-shimmer-tie-front-bustier.html" title="Seafolly Shimmer Tie Front Bustier">
-					<img src="cdn.shopify.com/s/files/1/0271/9799/products/image1-a_large6fe6.jpg?v=1418211173'" alt="Seafolly Shimmer Tie Front Bustier" class="animated fadeIn" id="collection-image-anim">
-				</a>
 				
-				<div class="hp-title">
-					<a href="products/seafolly-shimmer-tie-front-bustier.html">
-						<div class="indiv-product-title-text">Seafolly Shimmer Tie Front Bustier</div>
-						<span class="money-styling custom-font">
-							<small>from</small> &pound;53.00
-						</span>
-					</a>
-				</div>
-			</div>
-			
-		   	</li>
-			
-			<li class="col-md-3 col-sm-3 col-xs-12">
-			
-			<div class="indiv-product">
-				<a href="products/ginja-by-baku-cairo-paisley-print-flounce-bikini-top.html" title="Ginja By Baku Cairo Paisley Print Flounce Bikini Top">
-					<img src="cdn.shopify.com/s/files/1/0271/9799/products/image3-a_large9465.jpg?v=1418211597'" alt="Ginja By Baku Cairo Paisley Print Flounce Bikini Top" class="animated fadeIn" id="collection-image-anim">
-				</a>
+				<s:iterator value="#request.productList" >
 				
-				<div class="hp-title">
-					<a href="products/ginja-by-baku-cairo-paisley-print-flounce-bikini-top.html">
-						<div class="indiv-product-title-text">Ginja By Baku Cairo Paisley Print Flounce Bikini Top</div>
+					<li class="col-md-3 col-sm-3 col-xs-12">
+					<div class="indiv-product">
+						<a href="product-detail?id=${productId}" title="${name}">
+							<img src="${thumbUrl}" alt="${name}" class="animated fadeIn" id="collection-image-anim">
+						</a>
 						
-						
-					
-						<span class="money-styling custom-font">
-					
-							
-					
-								
-								
-									&pound;64.00
-								
-							
-			
-						</span>
-					</a>
-				</div>
-			</div>
-			
-		   	</li>
-			
-			<li class="col-md-3 col-sm-3 col-xs-12">
-			
-			
-			<div class="indiv-product">
-				<a href="products/seafolly-goddess-pleated-frill-triangle-bikini-top.html" title="Seafolly Goddess Pleated Frill Triangle Bikini Top">
-					<img src="cdn.shopify.com/s/files/1/0271/9799/products/image2-a_large68c5.jpg?v=1418211411'" alt="Seafolly Goddess Pleated Frill Triangle Bikini Top" class="animated fadeIn" id="collection-image-anim">
-				</a>
-				
-				<div class="hp-title">
-					<a href="products/seafolly-goddess-pleated-frill-triangle-bikini-top.html">
-						<div class="indiv-product-title-text">Seafolly Goddess Pleated Frill Triangle Bikini Top</div>
-						
-						
-							<div class="sale-badge">Sale</div>
-						
-					
-						<span class="money-styling custom-font">
-					
-							
-								<h5 class="custom-font compare-at-price">&pound;99.00</h5>
-							
-					
-							
-								<p class="product-dets-sold-out">Sold Out</p>
-							
-			
-						</span>
-					</a>
-				</div>
-			</div>
-			
-		   	</li>
-			
-			<li class="col-md-3 omega col-sm-3 col-xs-12">
-			
-			
-			<div class="indiv-product">
-				<a href="products/seafolly-romeo-rose-zip-front-bandeau-bikini-top.html" title="Seafolly Romeo Rose Zip Front Bandeau Bikini Top">
-					<img src="cdn.shopify.com/s/files/1/0271/9799/products/image4-a_large0ff4.jpg?v=1418211776'" alt="Seafolly Romeo Rose Zip Front Bandeau Bikini Top" class="animated fadeIn" id="collection-image-anim">
-				</a>
-				
-				<div class="hp-title">
-					<a href="products/seafolly-romeo-rose-zip-front-bandeau-bikini-top.html">
-						<div class="indiv-product-title-text">Seafolly Romeo Rose Zip Front Bandeau Bikini Top</div>
-						
-						
-					
-						<span class="money-styling custom-font">
-					
-							
-					
-								
-								
-									&pound;54.00
-								
-							
-			
-						</span>
-					</a>
-				</div>
-			</div>
-			
-		   	</li>
-			
+						<div class="hp-title">
+							<a href="product-detail?id=${productId}">
+								<div class="indiv-product-title-text">${name}</div>
+								<span class="custom-font compare-at-price">
+									<small></small> &#36;${priceCompare}
+								</span>
+								<span class="money-styling custom-font">
+									<small></small> &#36;${price}
+								</span>
+							</a>
+						</div>
+					</div>
+				   	</li>
+				   	
+				</s:iterator>
 			</ul>
 		</div>
 	</div>
