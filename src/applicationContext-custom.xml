@@ -11,6 +11,21 @@
 	<bean id="LoginInterceptor" class="com.apairl.interceptor.LoginInterceptor" scope="prototype" />
 	
 	
+	<bean id="SizeAction" class="com.apairl.action.SizeAction" scope="prototype">
+		<property name="sizeDAO">
+			<ref bean="SizeDAO" />
+		</property>
+	</bean>
+	
+	<bean id="FeaturedAction" class="com.apairl.action.FeaturedAction" scope="prototype">
+		<property name="featuredDAO">
+			<ref bean="FeaturedDAO" />
+		</property>
+		<property name="productDAO">
+			<ref bean="ProductDAO" />
+		</property>
+	</bean>
+	
 	<bean id="SlideAction" class="com.apairl.action.SlideAction" scope="prototype">
 		<property name="slideDAO">
 			<ref bean="SlideDAO" />

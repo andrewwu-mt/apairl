@@ -5,16 +5,13 @@
 	<div class="row">
 	
 	<div class="col-md-3 col-sm-6">
-	
-		
 			
 			<div id="frontpage-article">
 				<div class="article">
 			  		<h3>Welcome</h3>
 		  			<div class="article-body textile">
-			  			<p><strong>You made it! Congratulations on starting your own online store!</strong></p>
-	<p>This is your shop&#8217;s <strong>frontpage</strong>, and it&#8217;s the first thing your customers will see when they arrive. You&#8217;ll be able to organize and style this page however you like.</p>
-	<p><strong>You can start adding products to your shop by heading into the <a href="admin/auth/login.html">Admin Area</a>.</strong></p>
+			  			<p><strong>Apairlstore | Best quality authentic branded bikinis are available here. Let the bikinis speak louder than words.</strong></p>
+						<p>Apairl Store Always delivers more than you expected. Ready stock and NO RETURN. Based in Jakarta.<br>LINE: destyrustam<br>BBM: 75DC4839<br>Email: apairlstore@gmail.com</p>
 					</div>
 				</div>
 			</div>
@@ -85,19 +82,19 @@
 
 <div class="bottom-footer">
 	
-<div class="container">
-
-<div class="row">
-
-<div class="col-md-9">
-	<p>
-		<a href="index">Apairl Store</a> | Copyright 2015 All Right Reserved.
-	</p>
-</div>
+	<div class="container">
 	
-</div><!-- row -->
-
-</div><!-- container -->
+	<div class="row">
+	
+	<div class="col-md-9">
+		<p>
+			<a href="index">Apairl Store</a> | Copyright 2015 All Right Reserved.
+		</p>
+	</div>
+		
+	</div><!-- row -->
+	
+	</div><!-- container -->
 
 </div><!-- bottom-footer -->
 
@@ -106,9 +103,6 @@
 <script src="cdn.shopify.com/s/files/1/0271/9799/t/10/assets/pluginsa3ee.js?1172313162436649993" type="text/javascript"></script>
 
 <script src="cdn.shopify.com/s/files/1/0271/9799/t/10/assets/customa3ee.js?1172313162436649993" type="text/javascript"></script>
-
-
-
 	 
 
 <div style="display:none;">

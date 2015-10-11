@@ -26,6 +26,14 @@
 			<result name="success">/WEB-INF/jsp/admin/login-page.jsp</result>
 		</action>
 		
+		<!-- Size Start -->
+		<action name="size-all" class="SizeAction" method="allRecords" />
+		<!-- Size End -->
+		
+		<!-- Featured Start -->
+		<action name="featured-all" class="FeaturedAction" method="allRecords" />
+		<!-- Featured End -->
+		
 		<!-- Slide Start -->
 		<action name="slide-all" class="SlideAction" method="allRecords" />
 		<!-- Slide End -->

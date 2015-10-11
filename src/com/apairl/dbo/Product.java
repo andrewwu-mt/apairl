@@ -24,6 +24,7 @@ public class Product implements java.io.Serializable {
 	private Short isSeparate;
 	private Category category;
 	private Set productUrls = new HashSet(0);
+	private Set stocks = new HashSet(0);
 
 	// Constructors
 
@@ -34,7 +35,7 @@ public class Product implements java.io.Serializable {
 	/** full constructor */
 	public Product(String name, String description,
 			Integer price, Integer priceCompare, Timestamp insertDate,
-			Timestamp updateDate, Integer active, String urlPath, Short isSeparate, Category category, Set productUrls) {
+			Timestamp updateDate, Integer active, String urlPath, Short isSeparate, Category category, Set productUrls, Set stocks) {
 		this.name = name;
 		this.description = description;
 		this.price = price;
@@ -46,6 +47,7 @@ public class Product implements java.io.Serializable {
 		this.isSeparate = isSeparate;
 		this.category = category;
 		this.productUrls = productUrls;
+		this.stocks = stocks;
 	}
 
 	public Integer getProductId() {
@@ -144,6 +146,18 @@ public class Product implements java.io.Serializable {
 		this.category = category;
 	}
 
+	public Set getStocks() {
+		return stocks;
+	}
+
+	public void setStocks(Set stocks) {
+		this.stocks = stocks;
+	}
+
+	public String getConvertDesc(){
+		return description.replace("<br>", "\n");
+	}
+	
 	public String getThumbUrl(){
 		String path = "img/no_img.jpg";
 		

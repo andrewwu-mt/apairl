@@ -47,5 +47,12 @@
             </key>
             <one-to-many class="com.apairl.dbo.ProductUrl" />
         </set>
+        
+        <set name="stocks" inverse="true" lazy="false" order-by="stock_id asc">
+            <key>
+                <column name="product_id" not-null="true" />
+            </key>
+            <one-to-many class="com.apairl.dbo.Stock" />
+        </set>
     </class>
 </hibernate-mapping>

@@ -101,7 +101,6 @@ public class ProductAction extends ActionSupport{
 	public String getRecord(){
 		HttpServletRequest request = ServletActionContext.getRequest();
 		Product product = productDAO.findById(productId);
-		product.setDescription(product.getDescription().replace("<br>", "\n"));
 		request.setAttribute("product", product);
 		
 		return SUCCESS;

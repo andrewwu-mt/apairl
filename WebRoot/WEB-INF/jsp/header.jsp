@@ -1,13 +1,13 @@
 <div id="mobile-navigation">
 	<nav class="nav">
 		<ul>
-			<li><strong><a href="cart.html">Checkout</a></strong></li>
+			<li><strong><a href="checkout">Checkout</a></strong></li>
 			<li><a href="index">Home</a></li>
-			<li><a href="collections/all.html">Catalog</a></li>
-			<li><a href="blogs/news.html">Blog</a></li>
-			<li><a href="pages/about-us.html">About Us</a></li>
-			<li><a href="account/login.html">My Account</a></li>
-			<li><a href="account/logout.html" id="customer_logout_link">Log out</a></li>
+			<li><a href="category-list">Catalog</a></li>
+<!-- 			<li><a href="blogs/news.html">Blog</a></li> -->
+			<li><a href="about-us">About Us</a></li>
+<!-- 			<li><a href="account/login.html">My Account</a></li> -->
+<!-- 			<li><a href="account/logout.html" id="customer_logout_link">Log out</a></li> -->
 		</ul>
 	</nav>
 </div> 
@@ -41,13 +41,13 @@
 				<div>
 					<ul class="nav navbar-nav">
 					    <li><a href="index">Home</a></li>
-					    <li><a href="collections/all.html">Catalog</a></li>
-					    <li><a href="blogs/news.html">Blog</a></li>
-					    <li><a href="pages/about-us.html">About Us</a></li>
-			      		<li class="customer-account-links">
-			        		<a href="account/login.html" id="customer_login_link">Log in</a>
-	        				<li><a href="account/register.html" id="customer_register_link">Create Account</a></li>
-			      		</li>
+					    <li><a href="category-list">Catalog</a></li>
+<!-- 					    <li><a href="blogs/news.html">Blog</a></li> -->
+					    <li><a href="about-us">About Us</a></li>
+<!-- 			      		<li class="customer-account-links"> -->
+<!-- 			        		<a href="account/login.html" id="customer_login_link">Log in</a> -->
+<!-- 	        				<li><a href="account/register.html" id="customer_register_link">Create Account</a></li> -->
+<!-- 			      		</li> -->
 				    </ul>
 				</div>
 			</nav>
@@ -55,12 +55,12 @@
 		
 		<div class="col-md-3 col-sm-6">
 		
-			<form id="search" action="https://envy-stockholm.myshopify.com/search">
-			<div id="search-wrapper">
-				<input id="search_text" name="q" type="text" size="20" onblur="if(this.value=='')this.value=this.defaultValue;" onfocus="if(this.value==this.defaultValue)this.value='';" value="Search"/>
-				<input id="search_submit" type="submit" border="0" value="&#xf002;" />
-				<div class="clear"></div>
-			</div>
+			<form id="search" action="product-search" >
+				<div id="search-wrapper">
+					<input id="search_text" name="q" type="text" size="20" onblur="if(this.value=='')this.value=this.defaultValue;" onfocus="if(this.value==this.defaultValue)this.value='';" value="Search"/>
+					<input id="search_submit" type="submit" border="0" value="&#xf002;" />
+					<div class="clear"></div>
+				</div>
 			</form>
 		
 		</div>
@@ -119,11 +119,9 @@
 							<span class="nav-label">Fashion</span><span class="caret"></span>
 						</a>
 						<ul class="dropdown-menu">
-								<li><a href="collections/beachwear.html">Beachwear</a></li>
-								<li><a href="collections/shorts.html">Dress</a></li>
+							<li><a href="product-list?categoryId=1">Beachwear</a></li>
 						</ul>
 					</li>
-					<li><a href="collections/watches.html">Accessories</a></li>
 				</ul>
 			</div>
 		</div>

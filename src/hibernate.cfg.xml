@@ -36,6 +36,7 @@
 		<mapping resource="com/apairl/dbo/Category.hbm.xml" />
 		<mapping resource="com/apairl/dbo/Customer.hbm.xml" />
 		<mapping resource="com/apairl/dbo/Exchange.hbm.xml" />
+		<mapping resource="com/apairl/dbo/Featured.hbm.xml" />
 		<mapping resource="com/apairl/dbo/Kabupaten.hbm.xml" />
 		<mapping resource="com/apairl/dbo/Order.hbm.xml" />
 		<mapping resource="com/apairl/dbo/OrderProduct.hbm.xml" />

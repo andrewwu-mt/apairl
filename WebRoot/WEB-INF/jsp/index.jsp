@@ -9,7 +9,7 @@
 <!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
 <!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
 
-<s:action name="product-all" executeResult="false" />
+<s:action name="featured-all" executeResult="false" />
 
 <head>
 	<meta charset="utf-8">
@@ -67,22 +67,22 @@
 		<div class="row">
 			<ul class="featured-products">
 				
-				<s:iterator value="#request.productList" >
+				<s:iterator value="#request.featuredList" >
 				
 					<li class="col-md-3 col-sm-3 col-xs-12">
 					<div class="indiv-product">
-						<a href="product-detail?id=${productId}" title="${name}">
-							<img src="${thumbUrl}" alt="${name}" class="animated fadeIn" id="collection-image-anim">
+						<a href="product-detail?id=${product.productId}" title="${product.name}">
+							<img src="${product.thumbUrl}" alt="${product.name}" class="animated fadeIn" id="collection-image-anim">
 						</a>
 						
 						<div class="hp-title">
-							<a href="product-detail?id=${productId}">
-								<div class="indiv-product-title-text">${name}</div>
+							<a href="product-detail?id=${product.productId}">
+								<div class="indiv-product-title-text">${product.name}</div>
 								<span class="custom-font compare-at-price">
-									<small></small> &#36;${priceCompare}
+									<small></small> &#36;${product.priceCompare}
 								</span>
 								<span class="money-styling custom-font">
-									<small></small> &#36;${price}
+									<small></small> &#36;${product.price}
 								</span>
 							</a>
 						</div>

@@ -59,7 +59,7 @@ $(document).ready(function(){
 					</s:else>
 	  		    </tr>
 				<s:select name="active" label="Active" list="#{'1':'True', '0':'False'}" value="%{#request.product.active}" />
-				<s:textarea name="description" label="Description" value="%{#request.product.description}" cssStyle="resize:none;height:100px;width:500px" />
+				<s:textarea name="description" label="Description" value="%{#request.product.convertDesc}" cssStyle="resize:none;height:100px;width:500px" />
 				
 	 			<tr>
 	  		    	<td colspan="2" align="right"><div class="button-wrapper"><button class="submit">Submit</button></div></td>

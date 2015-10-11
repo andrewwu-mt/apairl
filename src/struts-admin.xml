@@ -28,6 +28,12 @@
 			<result name="successlogin" type="result-message">stock-list</result>
 		</action>
 		
+		<!-- Featured Start -->
+		<action name="featured-update" class="FeaturedAction" method="updateRecord">
+			<result name="success" type="result-message">stock-list</result>
+		</action>
+		<!-- Featured End -->
+		
 		<!-- Ship Start -->
 		<action name="ship-update-status" class="AdminAction" method="updateShipStatus">
 			<interceptor-ref name="checkAdmin"/>
