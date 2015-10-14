@@ -20,7 +20,7 @@
 		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
 	
-	<title>${request.product.name}</title>
+	<title>Apairl Store | ${request.product.name}</title>
 	<meta name="keywords" content="apairl,apairlstore,bikini,triangl,indonesia,baju,jual,dress,murah,asli,authentic,${request.product.name}">
 	<meta name="description" content="${request.product.name}">
 	<jsp:include page="core.jsp" />
@@ -171,20 +171,7 @@
 	
 	<jsp:include page="footer.jsp" />
 	
-	<script type="text/javascript">
-	if($(window).width() > 768){
-		$(document).ready(function(){
-			var check_cookie = $.cookie('envy-welcome-popup');
-			if(check_cookie == null){
-				$.cookie('envy-welcome-popup', 'true', { expires: 7 });
-				$.fancybox({
-					href: "#envy-auto-popup-2",
-					padding: 0
-				});
-			}
-		});
-	};
-	</script>
+	
 	 
 </body>
 

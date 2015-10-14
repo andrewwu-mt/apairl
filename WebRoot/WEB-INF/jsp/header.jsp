@@ -41,7 +41,7 @@
 				<div>
 					<ul class="nav navbar-nav">
 					    <li><a href="index">Home</a></li>
-					    <li><a href="category-list">Catalog</a></li>
+					    <li><a href="product-list">Catalog</a></li>
 <!-- 					    <li><a href="blogs/news.html">Blog</a></li> -->
 					    <li><a href="about-us">About Us</a></li>
 <!-- 			      		<li class="customer-account-links"> -->
@@ -119,7 +119,7 @@
 							<span class="nav-label">Fashion</span><span class="caret"></span>
 						</a>
 						<ul class="dropdown-menu">
-							<li><a href="product-list?categoryId=1">Beachwear</a></li>
+							<li><a href="product-list">Beachwear</a></li>
 						</ul>
 					</li>
 				</ul>

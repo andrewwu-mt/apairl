@@ -137,3 +137,18 @@
 		
 	</div>
 </div>
+
+<script type="text/javascript">
+	if($(window).width() > 768){
+		$(document).ready(function(){
+			var check_cookie = $.cookie('envy-welcome-popup');
+			if(check_cookie == null){
+				$.cookie('envy-welcome-popup', 'true', { expires: 7 });
+				$.fancybox({
+					href: "#envy-auto-popup-2",
+					padding: 0
+				});
+			}
+		});
+	};
+	</script>
