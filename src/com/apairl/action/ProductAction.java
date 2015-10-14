@@ -117,6 +117,13 @@ public class ProductAction extends ActionSupport{
 	
 	//Admin permission
 	
+	public String deleteRecord(){
+		Product product = productDAO.findById(productId);
+		productDAO.delete(product);
+		
+		return SUCCESS;
+	}
+	
 	public String saveRecord(){
 		HttpServletRequest request = ServletActionContext.getRequest();
 		try{

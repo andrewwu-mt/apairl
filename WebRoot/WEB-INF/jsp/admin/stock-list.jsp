@@ -56,7 +56,10 @@ $(document).ready(function(){
 		                <td><fmt:formatNumber groupingUsed="true"><s:property value="%{product.price}" /></fmt:formatNumber></td>
 		                <td><fmt:formatNumber groupingUsed="true"><s:property value="%{product.priceCompare}" /></fmt:formatNumber></td>
 		                <td><s:textfield name="qty" value="%{qty}"/></td>
-		                <td><s:submit value="Update" /></td>
+		                <td>
+		                	<s:submit value="Update" />
+		                	<a href="product-delete?productId=${product.productId}" onclick="confirm_delete()"><button type="button" >Delete</button></a>
+		                </td>
 	                </tr>
                 </s:form>
 			</s:iterator>

@@ -115,7 +115,7 @@
         	<result name="success"  type="result-message">product-edit?id=${#request.productId}</result>
 		</action>
 		
-        <action name="product-delete" class="ProductAction" method="saveRecord">
+        <action name="product-delete" class="ProductAction" method="deleteRecord">
 			<interceptor-ref name="checkAdmin"/>
 			<interceptor-ref name="defaultStack"/>
         	<result name="deleteerror" type="result-message">stock-list</result>
