@@ -28,7 +28,7 @@
 				<s:textfield name="priceCompare" label="Compare with price" size="50" />
 				<s:select name="isSeparate" label="Separate" list="#{'1':'True', '0':'False'}" />
 				<s:select name="active" label="Active" list="#{'1':'True', '0':'False'}" />
-				<s:textarea name="description" label="Description" cssStyle="resize:none;height:100px;width:500px" />
+				<s:textarea name="description" label="Description" cssStyle="resize:none;height:500px;width:500px" />
 				<s:submit value="Create" />
 			</s:form>
 		</table>
